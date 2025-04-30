@@ -24,7 +24,7 @@ const IMailXBanner = () => {
         <div 
           className="absolute inset-0 bg-gradient-to-r from-darkblue-900/95 via-darkblue-800/90 to-darkblue-900/95 z-10"
           style={{
-            backgroundImage: `url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')`,
+            backgroundImage: `url('https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80')`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             mixBlendMode: 'multiply',
