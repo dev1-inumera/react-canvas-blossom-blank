@@ -11,9 +11,9 @@ const CookieManager = () => {
     <Button
       variant="ghost"
       onClick={openCookieManager}
-      className="flex items-center gap-2 text-sm"
+      className="flex items-center gap-2 text-sm group transition-colors hover:text-indigo-600"
     >
-      <Cookie className="h-4 w-4" />
+      <Cookie className="h-4 w-4 group-hover:text-indigo-600 transition-colors" />
       <span>Gérer les cookies</span>
     </Button>
   );
