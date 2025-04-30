@@ -75,7 +75,7 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, navItems, location, clo
         </div>
         
         <a 
-          href="https://numa.i-numera.com/" 
+          href="https://i-numa.i-numera.com/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="px-6 py-3 font-medium rounded-full transition-all hover:shadow-lg bg-darkblue-800 hover:bg-darkblue-900 text-white text-center flex items-center justify-center"

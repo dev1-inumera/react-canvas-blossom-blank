@@ -40,7 +40,7 @@ const DesktopCTA: React.FC<DesktopCTAProps> = ({ scrolled, isDarkHeader, isConta
     </DropdownMenu>
 
     <a
-      href="https://numa.i-numera.com/"
+      href="https://i-numa.i-numera.com/"
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
