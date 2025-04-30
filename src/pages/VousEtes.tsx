@@ -69,16 +69,14 @@ const VousEtes = () => {
             transition={{ duration: 0.3 }}
             className="mb-24"
           >
-            <div className="bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto">
-              <div className="mb-8 text-center">
-                <h2 className="text-2xl font-semibold text-darkblue-900">
-                  Solutions pour {selectedProfession.label}
-                </h2>
-                <div className="h-1 w-20 bg-red-600 mt-3 mx-auto"></div>
-              </div>
-              
-              <ServiceList services={selectedProfession.services} />
+            <div className="text-center mb-10">
+              <h2 className="text-2xl font-semibold text-darkblue-900">
+                Solutions pour {selectedProfession.label}
+              </h2>
+              <div className="h-1 w-20 bg-red-600 mt-3 mx-auto"></div>
             </div>
+            
+            <ServiceList services={selectedProfession.services} />
           </motion.div>
         )}
 
