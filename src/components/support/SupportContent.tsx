@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Phone, Mail, FileQuestion, Search, ArrowRight, Clock, Headphones } from 'lucide-react';
@@ -45,7 +44,7 @@ const SupportContent: React.FC = () => {
           title="Support téléphonique"
           description="Disponible du lundi au vendredi de 9h à 18h"
           action={
-            <div className="font-medium text-red-600">01 23 45 67 89</div>
+            <div className="font-medium text-red-600">+33 9 85 40 45 63</div>
           }
         />
         <SupportChannelCard 

@@ -84,7 +84,7 @@ const Devis = () => {
                     Déjà client ?
                   </h2>
                   <p className="mb-4">
-                    Vous pouvez nous joindre par téléphone au <span className="font-medium">01 23 45 67 89</span> ou utilisez <span className="text-darkblue-600 font-medium">la page dédiée Service clients</span>.
+                    Vous pouvez nous joindre par téléphone au <span className="font-medium">+33 9 85 40 45 63</span> ou utilisez <span className="text-darkblue-600 font-medium">la page dédiée Service clients</span>.
                   </p>
                 </CardContent>
               </Card>

@@ -86,7 +86,7 @@ const Terms = () => {
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-medium text-darkblue-700 mb-2">Siège social</h3>
-                          <p>24 rue de la Liberté, 75008 Paris</p>
+                          <p>131, Continental Dr, Suite 305, Newark, DE 19713, United States</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-medium text-darkblue-700 mb-2">SIRET</h3>
