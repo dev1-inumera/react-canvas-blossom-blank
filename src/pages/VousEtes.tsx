@@ -1,12 +1,13 @@
 
 import React, { useState } from 'react';
 import { professions } from '@/data/professionData';
-import ProfessionSelector from '@/components/profession/ProfessionSelector';
+import ProfessionDropdown from '@/components/profession/ProfessionDropdown';
 import ServiceList from '@/components/profession/ServiceList';
 import { motion } from 'framer-motion';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
+import { ArrowDown } from 'lucide-react';
 
 const VousEtes = () => {
   const [activeProfession, setActiveProfession] = useState(professions[0].id);
@@ -21,7 +22,7 @@ const VousEtes = () => {
       <Navigation />
 
       {/* Header */}
-      <div className="pt-24 pb-16 px-4 md:px-6 max-w-7xl mx-auto">
+      <div className="pt-28 pb-16 px-4 md:px-6 max-w-7xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
@@ -31,23 +32,32 @@ const VousEtes = () => {
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-darkblue-900 mb-4">
             Nos solutions adaptées à votre profession
           </h1>
-          <p className="text-lg text-darkblue-700/80 mb-12">
+          <p className="text-lg text-darkblue-700/80 mb-8">
             Découvrez comment nous pouvons vous aider à développer votre activité en ligne, quelle que soit votre profession.
           </p>
+          
+          <div className="flex justify-center mb-6">
+            <ArrowDown className="text-red-600 animate-bounce h-8 w-8" />
+          </div>
         </motion.div>
 
-        {/* Profession selector */}
+        {/* Profession dropdown selector */}
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="mb-12"
+          className="mb-16"
         >
-          <ProfessionSelector
-            professions={professions}
-            activeProfession={activeProfession}
-            onProfessionChange={setActiveProfession}
-          />
+          <div className="bg-white rounded-xl shadow-md p-8 max-w-3xl mx-auto">
+            <h2 className="text-xl font-semibold text-center mb-6 text-darkblue-800">
+              Sélectionnez votre secteur d'activité
+            </h2>
+            <ProfessionDropdown
+              professions={professions}
+              activeProfession={activeProfession}
+              onProfessionChange={setActiveProfession}
+            />
+          </div>
         </motion.div>
 
         {/* Service list section */}
@@ -59,14 +69,16 @@ const VousEtes = () => {
             transition={{ duration: 0.3 }}
             className="mb-24"
           >
-            <div className="mb-6">
-              <h2 className="text-2xl font-semibold text-darkblue-900">
-                Solutions pour {selectedProfession.label}
-              </h2>
-              <div className="h-1 w-16 bg-red-600 mt-2"></div>
+            <div className="bg-white rounded-xl shadow-md p-8 max-w-4xl mx-auto">
+              <div className="mb-8 text-center">
+                <h2 className="text-2xl font-semibold text-darkblue-900">
+                  Solutions pour {selectedProfession.label}
+                </h2>
+                <div className="h-1 w-20 bg-red-600 mt-3 mx-auto"></div>
+              </div>
+              
+              <ServiceList services={selectedProfession.services} />
             </div>
-            
-            <ServiceList services={selectedProfession.services} />
           </motion.div>
         )}
 
