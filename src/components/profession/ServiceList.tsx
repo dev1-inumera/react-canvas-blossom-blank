@@ -10,7 +10,7 @@ interface ServiceListProps {
 
 const ServiceList = ({ services }: ServiceListProps) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-7xl mx-auto">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto px-4">
       {services.map((service, index) => (
         <motion.div
           key={index}
@@ -20,8 +20,8 @@ const ServiceList = ({ services }: ServiceListProps) => {
         >
           <Card className="h-full hover:shadow-lg transition-all duration-300 hover:-translate-y-1 border border-gray-100">
             <CardContent className="p-6">
-              <h3 className="text-lg font-semibold text-darkblue-500 mb-3">{service.title}</h3>
-              <p className="text-darkblue-400/90">{service.description}</p>
+              <h3 className="text-lg font-semibold text-darkblue-800 mb-3">{service.title}</h3>
+              <p className="text-darkblue-700/80">{service.description}</p>
             </CardContent>
           </Card>
         </motion.div>

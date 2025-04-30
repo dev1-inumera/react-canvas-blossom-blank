@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -52,42 +53,29 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
-                // Updated color palettes based on the main colors
                 darkblue: {
-                    50: '#E8E9F1',
-                    100: '#D1D3E3',
-                    200: '#A4A7C7',
-                    300: '#777BAB',
-                    400: '#4A508F',
-                    500: '#272C57', // Main dark blue
-                    600: '#23274E',
-                    700: '#1E2245',
-                    800: '#191C3B',
-                    900: '#141732'
+                    50: '#E6EBF4',
+                    100: '#C1CBE3',
+                    200: '#97A9D0',
+                    300: '#6D86BD',
+                    400: '#4C6BAD',
+                    500: '#2B509E',
+                    600: '#264996',
+                    700: '#1F408C',
+                    800: '#183782',
+                    900: '#0E2770'
                 },
                 red: {
-                    50: '#FCEBEC',
-                    100: '#F9D7D9',
-                    200: '#F3AEB3',
-                    300: '#ED868E',
-                    400: '#E75E68',
-                    500: '#BB0C19', // Main red
-                    600: '#A80B17',
-                    700: '#950A14',
-                    800: '#820811',
-                    900: '#6F070E'
-                },
-                gray: {
-                    50: '#F9F9F9',
-                    100: '#F3F3F3',
-                    200: '#E7E7E7',
-                    300: '#D1D1D1',
-                    400: '#ACACAC',
-                    500: '#878787',
-                    600: '#636363',
-                    700: '#4F4F4F',
-                    800: '#3A3A3A',
-                    900: '#262626'
+                    50: '#FFEBEE',
+                    100: '#FFCDD2',
+                    200: '#EF9A9A',
+                    300: '#E57373',
+                    400: '#EF5350',
+                    500: '#F44336',
+                    600: '#E53935',
+                    700: '#D32F2F',
+                    800: '#C62828',
+                    900: '#B71C1C'
                 }
 			},
 			borderRadius: {
@@ -133,10 +121,6 @@ export default {
                     '50%': { transform: 'translateY(-5px)' }
                 },
                 'marquee-vertical': {
-                    '0%': { transform: 'translateY(0)' },
-                    '100%': { transform: 'translateY(-50%)' }
-                },
-                'marquee-vertical-delayed': {
                     '0%': { transform: 'translateY(0)' },
                     '100%': { transform: 'translateY(-50%)' }
                 },
