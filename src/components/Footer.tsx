@@ -25,7 +25,7 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
         <div className="pt-8 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <p className="text-darkblue-700 text-sm mb-4 md:mb-0">
-              © 2019 i-numera. Tous droits réservés.
+              © 2025 i-numera. Tous droits réservés.
             </p>
             <LegalLinks />
           </div>
