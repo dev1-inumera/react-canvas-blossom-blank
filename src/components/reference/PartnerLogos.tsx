@@ -19,6 +19,10 @@ const PartnerLogos = () => {
             src={logo.image} 
             alt={`Projet ${index + 1}`} 
             className="max-h-16 max-w-full object-contain" 
+            loading="lazy"
+            decoding="async"
+            width="120"
+            height="60"
           />
         </motion.div>
       ))}

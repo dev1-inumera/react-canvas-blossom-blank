@@ -97,12 +97,14 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
               index === currentSlide ? "opacity-100" : "opacity-0"
             )}
           >
-            <div className="absolute inset-0 bg-black/70 z-10"></div>{" "}
-            {/* Dark overlay */}
+            <div className="absolute inset-0 bg-black/70 z-10"></div>
             <img
               src={slide.backgroundImage}
               alt={`Background ${index + 1}`}
               className="w-full h-full object-cover"
+              loading={index === 0 ? "eager" : "lazy"}
+              decoding="async"
+              fetchPriority={index === 0 ? "high" : "low"}
             />
           </div>
         ))}
@@ -125,6 +127,9 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                     src="/lovable-uploads/b3c33571-dd4d-4269-a516-f847893fdd7f.png"
                     alt="i-numera logo"
                     className="w-[1500px] max-w-[95%] h-auto transform scale-110"
+                    loading="eager"
+                    decoding="async"
+                    fetchPriority="high"
                   />
                 </div>
               </div>

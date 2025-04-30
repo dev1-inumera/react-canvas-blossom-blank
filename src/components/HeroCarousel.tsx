@@ -1,8 +1,9 @@
 
 import React, { useEffect, useState } from 'react';
 import { cn } from '@/lib/utils';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem } from '@/components/ui/carousel';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
+import { AspectRatio } from '@/components/ui/aspect-ratio';
 
 interface HeroCarouselProps {
   className?: string;
@@ -11,7 +12,7 @@ interface HeroCarouselProps {
 const carouselImages = [
   "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80&w=1500&h=800",
   "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1500&h=800",
-  "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=1500&h=800",
+  "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80&w=1500&h=800", 
   "https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80&w=1500&h=800",
   "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80&w=1500&h=800"
 ];
@@ -46,19 +47,24 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ className }) => {
         <CarouselContent className="h-full">
           {carouselImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
-              <div 
-                className={cn(
-                  "w-full h-full transition-opacity duration-1000", 
-                  index === currentSlide ? "opacity-100" : "opacity-0"
-                )}
-              >
-                <div className="absolute inset-0 bg-darkblue-900/70 z-10"></div>
-                <img 
-                  src={image} 
-                  alt={`Background ${index + 1}`} 
-                  className="w-full h-full object-cover"
-                />
-              </div>
+              <AspectRatio ratio={16/9} className="h-full">
+                <div 
+                  className={cn(
+                    "w-full h-full transition-opacity duration-1000", 
+                    index === currentSlide ? "opacity-100" : "opacity-0"
+                  )}
+                >
+                  <div className="absolute inset-0 bg-darkblue-900/70 z-10"></div>
+                  <img 
+                    src={image} 
+                    alt={`Background ${index + 1}`} 
+                    className="w-full h-full object-cover"
+                    loading={index === 0 ? "eager" : "lazy"}
+                    decoding="async"
+                    fetchPriority={index === 0 ? "high" : "low"}
+                  />
+                </div>
+              </AspectRatio>
             </CarouselItem>
           ))}
         </CarouselContent>

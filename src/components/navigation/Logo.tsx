@@ -16,6 +16,10 @@ const Logo: React.FC<LogoProps> = ({ onClick }) => (
       src="/lovable-uploads/b24ee520-7478-4b85-b844-07dbec409cf5.png" 
       alt="i-numera logo" 
       className="h-12 w-auto" 
+      loading="eager"
+      fetchPriority="high"
+      width="150"
+      height="48"
     />
   </Link>
 );
