@@ -7,6 +7,7 @@ import Testimonials from "@/components/Testimonials";
 import Packages from "@/components/Packages";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
+import IMailXBanner from "@/components/IMailXBanner";
 import { useLocation } from "react-router-dom";
 
 const Index = () => {
@@ -22,6 +23,7 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Services />
+        <IMailXBanner />
         <Packages />
         <div
           className="relative bg-gray-100 py-8"
