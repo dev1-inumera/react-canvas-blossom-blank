@@ -17,7 +17,7 @@ const Logo: React.FC<LogoProps> = ({ onClick }) => (
       alt="i-numera logo" 
       className="h-12 w-auto" 
       loading="eager"
-      fetchPriority="high"
+      fetchpriority="high"
       width="150"
       height="48"
     />

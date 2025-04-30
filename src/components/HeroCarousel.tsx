@@ -43,7 +43,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ className }) => {
 
   return (
     <div className={cn("absolute inset-0 -z-10 overflow-hidden", className)}>
-      <Carousel className="w-full h-full" setApi={setApi} opts={{ loop: true }}>
+      <Carousel className="w-full h-full" setApi={setApi} opts={{ loop: true, align: "center" }}>
         <CarouselContent className="h-full">
           {carouselImages.map((image, index) => (
             <CarouselItem key={index} className="h-full">
@@ -61,7 +61,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ className }) => {
                     className="w-full h-full object-cover"
                     loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
-                    fetchPriority={index === 0 ? "high" : "low"}
+                    fetchpriority={index === 0 ? "high" : "low"}
                   />
                 </div>
               </AspectRatio>

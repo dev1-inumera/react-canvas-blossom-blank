@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { ScrollArea } from "./ui/scroll-area";
 
 interface HeroProps {
   className?: string;
@@ -51,7 +52,7 @@ const carouselSlides = [
     description:
       "Développement d'applications spécifiques pour simplifier vos processus et augmenter votre productivité.",
     link1: {
-      to: "/custom-apps",
+      to: "/expertise",
       text: "Explorez nos applications",
     },
     link2: {
@@ -104,7 +105,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
               className="w-full h-full object-cover"
               loading={index === 0 ? "eager" : "lazy"}
               decoding="async"
-              fetchPriority={index === 0 ? "high" : "low"}
+              fetchpriority={index === 0 ? "high" : "low"}
             />
           </div>
         ))}
@@ -129,7 +130,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                     className="w-[1500px] max-w-[95%] h-auto transform scale-110"
                     loading="eager"
                     decoding="async"
-                    fetchPriority="high"
+                    fetchpriority="high"
                   />
                 </div>
               </div>
@@ -140,7 +141,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
           </div>
 
           {/* Text and CTA section - keep the same content and animations */}
-          <div className="flex flex-col space-y-8 animate-fade-in">
+          <ScrollArea className="flex flex-col space-y-8 animate-fade-in h-full">
             <div className="space-y-5 max-w-[640px]">
               <div
                 className="inline-block rounded-full px-3 py-1 text-sm bg-darkblue-50/90 text-darkblue-900 backdrop-blur-sm opacity-0 animate-fade-in"
@@ -196,7 +197,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                 />
               </Link>
             </div>
-          </div>
+          </ScrollArea>
         </div>
       </div>
     </section>
