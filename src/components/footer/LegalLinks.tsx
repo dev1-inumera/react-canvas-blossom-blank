@@ -1,6 +1,7 @@
 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import CookieManager from '@/components/cookies/CookieManager';
 
 const LegalLinks: React.FC = () => {
   return (
@@ -17,12 +18,7 @@ const LegalLinks: React.FC = () => {
       >
         Politique de confidentialité
       </Link>
-      <Link 
-        to="/cookies" 
-        className="hover:text-darkblue-900 transition-colors"
-      >
-        Gestion des cookies
-      </Link>
+      <CookieManager />
     </div>
   );
 };
