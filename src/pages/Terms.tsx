@@ -1,7 +1,6 @@
-
 import React from 'react';
 import { motion } from 'framer-motion';
-import { ArrowRight, ShieldCheck, FileText, Users, CircleInfo, Link } from 'lucide-react';
+import { ArrowRight, ShieldCheck, FileText, Users, CircleHelp, Link } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
@@ -59,7 +58,7 @@ const Terms = () => {
                 Conditions
               </TabsTrigger>
               <TabsTrigger value="various" className="data-[state=active]:bg-green-50 data-[state=active]:text-green-700">
-                <CircleInfo className="h-4 w-4 mr-2" />
+                <CircleHelp className="h-4 w-4 mr-2" />
                 Divers
               </TabsTrigger>
             </TabsList>
