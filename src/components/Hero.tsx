@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
@@ -105,7 +106,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
               className="w-full h-full object-cover"
               loading={index === 0 ? "eager" : "lazy"}
               decoding="async"
-              fetchpriority={index === 0 ? "high" : "low"}
+              fetchPriority={index === 0 ? "high" : "low"}
             />
           </div>
         ))}
@@ -130,7 +131,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
                     className="w-[1500px] max-w-[95%] h-auto transform scale-110"
                     loading="eager"
                     decoding="async"
-                    fetchpriority="high"
+                    fetchPriority="high"
                   />
                 </div>
               </div>

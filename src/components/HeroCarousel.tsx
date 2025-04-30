@@ -61,7 +61,7 @@ const HeroCarousel: React.FC<HeroCarouselProps> = ({ className }) => {
                     className="w-full h-full object-cover"
                     loading={index === 0 ? "eager" : "lazy"}
                     decoding="async"
-                    fetchpriority={index === 0 ? "high" : "low"}
+                    fetchPriority={index === 0 ? "high" : "low"}
                   />
                 </div>
               </AspectRatio>
