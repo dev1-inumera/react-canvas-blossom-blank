@@ -18,6 +18,8 @@ import Faq from "./pages/Faq";
 import Support from "./pages/Support";
 import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
+import Terms from "./pages/Terms";
+import Privacy from "./pages/Privacy";
 
 const queryClient = new QueryClient();
 
@@ -41,6 +43,8 @@ const App = () => (
             <Route path="/faq" element={<Faq />} />
             <Route path="/support" element={<Support />} />
             <Route path="/about" element={<Contact />} />
+            <Route path="/terms" element={<Terms />} />
+            <Route path="/privacy" element={<Privacy />} />
             
             {/* Redirect legacy routes to appropriate pages */}
             <Route path="/web-development" element={<Navigate to="/expertise" />} />
