@@ -1,11 +1,8 @@
-
 import React from 'react';
 import { HelpCircle, Star, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-
 const FaqSidebar: React.FC = () => {
-  return (
-    <div className="space-y-8">
+  return <div className="space-y-8">
       <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
         <h3 className="text-xl font-bold mb-4">Conseils et astuces</h3>
         <p className="text-gray-600 mb-4">
@@ -46,14 +43,10 @@ const FaqSidebar: React.FC = () => {
             <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
             <circle cx="12" cy="10" r="3"></circle>
           </svg>
-          <p className="text-blue-500 ">
-          16 Allée du maine,
-          38130 Grenoble
-          </p>
+          <p className="text-blue-500 ">131, Continental Dr, Suite 30 Newark, DE 19713,
+United States</p>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default FaqSidebar;
