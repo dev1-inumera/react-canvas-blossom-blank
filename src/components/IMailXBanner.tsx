@@ -39,28 +39,27 @@ const IMailXBanner = () => {
                 NOUVEAU
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Découvrez i-mailX : Votre solution d'emailing professionnelle
+                Découvrez i-prospect : Votre solution de boost de chiffre d'affaires
               </h2>
               <p className="text-xl text-white/90 mb-8 max-w-2xl">
-                Communiquez efficacement avec vos clients, automatisez vos campagnes et suivez vos performances en temps réel avec notre nouvelle solution d'emailing intégrée.
+                Maximisez vos revenus, convertissez plus de prospects et développez votre activité avec notre solution professionnelle complète de génération de leads et d'automatisation marketing.
               </p>
               <Link
                 to="/contact"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-red-600 hover:bg-red-700 text-white font-medium transition-all group text-lg"
               >
-                En savoir plus
+                Boostez votre activité
                 <ArrowRight size={20} className="ml-3 transition-transform group-hover:translate-x-1" />
               </Link>
             </div>
             <div className="md:w-1/3 flex justify-center">
               <div className="w-80 h-80 relative">
-                {/* Mail icon with animation */}
+                {/* Growth icon with animation */}
                 <div className="absolute inset-0 flex items-center justify-center">
                   <div className="w-40 h-40 bg-white rounded-2xl p-6 shadow-lg animate-float">
                     <div className="w-full h-full flex items-center justify-center">
                       <svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-red-600">
-                        <rect width="20" height="16" x="2" y="4" rx="2" />
-                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                        <path d="M22 12h-4l-3 9L9 3l-3 9H2" />
                       </svg>
                     </div>
                   </div>

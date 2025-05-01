@@ -1,7 +1,8 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
-import { PhoneCall, ArrowRight } from "lucide-react";
+import { Calendar, ArrowRight } from "lucide-react";
 import { cn } from "@/lib/utils";
 
 interface CallToActionProps {
@@ -66,17 +67,19 @@ const CallToAction: React.FC<CallToActionProps> = ({
               Réservez une présentation gratuite personnalisée sans engagement.
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center gap-4">
-              <Link
-                to="/contact"
+              <a
+                href="https://hubspot.com" 
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center justify-center px-6 py-3 rounded-full text-white bg-red-600 hover:bg-red-700 transition-all font-medium hover:shadow-lg group"
               >
-                <PhoneCall size={18} className="mr-2" />
-                Contactez-moi
+                <Calendar size={18} className="mr-2" />
+                Réserver un rendez-vous
                 <ArrowRight
                   size={18}
                   className="ml-2 transition-transform group-hover:translate-x-1"
                 />
-              </Link>
+              </a>
               <Link
                 to="/devis"
                 className={cn(
