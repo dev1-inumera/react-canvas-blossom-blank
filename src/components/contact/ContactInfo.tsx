@@ -42,11 +42,18 @@ const ContactInfo: React.FC = () => {
           </div>
           <div>
             <h3 className="font-medium text-lg text-darkblue-900">Téléphone</h3>
-            <p className="text-gray-600 mt-1">
-              <a href="tel:+33985404563" className="hover:text-red-600 transition-colors">
-              +33 9 85 40 45 63
-              </a>
-            </p>
+            <div className="text-gray-600 mt-1 space-y-1">
+              <p>
+                <a href="tel:+33985404563" className="hover:text-red-600 transition-colors font-medium bg-red-50 px-2 py-0.5 rounded-sm">
+                  +33 9 85 40 45 63
+                </a>
+              </p>
+              <p>
+                <a href="tel:+18338563018" className="hover:text-red-600 transition-colors font-medium bg-red-50 px-2 py-0.5 rounded-sm">
+                  +1 833 856 3018
+                </a>
+              </p>
+            </div>
           </div>
         </div>
       </div>

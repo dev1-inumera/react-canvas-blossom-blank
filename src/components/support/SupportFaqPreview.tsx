@@ -16,7 +16,7 @@ const popularFaqs = [
   },
   {
     question: "Comment contacter le service technique ?",
-    answer: "Vous pouvez contacter notre service technique par téléphone au +33 9 85 40 45 63 ou au +1 833 856 3018 (du lundi au vendredi, de 9h à 18h) ou par e-mail à support@i-numera.com. Nous répondons généralement sous 24 heures ouvrées."
+    answer: "Vous pouvez contacter notre service technique par téléphone au <span class='bg-red-50 px-2 py-0.5 rounded-sm font-medium'>+33 9 85 40 45 63</span> ou au <span class='bg-red-50 px-2 py-0.5 rounded-sm font-medium'>+1 833 856 3018</span> (du lundi au vendredi, de 9h à 18h) ou par e-mail à support@i-numera.com. Nous répondons généralement sous 24 heures ouvrées."
   },
   {
     question: "Quels sont les délais de réalisation d'un site internet ?",
@@ -37,9 +37,7 @@ const SupportFaqPreview: React.FC = () => {
               </div>
             </AccordionTrigger>
             <AccordionContent className="px-6 pb-4 pt-0 text-darkblue-700">
-              <div className="pl-9">
-                {faq.answer}
-              </div>
+              <div className="pl-9" dangerouslySetInnerHTML={{ __html: faq.answer }} />
             </AccordionContent>
           </AccordionItem>
         </Accordion>
