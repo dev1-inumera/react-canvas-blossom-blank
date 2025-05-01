@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -39,7 +40,6 @@ const Navigation = () => {
     { name: "Nos expertises", path: "/expertise" },
     { name: "Mon secteur", path: "/vous-etes" },
     { name: "Nos offres", path: "/pricing" },
-    { name: "Nos références", path: "/references" },
     { name: "Blog", path: "/blog" },
     { name: "i-numera et vous", path: "/contact" },
   ];

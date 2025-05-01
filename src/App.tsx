@@ -10,7 +10,6 @@ import Index from "./pages/Index";
 import Expertise from "./pages/Expertise";
 import Pricing from "./pages/Pricing";
 import VousEtes from "./pages/VousEtes";
-import References from "./pages/References";
 import Contact from "./pages/Contact";
 import Devis from "./pages/Devis";
 import NotFound from "./pages/NotFound";
@@ -35,7 +34,6 @@ const App = () => (
             <Route path="/expertise" element={<Expertise />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/vous-etes" element={<VousEtes />} />
-            <Route path="/references" element={<References />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/devis" element={<Devis />} />
             <Route path="/blog" element={<Blog />} />
