@@ -16,7 +16,7 @@ const popularFaqs = [
   },
   {
     question: "Comment contacter le service technique ?",
-    answer: "Vous pouvez contacter notre service technique par téléphone au 01 23 45 67 89 (du lundi au vendredi, de 9h à 18h) ou par e-mail à support@i-numera.com. Nous répondons généralement sous 24 heures ouvrées."
+    answer: "Vous pouvez contacter notre service technique par téléphone au +33 9 85 40 45 63 ou au +1 833 856 3018 (du lundi au vendredi, de 9h à 18h) ou par e-mail à support@i-numera.com. Nous répondons généralement sous 24 heures ouvrées."
   },
   {
     question: "Quels sont les délais de réalisation d'un site internet ?",
