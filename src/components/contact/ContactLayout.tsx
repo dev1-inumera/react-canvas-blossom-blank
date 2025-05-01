@@ -1,17 +1,11 @@
 
 import React from 'react';
 import BusinessInfo from './BusinessInfo';
-import ContactForm, { ContactFormValues } from './ContactForm';
+import ContactForm from './ContactForm';
 import FaqSidebar from './FaqSidebar';
 import ContactInfo from './ContactInfo';
 
-interface ContactLayoutProps {
-  onContactSubmit: (data: ContactFormValues) => void;
-}
-
-const ContactLayout: React.FC<ContactLayoutProps> = ({ 
-  onContactSubmit
-}) => {
+const ContactLayout: React.FC = () => {
   return (
     <div className="container px-4 md:px-6 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
@@ -22,7 +16,7 @@ const ContactLayout: React.FC<ContactLayoutProps> = ({
         
         {/* Main Content - Contact Form */}
         <div className="lg:col-span-1">
-          <ContactForm onSubmit={onContactSubmit} />
+          <ContactForm />
         </div>
         
         {/* Right Sidebar - FAQ and Contact Info */}

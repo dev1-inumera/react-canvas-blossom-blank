@@ -1,6 +1,9 @@
+
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { HelpCircle, Star, MessageSquare } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+
 const FaqSidebar: React.FC = () => {
   return <div className="space-y-8">
       <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -8,10 +11,12 @@ const FaqSidebar: React.FC = () => {
         <p className="text-gray-600 mb-4">
           Découvrez conseils et astuces sur notre blog accessible à tous
         </p>
-        <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-50 flex items-center justify-center">
-          <span className="mr-2">Parlez-vous digital ?</span>
-          <HelpCircle className="h-4 w-4" />
-        </Button>
+        <Link to="/blog">
+          <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-50 flex items-center justify-center">
+            <span className="mr-2">Parlez-vous digital ?</span>
+            <HelpCircle className="h-4 w-4" />
+          </Button>
+        </Link>
       </div>
       
       <div className="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
@@ -30,13 +35,14 @@ const FaqSidebar: React.FC = () => {
         <p className="text-gray-600 mb-4">
           Retrouvez les réponses aux questions les plus fréquentes sur la page FAQ
         </p>
-        <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-50 flex items-center justify-center">
-          <MessageSquare className="h-4 w-4 mr-2" />
-          Questions fréquentes
-        </Button>
+        <Link to="/faq">
+          <Button variant="outline" className="w-full border-blue-500 text-blue-500 hover:bg-blue-50 flex items-center justify-center">
+            <MessageSquare className="h-4 w-4 mr-2" />
+            Questions fréquentes
+          </Button>
+        </Link>
       </div>
-      
-      
     </div>;
 };
+
 export default FaqSidebar;

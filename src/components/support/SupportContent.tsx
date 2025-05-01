@@ -1,5 +1,6 @@
 
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { MessageCircle, Phone, Mail, FileQuestion, Search, ArrowRight, Clock, Headphones } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -7,6 +8,16 @@ import SupportChannelCard from './SupportChannelCard';
 import SupportFaqPreview from './SupportFaqPreview';
 
 const SupportContent: React.FC = () => {
+  const [searchQuery, setSearchQuery] = useState('');
+  const navigate = useNavigate();
+
+  const handleSearch = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (searchQuery.trim()) {
+      navigate(`/faq?search=${encodeURIComponent(searchQuery)}`);
+    }
+  };
+
   return (
     <div className="container px-4 md:px-6 py-12">
       {/* Introduction */}
@@ -140,22 +151,6 @@ const SupportContent: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
         <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
           <div className="flex items-start gap-4">
-            <div className="bg-green-50 rounded-full p-3 flex-shrink-0">
-              <FileQuestion size={24} className="text-green-600" />
-            </div>
-            <div>
-              <h3 className="text-xl font-bold text-darkblue-900 mb-2">Documentation</h3>
-              <p className="text-darkblue-700 mb-4">
-                Consultez notre base de connaissances pour trouver des guides et tutoriels détaillés.
-              </p>
-              <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50">
-                Accéder à la documentation
-              </Button>
-            </div>
-          </div>
-        </div>
-        <div className="bg-white p-8 rounded-xl shadow-sm border border-gray-100">
-          <div className="flex items-start gap-4">
             <div className="bg-purple-50 rounded-full p-3 flex-shrink-0">
               <Search size={24} className="text-purple-600" />
             </div>
@@ -164,14 +159,18 @@ const SupportContent: React.FC = () => {
               <p className="text-darkblue-700 mb-4">
                 Vous ne trouvez pas ce que vous cherchez ? Essayez notre outil de recherche.
               </p>
-              <div className="relative">
+              <form onSubmit={handleSearch} className="relative">
                 <input
                   type="text"
                   placeholder="Rechercher..."
+                  value={searchQuery}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full px-4 py-2 pr-10 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
                 />
-                <Search size={18} className="absolute right-3 top-2.5 text-gray-400" />
-              </div>
+                <button type="submit" className="absolute right-3 top-2.5 text-gray-400">
+                  <Search size={18} />
+                </button>
+              </form>
             </div>
           </div>
         </div>
