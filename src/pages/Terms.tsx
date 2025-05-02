@@ -103,16 +103,7 @@ const Terms = () => {
                         </CollapsibleContent>
                       </Collapsible>
 
-                      <Collapsible className="w-full bg-white border rounded-lg overflow-hidden">
-                        <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left bg-indigo-50/50 hover:bg-indigo-50">
-                          <span className="font-medium">Hébergement du site</span>
-                          <ArrowRight className="h-4 w-4 transform transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="p-4">
-                          <p>OVH SAS</p>
-                          <p>2 rue Kellermann - 59100 Roubaix - France</p>
-                        </CollapsibleContent>
-                      </Collapsible>
+                      
                     </div>
                   </CardContent>
                 </Card>
