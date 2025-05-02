@@ -92,16 +92,7 @@ const Terms = () => {
                         </div>
                       </div>
 
-                      <Collapsible className="w-full bg-white border rounded-lg overflow-hidden">
-                        <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left bg-indigo-50/50 hover:bg-indigo-50">
-                          <span className="font-medium">Directeur de la publication</span>
-                          <ArrowRight className="h-4 w-4 transform transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="p-4">
-                          <p>Ismaela Nafthaly RAJEMISON, Directeur Général</p>
-                          <p className="mt-2">Contact : direction@i-numera.com</p>
-                        </CollapsibleContent>
-                      </Collapsible>
+                      
 
                       
                     </div>
