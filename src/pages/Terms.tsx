@@ -6,40 +6,41 @@ import Footer from '@/components/Footer';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-
 const Terms = () => {
   const fadeInUp = {
-    initial: { opacity: 0, y: 20 },
-    animate: { opacity: 1, y: 0 },
-    transition: { duration: 0.5 }
+    initial: {
+      opacity: 0,
+      y: 20
+    },
+    animate: {
+      opacity: 1,
+      y: 0
+    },
+    transition: {
+      duration: 0.5
+    }
   };
-
   const pageVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1, transition: { staggerChildren: 0.1, delayChildren: 0.3 } },
+    initial: {
+      opacity: 0
+    },
+    animate: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.3
+      }
+    }
   };
-
-  return (
-    <>
+  return <>
       <Navigation />
       <div className="pt-24 pb-16 bg-gradient-to-b from-indigo-50/70 to-white">
-        <motion.div 
-          className="container px-4 md:px-6"
-          variants={pageVariants}
-          initial="initial"
-          animate="animate"
-        >
-          <motion.h1 
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-darkblue-800 mb-4"
-            variants={fadeInUp}
-          >
+        <motion.div className="container px-4 md:px-6" variants={pageVariants} initial="initial" animate="animate">
+          <motion.h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-darkblue-800 mb-4" variants={fadeInUp}>
             Mentions légales
           </motion.h1>
           
-          <motion.p 
-            className="text-lg text-darkblue-600 max-w-3xl mb-8"
-            variants={fadeInUp}
-          >
+          <motion.p className="text-lg text-darkblue-600 max-w-3xl mb-8" variants={fadeInUp}>
             Toutes les informations légales concernant i-numera, conformément à la législation française et européenne.
           </motion.p>
 
@@ -63,10 +64,7 @@ const Terms = () => {
               </TabsTrigger>
             </TabsList>
 
-            <motion.div
-              variants={fadeInUp}
-              className="space-y-8"
-            >
+            <motion.div variants={fadeInUp} className="space-y-8">
               <TabsContent value="company" className="space-y-6">
                 <Card className="transition-shadow hover:shadow-md">
                   <CardHeader className="bg-indigo-50/50">
@@ -89,8 +87,8 @@ const Terms = () => {
                           <p>131, Continental Dr, Suite 305, Newark, DE 19713, United States</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h3 className="font-medium text-darkblue-700 mb-2">SIRET</h3>
-                          <p>123 456 789 00012</p>
+                          <h3 className="font-medium text-darkblue-700 mb-2">EIN (équivalent du SIRET)</h3>
+                          <p>37-2178514</p>
                         </div>
                       </div>
 
@@ -255,10 +253,7 @@ const Terms = () => {
             <p className="text-darkblue-600 mb-8">
               Notre équipe juridique est à votre disposition pour répondre à toutes vos questions concernant nos mentions légales ou notre politique de confidentialité.
             </p>
-            <a 
-              href="/contact" 
-              className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-white hover:bg-indigo-700 transition-colors"
-            >
+            <a href="/contact" className="inline-flex items-center justify-center rounded-md bg-indigo-600 px-6 py-3 text-white hover:bg-indigo-700 transition-colors">
               Contactez-nous
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
@@ -267,8 +262,6 @@ const Terms = () => {
       </div>
 
       <Footer />
-    </>
-  );
+    </>;
 };
-
 export default Terms;
