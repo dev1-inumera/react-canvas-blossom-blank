@@ -20,4 +20,29 @@ export interface PartnerLogo {
 
 export const referenceCategories: ReferenceCategory[] = [];
 export const referenceData: Reference[] = [];
-export const partnerLogos: PartnerLogo[] = [];
+export const partnerLogos: PartnerLogo[] = [
+  {
+    name: "Google",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Google_2015_logo.svg/2560px-Google_2015_logo.svg.png"
+  },
+  {
+    name: "Hubspot",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/HubSpot_Logo.svg/2560px-HubSpot_Logo.svg.png"
+  },
+  {
+    name: "Zapier",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zapier_logo.svg/2560px-Zapier_logo.svg.png"
+  },
+  {
+    name: "Slack",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/2560px-Slack_Technologies_Logo.svg.png"
+  },
+  {
+    name: "Salesforce",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
+  },
+  {
+    name: "Notion",
+    image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
+  }
+];

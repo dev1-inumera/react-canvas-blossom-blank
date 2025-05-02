@@ -6,6 +6,9 @@ import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { ArrowRight, Check, PieChart, Mail, Calendar, Users } from "lucide-react";
+import { partnerLogos } from "@/data/referenceData";
+import { iProspectFaqCategories } from "@/data/iProspectFaq";
+import FaqCategoryAccordion from "@/components/faq/FaqCategoryAccordion";
 
 const IProspect = () => {
   return (
@@ -81,10 +84,14 @@ const IProspect = () => {
               <h3 className="text-lg font-medium text-gray-700">Ils font confiance à i-prospect</h3>
             </div>
             <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-              {['Google', 'Hubspot', 'Zapier', 'Slack', 'Salesforce', 'Notion'].map((logo, index) => (
+              {partnerLogos.map((logo, index) => (
                 <div key={index} className="grayscale opacity-70 hover:opacity-100 transition-opacity">
-                  <div className="h-8 flex items-center">
-                    <span className="text-gray-400 font-medium">{logo}</span>
+                  <div className="h-10 flex items-center">
+                    <img 
+                      src={logo.image} 
+                      alt={logo.name} 
+                      className="max-h-8 max-w-[120px] object-contain" 
+                    />
                   </div>
                 </div>
               ))}
@@ -410,6 +417,26 @@ const IProspect = () => {
                     <p className="text-gray-700 flex-grow">{item.description}</p>
                   </CardContent>
                 </Card>
+              ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* FAQ Section */}
+        <section className="py-16 md:py-24">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
+                Questions fréquentes sur <span className="text-red-600">i-prospect</span>
+              </h2>
+              <p className="max-w-3xl mx-auto text-lg text-gray-700">
+                Découvrez comment notre solution peut s'adapter à vos besoins spécifiques
+              </p>
+            </div>
+            
+            <div className="max-w-4xl mx-auto grid grid-cols-1 gap-6">
+              {iProspectFaqCategories.map((category, index) => (
+                <FaqCategoryAccordion key={index} category={category} />
               ))}
             </div>
           </div>
