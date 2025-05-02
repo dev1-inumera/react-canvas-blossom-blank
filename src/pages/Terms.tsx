@@ -76,7 +76,7 @@ const Terms = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-medium text-darkblue-700 mb-2">Dénomination</h3>
-                          <p>i-numera</p>
+                          <p>i-numera corporation</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-medium text-darkblue-700 mb-2">Forme juridique</h3>
