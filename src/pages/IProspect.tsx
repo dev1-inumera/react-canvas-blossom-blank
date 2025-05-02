@@ -251,7 +251,7 @@ const IProspect = () => {
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Jusqu'à 1500 e-mails ciblés/mois</span>
+                      <span className="text-gray-700">Jusqu'à 1000 e-mails ciblés/mois</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -263,7 +263,7 @@ const IProspect = () => {
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">3 rendez-vous garantis/mois</span>
+                      <span className="text-gray-700">3 résultats garantis/mois</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -297,7 +297,7 @@ const IProspect = () => {
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Jusqu'à 3000 e-mails/mois</span>
+                      <span className="text-gray-700">Jusqu'à 1500 e-mails/mois</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -309,7 +309,7 @@ const IProspect = () => {
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">5 RDV qualifiés garantis</span>
+                      <span className="text-gray-700">5 résultats garantis</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
