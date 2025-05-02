@@ -45,7 +45,7 @@ const IMailXBanner = () => {
                 Maximisez vos revenus, convertissez plus de prospects et développez votre activité avec notre solution professionnelle complète de génération de leads et d'automatisation marketing.
               </p>
               <Link
-                to="/contact"
+                to="/i-prospect"
                 className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-red-600 hover:bg-red-700 text-white font-medium transition-all group text-lg"
               >
                 Boostez votre activité
