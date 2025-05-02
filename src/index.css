@@ -109,11 +109,29 @@
     display: flex;
     width: max-content;
   }
+  
+  /* Optimized animation keyframes */
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-fade-in {
+    animation: fade-in 0.5s ease-out forwards;
+    will-change: opacity, transform;
+  }
 }
 
 /* Custom styles */
 .hover-lift {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  will-change: transform, box-shadow;
 }
 
 .hover-lift:hover {
@@ -123,6 +141,7 @@
 
 .hover-slide-right {
   transition: transform 0.3s ease;
+  will-change: transform;
 }
 
 .hover-slide-right:hover {
@@ -149,4 +168,16 @@
   opacity: 0;
   transform: translateY(-20px);
   transition: opacity 400ms, transform 400ms;
+}
+
+/* Add will-change hints for browser optimization */
+img {
+  will-change: transform;
+}
+
+.transition-all, 
+.transition-colors, 
+.transition-opacity, 
+.transition-transform {
+  will-change: auto;
 }

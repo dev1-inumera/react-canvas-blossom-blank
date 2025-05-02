@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { memo } from "react";
 
 const HeroLogoSection: React.FC = () => {
   return (
@@ -13,19 +13,21 @@ const HeroLogoSection: React.FC = () => {
             <img
               src="/lovable-uploads/b3c33571-dd4d-4269-a516-f847893fdd7f.png"
               alt="i-numera logo"
-              className="w-[1500px] max-w-[95%] h-auto transform scale-110"
+              className="w-auto max-w-[95%] h-auto"
               loading="eager"
               decoding="async"
               fetchPriority="high"
+              width="1500"
+              height="600"
             />
           </div>
         </div>
       </div>
-      {/* Decorative Elements */}
-      <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-500 rounded-full blur-2xl opacity-20"></div>
-      <div className="absolute -top-8 -right-8 w-20 h-20 bg-darkblue-500 rounded-full blur-3xl opacity-20"></div>
+      {/* Simplified decorative elements with less blur */}
+      <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-500 rounded-full blur-xl opacity-20"></div>
+      <div className="absolute -top-8 -right-8 w-20 h-20 bg-darkblue-500 rounded-full blur-xl opacity-20"></div>
     </div>
   );
 };
 
-export default HeroLogoSection;
+export default memo(HeroLogoSection);

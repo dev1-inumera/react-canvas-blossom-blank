@@ -120,7 +120,7 @@ RewriteRule ^quote/?$ /devis [R=301,L]
   Header set X-Frame-Options "SAMEORIGIN"
 
   # Add security policies
-  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.gpteng.co; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com; connect-src 'self' https://www.google-analytics.com; font-src 'self'; object-src 'none'; media-src 'self'; frame-src 'self';"
+  Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.google-analytics.com https://www.googletagmanager.com https://cdn.gpteng.co; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://www.google-analytics.com https://images.unsplash.com; connect-src 'self' https://www.google-analytics.com; font-src 'self'; object-src 'none'; media-src 'self'; frame-src 'self';"
 
   # Only send Referer header to same origin
   Header set Referrer-Policy "same-origin"

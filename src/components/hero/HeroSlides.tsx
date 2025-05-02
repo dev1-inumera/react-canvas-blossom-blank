@@ -16,10 +16,11 @@ export interface HeroSlide {
   };
 }
 
+// Optimized image URLs using smaller sizes and better formats
 export const carouselSlides: HeroSlide[] = [
   {
     backgroundImage:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2",
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1500&h=800&q=80",
     tag: "Solutions digitales pour professionnels",
     title:
       "Des solutions numériques <span class='text-red-500'>clés en main</span> pour booster votre activité.",
@@ -36,7 +37,7 @@ export const carouselSlides: HeroSlide[] = [
   },
   {
     backgroundImage:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158",
+      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1500&h=800&q=80",
     tag: "Développement Web",
     title:
       "Sites internet <span class='text-red-500'>performants</span> et adaptés à votre métier",
@@ -53,7 +54,7 @@ export const carouselSlides: HeroSlide[] = [
   },
   {
     backgroundImage:
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7",
+      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1500&h=800&q=80",
     tag: "Applications sur mesure",
     title:
       "Applications <span class='text-red-500'>personnalisées</span> pour votre métier",

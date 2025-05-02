@@ -1,5 +1,5 @@
 
-import React from "react";
+import React, { memo } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 import { ScrollArea } from "@/components/ui/scroll-area";
@@ -74,4 +74,4 @@ const HeroContent: React.FC<HeroContentProps> = ({ currentSlide, slides }) => {
   );
 };
 
-export default HeroContent;
+export default memo(HeroContent);
