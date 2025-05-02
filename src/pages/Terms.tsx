@@ -98,7 +98,7 @@ const Terms = () => {
                           <ArrowRight className="h-4 w-4 transform transition-transform duration-200 group-data-[state=open]:rotate-90" />
                         </CollapsibleTrigger>
                         <CollapsibleContent className="p-4">
-                          <p>Emmanuel Dupont, Directeur Général</p>
+                          <p>Ismaela Nafthaly RAJEMISON, Directeur Général</p>
                           <p className="mt-2">Contact : direction@i-numera.com</p>
                         </CollapsibleContent>
                       </Collapsible>
