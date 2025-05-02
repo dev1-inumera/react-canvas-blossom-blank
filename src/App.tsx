@@ -20,7 +20,6 @@ import Blog from "./pages/Blog";
 import BlogDetail from "./pages/BlogDetail";
 import Terms from "./pages/Terms";
 import Privacy from "./pages/Privacy";
-import IProspect from "./pages/IProspect";
 
 // ScrollToTop component to handle scroll position on navigation
 const ScrollToTop = () => {
@@ -57,7 +56,6 @@ const App = () => (
             <Route path="/about" element={<Contact />} />
             <Route path="/terms" element={<Terms />} />
             <Route path="/privacy" element={<Privacy />} />
-            <Route path="/i-prospect" element={<IProspect />} />
             
             {/* Redirect legacy routes to appropriate pages */}
             <Route path="/web-development" element={<Navigate to="/expertise" />} />
