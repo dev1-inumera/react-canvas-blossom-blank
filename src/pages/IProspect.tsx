@@ -1,11 +1,10 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Check, PieChart, Mail, Calendar, Users } from "lucide-react";
+import { ArrowRight, Check, PieChart, Mail, Calendar, Users, Video, FileSearch, Signature } from "lucide-react";
 import { partnerLogos } from "@/data/referenceData";
 import { iProspectFaqCategories } from "@/data/iProspectFaq";
 import FaqCategoryAccordion from "@/components/faq/FaqCategoryAccordion";
@@ -426,6 +425,137 @@ const IProspect = () => {
                   </CardContent>
                 </Card>
               ))}
+            </div>
+          </div>
+        </section>
+        
+        {/* Steps Section */}
+        <section className="py-16 md:py-24 bg-gray-50">
+          <div className="container mx-auto px-4">
+            <div className="text-center mb-16">
+              <span className="text-red-600 font-medium text-sm uppercase tracking-wider">Comment ça marche</span>
+              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mt-2 mb-4">
+                Les étapes <span className="text-red-600">i-prospect</span>
+              </h2>
+              <p className="max-w-3xl mx-auto text-lg text-gray-700">
+                Notre processus simplifié pour vous accompagner vers le succès commercial
+              </p>
+            </div>
+
+            <div className="max-w-6xl mx-auto">
+              {/* Step 1 */}
+              <div className="flex flex-col md:flex-row items-center mb-20 relative">
+                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
+                  <div className="flex items-start space-x-5">
+                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                      <Calendar size={28} />
+                    </div>
+                    <div>
+                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 1</div>
+                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Prendre Rendez-Vous</h3>
+                      <p className="text-gray-700">
+                        Planifiez un rendez-vous avec l'un de nos experts i-prospect. Nous évaluerons vos besoins spécifiques et établirons un plan d'action personnalisé pour votre entreprise. Nous vous recommandons les meilleures stratégies de prospection adaptées à votre secteur.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 relative">
+                  <div className="bg-white p-6 rounded-xl shadow-md">
+                    <img 
+                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      alt="Calendrier de rendez-vous" 
+                      className="w-full h-auto rounded-lg" 
+                    />
+                  </div>
+                </div>
+                {/* Connecting line */}
+                <div className="hidden md:block absolute left-1/2 top-full h-16 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+              </div>
+
+              {/* Step 2 */}
+              <div className="flex flex-col md:flex-row-reverse items-center mb-20 relative">
+                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8 relative z-10">
+                  <div className="flex items-start space-x-5">
+                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                      <Video size={28} />
+                    </div>
+                    <div>
+                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 2</div>
+                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Démo</h3>
+                      <p className="text-gray-700">
+                        Assistez à une démonstration personnalisée de notre solution i-prospect. Découvrez comment notre plateforme peut automatiser votre prospection, générer des leads qualifiés et optimiser votre processus de vente. Posez toutes vos questions à notre équipe d'experts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 relative">
+                  <div className="bg-white p-6 rounded-xl shadow-md">
+                    <img 
+                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      alt="Démonstration de la plateforme" 
+                      className="w-full h-auto rounded-lg" 
+                    />
+                  </div>
+                </div>
+                {/* Connecting line */}
+                <div className="hidden md:block absolute left-1/2 top-full h-16 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+              </div>
+
+              {/* Step 3 */}
+              <div className="flex flex-col md:flex-row items-center mb-20 relative">
+                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
+                  <div className="flex items-start space-x-5">
+                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                      <FileSearch size={28} />
+                    </div>
+                    <div>
+                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 3</div>
+                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Étude du marché</h3>
+                      <p className="text-gray-700">
+                        Nous analysons votre marché cible et identifions les meilleurs prospects pour votre entreprise. Notre équipe élabore une stratégie de prospection sur mesure, en tenant compte de votre secteur d'activité, de votre positionnement et de vos objectifs commerciaux.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 relative">
+                  <div className="bg-white p-6 rounded-xl shadow-md">
+                    <img 
+                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      alt="Analyse de marché" 
+                      className="w-full h-auto rounded-lg" 
+                    />
+                  </div>
+                </div>
+                {/* Connecting line */}
+                <div className="hidden md:block absolute left-1/2 top-full h-16 w-0.5 bg-gray-200 -translate-x-1/2"></div>
+              </div>
+
+              {/* Step 4 */}
+              <div className="flex flex-col md:flex-row-reverse items-center relative">
+                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8 relative z-10">
+                  <div className="flex items-start space-x-5">
+                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
+                      <Signature size={28} />
+                    </div>
+                    <div>
+                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 4</div>
+                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Signature</h3>
+                      <p className="text-gray-700">
+                        Une fois que vous êtes convaincu par notre approche, nous finalisons le contrat et mettons en place votre solution i-prospect. Notre équipe vous accompagne tout au long du processus d'intégration et reste disponible pour répondre à vos questions et optimiser vos résultats.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 relative">
+                  <div className="bg-white p-6 rounded-xl shadow-md">
+                    <img 
+                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      alt="Signature du contrat" 
+                      className="w-full h-auto rounded-lg" 
+                    />
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
