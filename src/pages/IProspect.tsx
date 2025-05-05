@@ -1,3 +1,4 @@
+
 import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -462,7 +463,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg-white p-6 rounded-xl shadow-md">
                     <img 
-                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      src="/public/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" 
                       alt="Calendrier de rendez-vous" 
                       className="w-full h-auto rounded-lg" 
                     />
@@ -491,7 +492,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg-white p-6 rounded-xl shadow-md">
                     <img 
-                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      src="/public/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png" 
                       alt="Démonstration de la plateforme" 
                       className="w-full h-auto rounded-lg" 
                     />
@@ -520,7 +521,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg-white p-6 rounded-xl shadow-md">
                     <img 
-                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      src="/public/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png" 
                       alt="Analyse de marché" 
                       className="w-full h-auto rounded-lg" 
                     />
@@ -549,7 +550,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg-white p-6 rounded-xl shadow-md">
                     <img 
-                      src="/public/lovable-uploads/bca11035-d2e4-4559-9335-9bd9e0a1f680.png" 
+                      src="/public/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" 
                       alt="Signature du contrat" 
                       className="w-full h-auto rounded-lg" 
                     />
