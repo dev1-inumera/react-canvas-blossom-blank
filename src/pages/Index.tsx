@@ -8,6 +8,7 @@ import Packages from "@/components/Packages";
 import CallToAction from "@/components/CallToAction";
 import Footer from "@/components/Footer";
 import IMailXBanner from "@/components/IMailXBanner";
+import BusinessBanner from "@/components/BusinessBanner";
 import { useLocation } from "react-router-dom";
 
 const Index = () => {
@@ -38,9 +39,10 @@ const Index = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          {/* Overlay with blur */}
+          {/* Add the new banner before Testimonials */}
           <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
           <div className="relative z-10">
+            <BusinessBanner />
             <Testimonials />
             <CallToAction />
           </div>
