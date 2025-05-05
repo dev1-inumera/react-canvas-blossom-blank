@@ -23,7 +23,10 @@ const Index = () => {
       <main className="flex-grow">
         <Hero />
         <Services />
-        <IMailXBanner />
+        {/* IMailXBanner component is now directly in the main flow without overlay */}
+        <div className="py-12 bg-gray-50">
+          <IMailXBanner />
+        </div>
         <Packages />
         <div
           className="relative bg-gray-100 py-8"
