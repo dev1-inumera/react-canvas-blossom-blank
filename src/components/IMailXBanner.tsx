@@ -47,9 +47,9 @@ const IMailXBanner = () => {
               </Link>
             </div>
             <div className="md:w-1/2 flex justify-center">
-              {/* New image */}
+              {/* Updated image */}
               <img 
-                src="/lovable-uploads/0d5b6473-7f50-499c-b2ad-2ebefb601e49.png" 
+                src="/lovable-uploads/9db84c2d-488c-4595-bb2a-3cf9cccd7afd.png" 
                 alt="Analyse de performance commerciale" 
                 className="w-full max-w-md h-auto object-contain animate-float"
               />
