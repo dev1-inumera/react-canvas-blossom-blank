@@ -20,16 +20,16 @@ const BusinessBanner = () => {
       )}
     >
       <div className="relative">
-        {/* Gradient background */}
+        {/* Updated gradient background with different colors */}
         <div 
-          className="absolute inset-0 bg-gradient-to-r from-darkblue-600 to-darkblue-800 z-10"
+          className="absolute inset-0 bg-gradient-to-r from-purple-700 to-indigo-800 z-10"
         />
         
         {/* Content */}
         <div className="relative z-20 px-6 py-16 md:px-16 md:py-20 text-white">
           <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
             <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-              <span className="inline-block px-4 py-1 rounded-full bg-red-600 text-white text-xs font-medium mb-6">
+              <span className="inline-block px-4 py-1 rounded-full bg-orange-500 text-white text-xs font-medium mb-6">
                 OPPORTUNITÉ
               </span>
               <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
@@ -40,7 +40,7 @@ const BusinessBanner = () => {
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-red-600 hover:bg-red-700 text-white font-medium transition-all group text-lg"
+                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-orange-500 hover:bg-orange-600 text-white font-medium transition-all group text-lg"
               >
                 Commencer l'aventure
                 <ArrowRight size={20} className="ml-3 transition-transform group-hover:translate-x-1" />

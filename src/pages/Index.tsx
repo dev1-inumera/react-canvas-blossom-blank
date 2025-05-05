@@ -28,6 +28,10 @@ const Index = () => {
         <div className="py-12 bg-gray-50">
           <IMailXBanner />
         </div>
+        {/* BusinessBanner now appears after IMailXBanner */}
+        <div className="py-12 bg-gray-100">
+          <BusinessBanner />
+        </div>
         <Packages />
         <div
           className="relative bg-gray-100 py-8"
@@ -39,10 +43,9 @@ const Index = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          {/* Add the new banner before Testimonials */}
+          {/* BusinessBanner was removed from here */}
           <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
           <div className="relative z-10">
-            <BusinessBanner />
             <Testimonials />
             <CallToAction />
           </div>
