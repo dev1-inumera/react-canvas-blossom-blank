@@ -41,7 +41,7 @@ const Navigation = () => {
     { name: "Mon secteur", path: "/vous-etes" },
     { name: "Nos offres", path: "/pricing" },
     { name: "Blog", path: "/blog" },
-    { name: "i-numera et vous", path: "/contact" },
+    { name: "i-numera et vous", path: "/registration" },
   ];
 
   // Check if we're on a page with dark header

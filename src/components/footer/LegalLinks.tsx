@@ -10,13 +10,13 @@ const LegalLinks: React.FC = () => {
         to="/terms" 
         className="hover:text-darkblue-900 transition-colors"
       >
-        Terms of Service
+        Mentions légales
       </Link>
       <Link 
         to="/privacy" 
         className="hover:text-darkblue-900 transition-colors"
       >
-        Privacy Policy
+        Politique de confidentialité
       </Link>
       <CookieManager />
     </div>

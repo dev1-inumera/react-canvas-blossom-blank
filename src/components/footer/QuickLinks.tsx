@@ -1,6 +1,8 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+
 const QuickLinks: React.FC = () => {
   return <div>
       <h3 className="text-lg font-semibold mb-4 text-darkblue-900">Liens rapides</h3>
@@ -24,10 +26,7 @@ const QuickLinks: React.FC = () => {
           </Link>
         </li>
         <li>
-          
-        </li>
-        <li>
-          <Link to="/about" className="text-darkblue-700 hover:text-darkblue-900 transition-colors hover-slide-right inline-flex items-center group">
+          <Link to="/registration" className="text-darkblue-700 hover:text-darkblue-900 transition-colors hover-slide-right inline-flex items-center group">
             <ArrowRight size={14} className="mr-2 transition-transform group-hover:translate-x-1" />
             i-numera et vous
           </Link>
@@ -35,4 +34,5 @@ const QuickLinks: React.FC = () => {
       </ul>
     </div>;
 };
+
 export default QuickLinks;
