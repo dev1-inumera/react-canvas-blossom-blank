@@ -77,7 +77,7 @@ const RegistrationForm = () => {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': 'fNZWWd5fpywjrsTEBhZchidNyKbJfAx59sNqTkCmeA3Rnre9KKRA4VM4VxRaO4Y+3lF8mtY/G5rOor3AOs4VqA=='
+          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndwcmxrcGx6bGh5cnBoYmNhYWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDU2MTA5MjQsImV4cCI6MjA2MTE4NjkyNH0.BkmefUSRt048r0o8h4US_4ZUrEicJ2iDm94FTfPi7MQ'
         },
         body: JSON.stringify(payload)
       });
