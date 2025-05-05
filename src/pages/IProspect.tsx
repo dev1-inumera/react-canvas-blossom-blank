@@ -432,7 +432,7 @@ const IProspect = () => {
         
         {/* Steps Section */}
         <section className="py-16 md:py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
+          <div className="  ">
             <div className="text-center mb-16">
               <span className="text-red-600 font-medium text-sm uppercase tracking-wider">Comment ça marche</span>
               <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mt-2 mb-4">
@@ -443,7 +443,7 @@ const IProspect = () => {
               </p>
             </div>
 
-            <div className="max-w-6xl mx-auto">
+            <div className="max-w-[75%] mx-auto">
               {/* Step 1 */}
               <div className="flex flex-col md:flex-row items-center mb-20 relative">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
@@ -461,16 +461,15 @@ const IProspect = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 relative">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="bg justify-items-center p-6 rounded-xl">
                     <img 
-                      src="/public/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" 
+                      src="/public/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" 
                       alt="Calendrier de rendez-vous" 
-                      className="w-full h-auto rounded-lg" 
+                      className="w-[50%] h-auto  rounded-lg" 
                     />
                   </div>
                 </div>
                 {/* Connecting line */}
-                <div className="hidden md:block absolute left-1/2 top-full h-16 w-0.5 bg-gray-200 -translate-x-1/2"></div>
               </div>
 
               {/* Step 2 */}
@@ -490,16 +489,15 @@ const IProspect = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 relative">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="bg justify-items-center p-6 rounded-xl ">
                     <img 
                       src="/public/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png" 
                       alt="Démonstration de la plateforme" 
-                      className="w-full h-auto rounded-lg" 
+                      className="w-[50%] h-auto rounded-lg" 
                     />
                   </div>
                 </div>
                 {/* Connecting line */}
-                <div className="hidden md:block absolute left-1/2 top-full h-16 w-0.5 bg-gray-200 -translate-x-1/2"></div>
               </div>
 
               {/* Step 3 */}
@@ -519,16 +517,15 @@ const IProspect = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 relative">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="bg justify-items-center p-6 rounded-xl">
                     <img 
                       src="/public/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png" 
                       alt="Analyse de marché" 
-                      className="w-full h-auto rounded-lg" 
+                      className="w-[50%] h-auto rounded-lg" 
                     />
                   </div>
                 </div>
                 {/* Connecting line */}
-                <div className="hidden md:block absolute left-1/2 top-full h-16 w-0.5 bg-gray-200 -translate-x-1/2"></div>
               </div>
 
               {/* Step 4 */}
@@ -548,11 +545,11 @@ const IProspect = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 relative">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
+                  <div className="bg justify-items-center p-6 rounded-xl">
                     <img 
-                      src="/public/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" 
+                      src="/public/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" 
                       alt="Signature du contrat" 
-                      className="w-full h-auto rounded-lg" 
+                      className="w-[50%] h-auto rounded-lg" 
                     />
                   </div>
                 </div>
