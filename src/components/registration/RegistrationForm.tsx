@@ -72,12 +72,12 @@ const RegistrationForm = () => {
         code_challenge_method: null
       };
 
-      // Make API call to Supabase
+      // Make API call to Supabase with the updated API key
       const response = await fetch('https://wprlkplzlhyrphbcaalc.supabase.co/auth/v1/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'apikey': 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndwcmxrcGx6bGh5cnBoYmNhYWxjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MzQ3NTQyNDYsImV4cCI6MjA1MDMzMDI0Nn0.pxl4k-GrFyTBzJmo_NfD1ai-FDWlzO4-hQ2PJJkbBqI'
+          'apikey': 'fNZWWd5fpywjrsTEBhZchidNyKbJfAx59sNqTkCmeA3Rnre9KKRA4VM4VxRaO4Y+3lF8mtY/G5rOor3AOs4VqA=='
         },
         body: JSON.stringify(payload)
       });
