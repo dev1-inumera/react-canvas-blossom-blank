@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, ShieldCheck, FileText, Users, CircleHelp, Link } from 'lucide-react';
@@ -78,7 +79,7 @@ const Terms = () => {
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-medium text-darkblue-700 mb-2">Dénomination</h3>
-                          <p>i-numera</p>
+                          <p>i-numera corporation</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
                           <h3 className="font-medium text-darkblue-700 mb-2">Forme juridique</h3>
@@ -89,32 +90,10 @@ const Terms = () => {
                           <p>131, Continental Dr, Suite 305, Newark, DE 19713, United States</p>
                         </div>
                         <div className="p-4 bg-gray-50 rounded-lg">
-                          <h3 className="font-medium text-darkblue-700 mb-2">SIRET</h3>
-                          <p>123 456 789 00012</p>
+                          <h3 className="font-medium text-darkblue-700 mb-2">EIN (équivalent du SIRET)</h3>
+                          <p>37-2178514</p>
                         </div>
                       </div>
-
-                      <Collapsible className="w-full bg-white border rounded-lg overflow-hidden">
-                        <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left bg-indigo-50/50 hover:bg-indigo-50">
-                          <span className="font-medium">Directeur de la publication</span>
-                          <ArrowRight className="h-4 w-4 transform transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="p-4">
-                          <p>Emmanuel Dupont, Directeur Général</p>
-                          <p className="mt-2">Contact : direction@i-numera.com</p>
-                        </CollapsibleContent>
-                      </Collapsible>
-
-                      <Collapsible className="w-full bg-white border rounded-lg overflow-hidden">
-                        <CollapsibleTrigger className="flex justify-between items-center w-full p-4 text-left bg-indigo-50/50 hover:bg-indigo-50">
-                          <span className="font-medium">Hébergement du site</span>
-                          <ArrowRight className="h-4 w-4 transform transition-transform duration-200 group-data-[state=open]:rotate-90" />
-                        </CollapsibleTrigger>
-                        <CollapsibleContent className="p-4">
-                          <p>OVH SAS</p>
-                          <p>2 rue Kellermann - 59100 Roubaix - France</p>
-                        </CollapsibleContent>
-                      </Collapsible>
                     </div>
                   </CardContent>
                 </Card>
@@ -225,7 +204,7 @@ const Terms = () => {
                           <ArrowRight className="h-4 w-4 transform transition-transform duration-200 group-data-[state=open]:rotate-90" />
                         </CollapsibleTrigger>
                         <CollapsibleContent className="p-4">
-                          <p>Les présentes mentions légales sont soumises au droit français. En cas de litige, les tribunaux français seront seuls compétents.</p>
+                          <p>Les présentes mentions légales sont soumises au droit américain. En cas de litige, les tribunaux américains seront seuls compétents.</p>
                         </CollapsibleContent>
                       </Collapsible>
 
