@@ -113,15 +113,19 @@ const RegistrationForm = () => {
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div className="grid grid-cols-1 gap-4">
           <FormField
             control={form.control}
             name="fullName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nom complet</FormLabel>
+                <FormLabel className="text-darkblue-800">Nom complet</FormLabel>
                 <FormControl>
-                  <Input placeholder="John Doe" {...field} />
+                  <Input 
+                    placeholder="John Doe" 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -133,9 +137,13 @@ const RegistrationForm = () => {
             name="companyName"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Nom de la société</FormLabel>
+                <FormLabel className="text-darkblue-800">Nom de la société</FormLabel>
                 <FormControl>
-                  <Input placeholder="Votre entreprise" {...field} />
+                  <Input 
+                    placeholder="Votre entreprise" 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -147,9 +155,13 @@ const RegistrationForm = () => {
             name="companyAddress"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Adresse de la société</FormLabel>
+                <FormLabel className="text-darkblue-800">Adresse de la société</FormLabel>
                 <FormControl>
-                  <Input placeholder="123 Rue Exemple, 75000 Paris" {...field} />
+                  <Input 
+                    placeholder="123 Rue Exemple, 75000 Paris" 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -161,9 +173,13 @@ const RegistrationForm = () => {
             name="businessSector"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Secteur d'activité</FormLabel>
+                <FormLabel className="text-darkblue-800">Secteur d'activité</FormLabel>
                 <FormControl>
-                  <Input placeholder="Services, Technologie, Commerce..." {...field} />
+                  <Input 
+                    placeholder="Services, Technologie, Commerce..." 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -175,9 +191,13 @@ const RegistrationForm = () => {
             name="role"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Fonction dans la société</FormLabel>
+                <FormLabel className="text-darkblue-800">Fonction dans la société</FormLabel>
                 <FormControl>
-                  <Input placeholder="Directeur, Gérant, Responsable..." {...field} />
+                  <Input 
+                    placeholder="Directeur, Gérant, Responsable..." 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -189,9 +209,13 @@ const RegistrationForm = () => {
             name="phone"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Numéro de téléphone</FormLabel>
+                <FormLabel className="text-darkblue-800">Numéro de téléphone</FormLabel>
                 <FormControl>
-                  <Input placeholder="+33 1 23 45 67 89" {...field} />
+                  <Input 
+                    placeholder="+33 1 23 45 67 89" 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -203,9 +227,14 @@ const RegistrationForm = () => {
             name="email"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Adresse email</FormLabel>
+                <FormLabel className="text-darkblue-800">Adresse email</FormLabel>
                 <FormControl>
-                  <Input type="email" placeholder="exemple@domaine.com" {...field} />
+                  <Input 
+                    type="email" 
+                    placeholder="exemple@domaine.com" 
+                    {...field} 
+                    className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
+                  />
                 </FormControl>
                 <FormMessage />
               </FormItem>
@@ -217,13 +246,14 @@ const RegistrationForm = () => {
             name="password"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Mot de passe</FormLabel>
+                <FormLabel className="text-darkblue-800">Mot de passe</FormLabel>
                 <FormControl>
                   <div className="relative">
                     <Input 
                       type={showPassword ? "text" : "password"} 
                       placeholder="Mot de passe" 
                       {...field} 
+                      className="border-gray-300 focus:border-red-500 focus:ring-1 focus:ring-red-500" 
                     />
                     <div 
                       className="absolute right-3 top-1/2 -translate-y-1/2 cursor-pointer text-gray-500 hover:text-gray-700"
@@ -241,7 +271,7 @@ const RegistrationForm = () => {
         
         <Button 
           type="submit" 
-          className="w-full bg-red-600 hover:bg-red-700 text-white" 
+          className="w-full bg-red-600 hover:bg-red-700 text-white mt-6" 
           disabled={isLoading}
         >
           {isLoading ? "Inscription en cours..." : "S'inscrire"}

@@ -27,11 +27,13 @@ const IProspect = () => {
                   i-prospect est une solution de prospection commerciale intelligente conçue pour aider les entreprises à générer des leads qualifiés, remplir leur agenda et booster leurs ventes - sans perdre de temps à prospecter à l'aveugle.
                 </p>
                 <div className="mb-8">
-                  <Button 
-                    className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium"
-                  >
-                    Demander une démo gratuite
-                  </Button>
+                  <Link to="/devis">
+                    <Button 
+                      className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium"
+                    >
+                      Demander une démo gratuite
+                    </Button>
+                  </Link>
                 </div>
                 <div className="flex flex-wrap gap-4 items-center">
                   <div className="flex items-center text-green-600">
@@ -234,9 +236,11 @@ const IProspect = () => {
                   
                   <p className="text-sm text-gray-600 mb-6">Idéal pour tester le canal ou démarrer une prospection ciblée.</p>
                   
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                    Sélectionner
-                  </Button>
+                  <Link to="/devis">
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+                      Sélectionner
+                    </Button>
+                  </Link>
                 </div>
               </div>
               
@@ -281,9 +285,11 @@ const IProspect = () => {
                   
                   <p className="text-sm text-gray-600 mb-6">Parfait pour générer des leads en continu et remplir votre agenda.</p>
                   
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                    Sélectionner
-                  </Button>
+                  <Link to="/devis">
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+                      Sélectionner
+                    </Button>
+                  </Link>
                 </div>
               </div>
               
@@ -327,9 +333,11 @@ const IProspect = () => {
                   
                   <p className="text-sm text-gray-600 mb-6">Solution complète clé en main avec accompagnement stratégique.</p>
                   
-                  <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                    Sélectionner
-                  </Button>
+                  <Link to="/devis">
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+                      Sélectionner
+                    </Button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -453,10 +461,12 @@ const IProspect = () => {
                 Prenez rendez-vous avec un conseiller i-prospect.<br />
                 En moins de 48h, commencez à remplir votre agenda.
               </p>
-              <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium inline-flex items-center">
-                Demander une démo gratuite
-                <ArrowRight size={20} className="ml-2" />
-              </Button>
+              <Link to="/devis">
+                <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium inline-flex items-center">
+                  Demander une démo gratuite
+                  <ArrowRight size={20} className="ml-2" />
+                </Button>
+              </Link>
             </div>
           </div>
         </section>

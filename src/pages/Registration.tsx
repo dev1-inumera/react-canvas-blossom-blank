@@ -25,28 +25,29 @@ const Registration = () => {
   return (
     <>
       <Navigation />
-      <div className="min-h-screen pt-24 pb-16 bg-gradient-to-br from-slate-100 to-blue-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <AnimatePresence>
-            {!showForm ? (
-              <motion.div 
-                className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center"
-                initial={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                key="landing"
-              >
-                {/* Left side - Main content */}
-                <div className="p-8">
+      <div className="min-h-screen bg-gray-50">
+        <div className="grid grid-cols-1 md:grid-cols-2 h-full">
+          {/* Left side with form or main content */}
+          <div className="flex items-center justify-center p-6 md:p-10 min-h-screen">
+            <AnimatePresence>
+              {!showForm ? (
+                <motion.div 
+                  className="w-full max-w-md"
+                  initial={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                  key="landing"
+                >
                   <motion.div 
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.5 }}
+                    className="text-center md:text-left"
                   >
                     <h1 className="text-4xl font-bold mb-4">
                       <span className="text-red-600">i</span>
                       <span className="text-darkblue-800">-numa</span>
                     </h1>
-                    <p className="text-xl text-gray-600 mb-6">
+                    <p className="text-gray-600 mb-8">
                       Solutions innovantes pour votre transformation digitale
                     </p>
                     <motion.button
@@ -57,56 +58,75 @@ const Registration = () => {
                     >
                       S'inscrire
                     </motion.button>
+                    
+                    <div className="mt-8 text-sm text-gray-500 text-center">
+                      <p>Développé par i-numera</p>
+                    </div>
                   </motion.div>
-                </div>
-
-                {/* Right side - Promotional content */}
-                <div className="bg-darkblue-900 text-white p-10 rounded-lg">
-                  <PromotionCarousel />
-                </div>
-              </motion.div>
-            ) : (
-              <motion.div 
-                className="flex justify-center items-center"
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ delay: 0.5 }}
-                key="form"
-              >
-                {/* Door opening animation */}
-                <div className="w-full max-w-4xl relative overflow-hidden bg-white rounded-lg shadow-lg">
-                  <motion.div 
-                    className="absolute inset-0 bg-slate-100 origin-left"
-                    initial={{ scaleX: 0.5, x: 0 }}
-                    animate={{ scaleX: 0, x: '-50%' }}
-                    transition={{ duration: 0.7, ease: "easeInOut" }}
-                  />
-                  <motion.div 
-                    className="absolute inset-0 bg-slate-100 origin-right"
-                    initial={{ scaleX: 0.5, x: '100%' }}
-                    animate={{ scaleX: 0, x: '150%' }}
-                    transition={{ duration: 0.7, ease: "easeInOut" }}
-                  />
-                  
-                  <motion.div
-                    initial={{ opacity: 0 }}
-                    animate={{ opacity: 1 }}
-                    transition={{ delay: 0.7 }}
-                    className="p-8"
+                </motion.div>
+              ) : (
+                <motion.div 
+                  className="w-full max-w-md"
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  transition={{ delay: 0.3 }}
+                  key="form"
+                >
+                  <button 
+                    onClick={() => setShowForm(false)}
+                    className="mb-4 text-darkblue-600 hover:text-darkblue-800 transition-colors flex items-center"
                   >
-                    <button 
-                      onClick={() => setShowForm(false)}
-                      className="mb-4 text-darkblue-600 hover:text-darkblue-800 transition-colors flex items-center"
-                    >
-                      ← Retour
-                    </button>
-                    <h2 className="text-2xl font-bold mb-6 text-center text-darkblue-900">Inscription</h2>
-                    <RegistrationForm />
-                  </motion.div>
+                    ← Retour
+                  </button>
+                  <h2 className="text-2xl font-bold mb-6 text-darkblue-900">Inscription</h2>
+                  <RegistrationForm />
+                </motion.div>
+              )}
+            </AnimatePresence>
+          </div>
+          
+          {/* Right side with dark background and promotional content */}
+          <div className="hidden md:block bg-darkblue-900 text-white relative">
+            <div className="absolute inset-0 flex items-center justify-center p-10">
+              <div className="w-full max-w-md">
+                <div className="space-y-8">
+                  <div className="flex items-start space-x-2">
+                    <span className="text-red-500 text-xl">◆</span>
+                    <div>
+                      <h2 className="text-3xl font-bold mb-4">Expertise technique</h2>
+                      <p className="text-white/80">
+                        Nos équipes d'experts vous accompagnent dans tous vos projets numériques, du développement à la maintenance en passant par la sécurisation de vos données.
+                      </p>
+                    </div>
+                  </div>
+                  
+                  <div className="h-1 w-24 bg-red-600"></div>
+                  
+                  <div className="grid grid-cols-3 gap-10 text-center">
+                    <div>
+                      <p className="text-3xl font-bold text-red-500">99%</p>
+                      <p className="text-sm text-gray-300">Satisfaction client</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-red-500">24/7</p>
+                      <p className="text-sm text-gray-300">Support technique</p>
+                    </div>
+                    <div>
+                      <p className="text-3xl font-bold text-red-500">500+</p>
+                      <p className="text-sm text-gray-300">Projets réalisés</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex justify-center space-x-2 mt-16">
+                    <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
+                    <div className="w-2 h-2 rounded-full bg-red-500"></div>
+                    <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
+                    <div className="w-2 h-2 rounded-full bg-white opacity-50"></div>
+                  </div>
                 </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <Footer />
