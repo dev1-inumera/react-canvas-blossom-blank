@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -127,7 +126,7 @@ const IProspect = () => {
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Détection des prospects intéressés</span>
+                      <span>Détection des prospects intéress��s</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -463,7 +462,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl">
                     <img 
-                      src="/public/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" 
+                      src="/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" 
                       alt="Calendrier de rendez-vous" 
                       className="w-[50%] h-auto  rounded-lg" 
                     />
@@ -491,7 +490,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl ">
                     <img 
-                      src="/public/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png" 
+                      src="/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png" 
                       alt="Démonstration de la plateforme" 
                       className="w-[50%] h-auto rounded-lg" 
                     />
@@ -519,7 +518,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl">
                     <img 
-                      src="/public/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png" 
+                      src="/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png" 
                       alt="Analyse de marché" 
                       className="w-[50%] h-auto rounded-lg" 
                     />
@@ -547,7 +546,7 @@ const IProspect = () => {
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl">
                     <img 
-                      src="/public/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" 
+                      src="/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" 
                       alt="Signature du contrat" 
                       className="w-[50%] h-auto rounded-lg" 
                     />
