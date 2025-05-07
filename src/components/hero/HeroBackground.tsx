@@ -14,6 +14,10 @@ const HeroBackground: React.FC = () => {
         <div className="absolute top-40 left-1/4 w-32 h-32 rounded-full bg-darkblue-50 opacity-15 blur-xl"></div>
         <div className="absolute bottom-40 right-1/4 w-48 h-48 rounded-full bg-red-50 opacity-15 blur-xl"></div>
       </div>
+      <img src="/lovable-uploads/web.svg"
+       alt="shopping_cart" 
+       className="relative top-7 -rotate-3 ml-auto mr-[240px]"
+       style={{width:"50px"}} />
     </>
   );
 };

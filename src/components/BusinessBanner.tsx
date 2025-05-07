@@ -26,18 +26,18 @@ const BusinessBanner = () => {
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row-reverse items-center justify-between gap-12">
             {/* Texte à droite */}
             <div className="md:w-1/2">
-              <span className="inline-block px-4 py-1 rounded-full bg-orange-500 text-xs font-semibold tracking-wide mb-6">
+              <span className="inline-block px-4 py-1 rounded-full bg-[#e53935] text-xs font-semibold tracking-wide mb-6">
                 OPPORTUNITÉ
               </span>
               <h2 className="text-4xl md:text-5xl text-[#183782] font-extrabold leading-tight mb-6">
-                Lancez votre business de A à Z avec <span className="text-orange-400">in-commerce</span>
+                Lancez votre business de A à Z avec <span className="text-[#e53935]">in-commerce</span>
               </h2>
               <p className="text-lg text-[#183782] mb-8">
                 i-numera vous accompagne dans chaque étape pour créer une entreprise rentable, même si vous partez de zéro. Idéal pour les entrepreneurs motivés.
               </p>
               <Link
                 to="/contact"
-                className="inline-flex items-center px-8 py-4 bg-orange-500 hover:bg-orange-600 transition rounded-full text-white text-lg font-medium group"
+                className="inline-flex items-center px-8 py-4 bg-[#e53935] hover:bg-[#e53935] transition rounded-full text-white text-lg font-medium group"
               >
                 Commencer l'aventure
                 <ArrowRight className="ml-3 transition-transform group-hover:translate-x-1" size={20} />
