@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight } from 'lucide-react';
@@ -36,7 +37,7 @@ const BusinessBanner = () => {
                 i-numera vous accompagne dans chaque étape pour créer une entreprise rentable, même si vous partez de zéro. Idéal pour les entrepreneurs motivés.
               </p>
               <Link
-                to="/contact"
+                to="/in-commerce"
                 className="inline-flex items-center px-8 py-4 bg-[#e53935] hover:bg-[#e53935] transition rounded-full text-white text-lg font-medium group"
               >
                 Commencer l'aventure
