@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-28",
+        "relative w-full overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-36",
         className
       )}
     >
@@ -60,8 +60,8 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
         </div>
       </div>
       
-      {/* Separator to clearly divide hero from content below */}
-      <div className="container px-4 md:px-6 mt-16">
+      {/* Separator moved further down to clearly divide hero from content below */}
+      <div className="container px-4 md:px-6 mt-20">
         <Separator className="h-[2px] bg-gradient-to-r from-transparent via-darkblue-200/40 to-transparent" />
       </div>
     </section>
