@@ -1,45 +1,59 @@
 
-import React from "react";
-import { Briefcase, Globe, ShoppingCart, Users, Store } from "lucide-react";
+import React, { memo } from "react";
+import { cn } from "@/lib/utils";
+import { HeroSlide } from "./HeroSlides";
 
-const HeroBackground: React.FC = () => {
+interface HeroBackgroundProps {
+  slides: HeroSlide[];
+  currentSlide: number;
+}
+
+const HeroBackground: React.FC<HeroBackgroundProps> = ({ slides, currentSlide }) => {
   return (
     <>
-      {/* Simplified Background */}
-      <div className="absolute inset-0 -z-10 bg-darkblue-900">
-        {/* Subtle pattern overlay */}
-        <div className="absolute inset-0 opacity-10" 
-            style={{ 
-              backgroundImage: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.15'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")",
-            }}
-        ></div>
-        
-        {/* Simple, lighter abstract shape */}
-        <div className="absolute top-[10%] left-[15%] w-32 h-32 rounded-full bg-darkblue-800 blur-2xl opacity-30"></div>
-        <div className="absolute bottom-[20%] right-[10%] w-40 h-40 rounded-full bg-red-500/10 blur-2xl"></div>
-        
-        {/* Decorative Icons - positioned across the background with improved performance */}
-        <div className="absolute top-[20%] left-[40%] text-white/8">
-          <Briefcase size={60} strokeWidth={1} />
-        </div>
-        <div className="absolute top-[60%] left-[20%] text-white/8">
-          <Globe size={55} strokeWidth={1} />
-        </div>
-        <div className="absolute top-[30%] right-[30%] text-white/8">
-          <Store size={50} strokeWidth={1} />
-        </div>
-        <div className="absolute bottom-[30%] left-[35%] text-white/8">
-          <ShoppingCart size={45} strokeWidth={1} />
-        </div>
-        <div className="absolute top-[70%] right-[25%] text-white/8">
-          <Users size={55} strokeWidth={1} />
-        </div>
+      {/* Background Pattern Overlay - Reduced blur intensity */}
+      <div className="absolute inset-0 -z-5 opacity-10">
+        <div className="absolute -top-[40%] -right-[40%] h-[80%] w-[80%] rounded-full bg-darkblue-900 blur-[100px]" />
+        <div className="absolute -bottom-[20%] -left-[20%] h-[60%] w-[60%] rounded-full bg-red-500 blur-[50px]" />
       </div>
 
-      {/* Simplified Gradient Overlay */}
-      <div className="absolute inset-y-0 left-0 w-[60%] bg-gradient-to-r from-white/40 to-transparent z-10 pointer-events-none"></div>
+      {/* Background Carousel - Only render active and next slides */}
+      <div className="absolute inset-0 -z-10">
+        {slides.map((slide, index) => {
+          // Only render the current slide and the next slide to reduce DOM elements
+          const isVisible = index === currentSlide || 
+                           index === (currentSlide + 1) % slides.length;
+          
+          if (!isVisible) return null;
+          
+          return (
+            <div
+              key={index}
+              className={cn(
+                "absolute inset-0 transition-opacity duration-1000",
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              )}
+            >
+              <div className="absolute inset-0 bg-black/70 z-10"></div>
+              <img
+                src={slide.backgroundImage}
+                alt=""
+                className="w-full h-full object-cover"
+                loading={index === 0 ? "eager" : "lazy"}
+                decoding="async"
+                fetchPriority={index === 0 ? "high" : "low"}
+                width="1920"
+                height="1080"
+              />
+            </div>
+          );
+        })}
+      </div>
+
+      {/* White Gradient Overlay */}
+      <div className="absolute inset-y-0 left-0 w-[63%] bg-gradient-to-r from-white via-darkblue/80 to-transparent z-10 pointer-events-none"></div>
     </>
   );
 };
 
-export default React.memo(HeroBackground);
+export default memo(HeroBackground);

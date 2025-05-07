@@ -1,36 +1,33 @@
 
-import React from "react";
+import React, { memo } from "react";
 
 const HeroLogoSection: React.FC = () => {
   return (
     <div
-      className="relative opacity-0 animate-fade-in"
-      style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
+      className="relative lg:pl-8 opacity-0 animate-fade-in"
+      style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
     >
-      {/* Moved up and reduced margin */}
-      <div className="relative mb-4 -mt-4">
-        <div className="relative overflow-hidden">
-          <div className="flex items-start justify-start">
+      <div className="relative rounded-2xl overflow-hidden">
+        <div className="aspect-[4/3] relative overflow-hidden">
+          <div className="absolute inset-0 flex items-center justify-center z-10">
             <img
               src="/lovable-uploads/b3c33571-dd4d-4269-a516-f847893fdd7f.png"
               alt="i-numera logo"
-              /* Reduced size */
-              className="w-auto max-w-[70%] h-auto"
+              className="w-auto max-w-[95%] h-auto"
               loading="eager"
               decoding="async"
               fetchPriority="high"
-              /* Reduced width */
-              width="900"
-              height="360"
+              width="1500"
+              height="600"
             />
           </div>
         </div>
       </div>
-      
-      {/* Simplified decorative elements */}
-      <div className="absolute -bottom-4 -left-4 w-12 h-12 bg-red-500 rounded-full blur-lg opacity-10"></div>
+      {/* Simplified decorative elements with less blur */}
+      <div className="absolute -bottom-8 -left-8 w-16 h-16 bg-red-500 rounded-full blur-xl opacity-20"></div>
+      <div className="absolute -top-8 -right-8 w-20 h-20 bg-darkblue-500 rounded-full blur-xl opacity-20"></div>
     </div>
   );
 };
 
-export default React.memo(HeroLogoSection);
+export default memo(HeroLogoSection);

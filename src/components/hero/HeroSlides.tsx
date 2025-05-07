@@ -1,3 +1,4 @@
+
 import React from "react";
 
 export interface HeroSlide {
@@ -15,8 +16,7 @@ export interface HeroSlide {
   };
 }
 
-// These slides are no longer used in the main interface, but we keep them
-// as a reference for future content needs
+// Optimized image URLs using smaller sizes and better formats
 export const carouselSlides: HeroSlide[] = [
   {
     backgroundImage:
