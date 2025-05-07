@@ -27,7 +27,7 @@ export const partnerLogos: PartnerLogo[] = [
   },
   {
     name: "Hubspot",
-    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/HubSpot_Logo.svg/2560px-HubSpot_Logo.svg.png"
+    image: "https://tbkconsult.com/wp-content/uploads/2016/11/HubSpot-Logo-PNG.png"
   },
   {
     name: "Zapier",

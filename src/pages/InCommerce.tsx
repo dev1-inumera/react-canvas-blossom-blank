@@ -11,11 +11,11 @@ import { partnerLogos } from "@/data/referenceData";
 
 const InCommerce = () => {
   return (
-    <div className="min-h-screen flex flex-col bg-white">
+    <div className="min-h-screen pt-6 flex flex-col bg-white">
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-white py-16 md:py-24 overflow-hidden">
+        <section className="relative  bg-white py-16 md:py-24 overflow-hidden">
           <div className="container mx-auto px-4">
             <div className="flex flex-col lg:flex-row items-center gap-12">
               <div className="w-full lg:w-1/2">
@@ -30,7 +30,7 @@ const InCommerce = () => {
                     <Button 
                       className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium"
                     >
-                      🛍️ Créer ma boutique maintenant
+                      Créer ma boutique maintenant
                     </Button>
                   </Link>
                 </div>
@@ -55,10 +55,10 @@ const InCommerce = () => {
               </div>
               <div className="w-full lg:w-1/2 relative">
                 <div className="relative">
-                  <div className="absolute -top-10 -left-10 w-20 h-20 bg-red-100 rounded-full opacity-70"></div>
-                  <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-darkblue-100 rounded-full opacity-50"></div>
+                  <div className="absolute animate-float -top-10 -left-10 w-20 h-20 bg-red-100 rounded-full opacity-70"></div>
+                  <div className="absolute animate-float -bottom-10 -right-10 w-32 h-32 bg-darkblue-100 rounded-full opacity-50"></div>
                   <img 
-                    src="/lovable-uploads/shop.svg" 
+                    src="/lovable-uploads/incom.png" 
                     alt="Création boutique en ligne" 
                     className="relative z-10 w-full max-w-lg mx-auto"
                   />
@@ -456,7 +456,7 @@ const InCommerce = () => {
 
             <div className="max-w-5xl mx-auto">
               {/* Step 1 */}
-              <div className="relative flex flex-col md:flex-row items-center mb-20">
+              <div className="relative flex flex-col md:flex-row items-center ">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
                   <div className="flex items-start space-x-5">
                     <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
@@ -476,8 +476,8 @@ const InCommerce = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <img src="/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" alt="Calendar" className="w-full h-auto rounded-lg" />
+                  <div className="p-[50px]">
+                    <img src="/lovable-uploads/calendar.svg" alt="Calendar" className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -485,7 +485,7 @@ const InCommerce = () => {
               </div>
 
               {/* Step 2 */}
-              <div className="relative flex flex-col md:flex-row-reverse items-center mb-20">
+              <div className="relative flex flex-col md:flex-row-reverse items-center">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8 relative z-10">
                   <div className="flex items-start space-x-5">
                     <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
@@ -501,8 +501,8 @@ const InCommerce = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <img src="/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png" alt="Registration" className="w-full h-auto rounded-lg" />
+                  <div className=" p-[50px]">
+                    <img src="/lovable-uploads/profile.svg" alt="Registration" className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -510,7 +510,7 @@ const InCommerce = () => {
               </div>
 
               {/* Step 3 */}
-              <div className="relative flex flex-col md:flex-row items-center mb-20">
+              <div className="relative flex flex-col md:flex-row items-center">
                 <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
                   <div className="flex items-start space-x-5">
                     <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
@@ -529,8 +529,8 @@ const InCommerce = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <img src="/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png" alt="Store Creation" className="w-full h-auto rounded-lg" />
+                  <div className="p-[50px] ">
+                    <img src="/lovable-uploads/boutique.svg" alt="Store Creation" className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -557,8 +557,8 @@ const InCommerce = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <img src="/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" alt="Project Delivery" className="w-full h-auto rounded-lg" />
+                  <div className="p-[50px] ">
+                    <img src="/lovable-uploads/livraison.svg" alt="Project Delivery" className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
                 {/* Connecting line */}
@@ -585,8 +585,8 @@ const InCommerce = () => {
                   </div>
                 </div>
                 <div className="w-full md:w-1/2">
-                  <div className="bg-white p-6 rounded-xl shadow-md">
-                    <img src="/lovable-uploads/0d5b6473-7f50-499c-b2ad-2ebefb601e49.png" alt="Coaching" className="w-full h-auto rounded-lg" />
+                  <div className="p-[50px] ">
+                    <img src="/lovable-uploads/accompagnement.svg" alt="Coaching" className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
               </div>
@@ -646,7 +646,7 @@ const InCommerce = () => {
               </p>
               <Link to="/contact">
                 <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium inline-flex items-center">
-                  🛍️ Réserver un appel découverte
+                  Réserver un appel découverte
                   <ArrowRight size={20} className="ml-2" />
                 </Button>
               </Link>
