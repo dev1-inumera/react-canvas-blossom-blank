@@ -1,53 +1,33 @@
 
-import React, { memo } from "react";
-import { cn } from "@/lib/utils";
-import { HeroSlide } from "./HeroSlides";
+import React from "react";
+import { Briefcase, PenTool, Globe, ShoppingCart, Users } from "lucide-react";
 
-interface HeroBackgroundProps {
-  slides: HeroSlide[];
-  currentSlide: number;
-}
-
-const HeroBackground: React.FC<HeroBackgroundProps> = ({ slides, currentSlide }) => {
+const HeroBackground: React.FC = () => {
   return (
     <>
-      {/* Background Pattern Overlay - Reduced blur intensity */}
-      <div className="absolute inset-0 -z-5 opacity-10">
-        <div className="absolute -top-[40%] -right-[40%] h-[80%] w-[80%] rounded-full bg-darkblue-900 blur-[100px]" />
-        <div className="absolute -bottom-[20%] -left-[20%] h-[60%] w-[60%] rounded-full bg-red-500 blur-[50px]" />
-      </div>
-
-      {/* Background Carousel - Only render active and next slides */}
-      <div className="absolute inset-0 -z-10">
-        {slides.map((slide, index) => {
-          // Only render the current slide and the next slide to reduce DOM elements
-          const isVisible = index === currentSlide || 
-                           index === (currentSlide + 1) % slides.length;
-          
-          if (!isVisible) return null;
-          
-          return (
-            <div
-              key={index}
-              className={cn(
-                "absolute inset-0 transition-opacity duration-1000",
-                index === currentSlide ? "opacity-100" : "opacity-0"
-              )}
-            >
-              <div className="absolute inset-0 bg-black/70 z-10"></div>
-              <img
-                src={slide.backgroundImage}
-                alt=""
-                className="w-full h-full object-cover"
-                loading={index === 0 ? "eager" : "lazy"}
-                decoding="async"
-                fetchPriority={index === 0 ? "high" : "low"}
-                width="1920"
-                height="1080"
-              />
-            </div>
-          );
-        })}
+      {/* Static Abstract Background */}
+      <div className="absolute inset-0 -z-10 bg-gradient-to-br from-darkblue-900 to-darkblue-800">
+        {/* Abstract Shapes */}
+        <div className="absolute top-[10%] left-[15%] w-64 h-64 rounded-full bg-darkblue-700/30 blur-3xl"></div>
+        <div className="absolute bottom-[20%] right-[10%] w-80 h-80 rounded-full bg-red-500/20 blur-3xl"></div>
+        <div className="absolute top-[40%] right-[20%] w-48 h-48 rounded-full bg-darkblue-600/20 blur-3xl"></div>
+        
+        {/* Decorative Icons - positioned across the background */}
+        <div className="absolute top-[20%] left-[40%] text-white/10">
+          <Briefcase size={80} />
+        </div>
+        <div className="absolute top-[60%] left-[20%] text-white/10">
+          <PenTool size={60} />
+        </div>
+        <div className="absolute top-[30%] right-[30%] text-white/10">
+          <Globe size={70} />
+        </div>
+        <div className="absolute bottom-[30%] left-[35%] text-white/10">
+          <ShoppingCart size={65} />
+        </div>
+        <div className="absolute top-[70%] right-[25%] text-white/10">
+          <Users size={75} />
+        </div>
       </div>
 
       {/* White Gradient Overlay */}
@@ -56,4 +36,4 @@ const HeroBackground: React.FC<HeroBackgroundProps> = ({ slides, currentSlide })
   );
 };
 
-export default memo(HeroBackground);
+export default HeroBackground;
