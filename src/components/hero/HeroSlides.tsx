@@ -1,72 +1,90 @@
 
 import React from "react";
 
-export interface HeroSlide {
-  backgroundImage: string;
+export interface OfferSlide {
   tag: string;
   title: string;
   description: string;
-  link1: {
+  primaryLink: {
     to: string;
     text: string;
   };
-  link2: {
+  secondaryLink: {
     to: string;
     text: string;
   };
 }
 
-// Optimized image URLs using smaller sizes and better formats
-export const carouselSlides: HeroSlide[] = [
+// Updated to focus on promotional offers changing every 7 seconds
+export const offerSlides: OfferSlide[] = [
   {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1500&h=800&q=80",
-    tag: "Solutions digitales pour professionnels",
-    title:
-      "Des solutions numériques <span class='text-red-500'>clés en main</span> pour booster votre activité.",
+    tag: "Site Web Professionnel",
+    title: "Votre <span class='text-red-500'>site internet</span> professionnel à partir de 599€",
     description:
-      "Nous accompagnons les professionnels et TPE/PME dans leur transformation digitale avec des solutions simples et efficaces.",
-    link1: {
+      "Une solution complète pour votre présence en ligne : design sur mesure, optimisation pour mobiles et référencement naturel inclus.",
+    primaryLink: {
       to: "/expertise",
-      text: "Découvrez nos prestations",
+      text: "Découvrir l'offre",
     },
-    link2: {
+    secondaryLink: {
       to: "/devis",
       text: "Demander un devis",
     },
   },
   {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=1500&h=800&q=80",
-    tag: "Développement Web",
-    title:
-      "Sites internet <span class='text-red-500'>performants</span> et adaptés à votre métier",
+    tag: "Boutique en ligne",
+    title: "Votre <span class='text-red-500'>e-commerce</span> clé en main à partir de 999€",
     description:
-      "Des sites web professionnels, optimisés pour le référencement et adaptés aux besoins de votre entreprise.",
-    link1: {
-      to: "/web-development",
-      text: "Voir nos services web",
+      "Vendez en ligne facilement avec notre solution complète : catalogue produits, paiement sécurisé et gestion des commandes intégrée.",
+    primaryLink: {
+      to: "/expertise",
+      text: "Explorer nos solutions",
     },
-    link2: {
+    secondaryLink: {
       to: "/contact",
-      text: "Contactez-nous",
+      text: "Nous contacter",
     },
   },
   {
-    backgroundImage:
-      "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&w=1500&h=800&q=80",
-    tag: "Applications sur mesure",
-    title:
-      "Applications <span class='text-red-500'>personnalisées</span> pour votre métier",
+    tag: "Applications Métier",
+    title: "Solutions <span class='text-red-500'>sur mesure</span> pour votre activité",
     description:
-      "Développement d'applications spécifiques pour simplifier vos processus et augmenter votre productivité.",
-    link1: {
+      "Optimisez vos processus avec des applications personnalisées pour votre secteur d'activité. Devis personnalisé sur demande.",
+    primaryLink: {
       to: "/expertise",
-      text: "Explorez nos applications",
+      text: "Voir nos références",
     },
-    link2: {
-      to: "/quote",
-      text: "Obtenez un devis",
+    secondaryLink: {
+      to: "/devis",
+      text: "Obtenir un devis",
+    },
+  },
+  {
+    tag: "Référencement SEO",
+    title: "Boostez votre <span class='text-red-500'>visibilité</span> en ligne",
+    description:
+      "Nos forfaits d'optimisation pour les moteurs de recherche vous permettent d'attirer plus de clients qualifiés sur votre site web.",
+    primaryLink: {
+      to: "/expertise",
+      text: "Nos services SEO",
+    },
+    secondaryLink: {
+      to: "/contact",
+      text: "Nous contacter",
+    },
+  },
+  {
+    tag: "Maintenance & Support",
+    title: "Services <span class='text-red-500'>tout inclus</span> à partir de 39€/mois",
+    description:
+      "Profitez d'une tranquillité d'esprit avec nos forfaits de maintenance : mises à jour, sécurité et support technique prioritaire.",
+    primaryLink: {
+      to: "/pricing",
+      text: "Voir les forfaits",
+    },
+    secondaryLink: {
+      to: "/devis",
+      text: "Demander un devis",
     },
   },
 ];
