@@ -7,17 +7,20 @@ const HeroLogoSection: React.FC = () => {
       className="relative opacity-0 animate-fade-in"
       style={{ animationDelay: "0.4s", animationFillMode: "forwards" }}
     >
-      <div className="relative mb-4 -mt-4"> {/* Moved up and reduced margin */}
+      {/* Moved up and reduced margin */}
+      <div className="relative mb-4 -mt-4">
         <div className="relative overflow-hidden">
           <div className="flex items-start justify-start">
             <img
               src="/lovable-uploads/b3c33571-dd4d-4269-a516-f847893fdd7f.png"
               alt="i-numera logo"
-              className="w-auto max-w-[70%] h-auto" {/* Reduced size */}
+              /* Reduced size */
+              className="w-auto max-w-[70%] h-auto"
               loading="eager"
               decoding="async"
               fetchPriority="high"
-              width="900" {/* Reduced width */}
+              /* Reduced width */
+              width="900"
               height="360"
             />
           </div>
