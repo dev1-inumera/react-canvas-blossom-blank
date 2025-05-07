@@ -13,14 +13,14 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32",
+        "relative w-full overflow-hidden pt-24 pb-16 lg:pt-28 lg:pb-24", // Reduced padding for better spacing
         className
       )}
     >
       <HeroBackground />
 
       <div className="container px-4 md:px-6 relative z-20">
-        <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
+        <div className="grid gap-8 lg:grid-cols-2 lg:gap-8 items-center">
           <HeroLogoSection />
           <HeroContent />
         </div>
