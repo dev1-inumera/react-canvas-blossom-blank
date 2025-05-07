@@ -6,6 +6,7 @@ import HeroBackground from "./hero/HeroBackground";
 import HeroContent from "./hero/HeroContent";
 import HeroLogoSection from "./hero/HeroLogoSection";
 import HeroIllustration from "./hero/HeroIllustration";
+import { Separator } from "./ui/separator";
 
 interface HeroProps {
   className?: string;
@@ -36,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden pt-32 pb-20 lg:pt-40 lg:pb-32",
+        "relative w-full overflow-hidden pt-32 pb-16 lg:pt-40 lg:pb-28",
         className
       )}
     >
@@ -57,6 +58,11 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
             </div>
           </div>
         </div>
+      </div>
+      
+      {/* Separator to clearly divide hero from content below */}
+      <div className="container px-4 md:px-6 mt-16">
+        <Separator className="h-[2px] bg-gradient-to-r from-transparent via-darkblue-200/40 to-transparent" />
       </div>
     </section>
   );

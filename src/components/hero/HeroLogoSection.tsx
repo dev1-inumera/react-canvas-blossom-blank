@@ -7,7 +7,7 @@ const HeroLogoSection: React.FC = () => {
       className="relative opacity-0 animate-fade-in"
       style={{ animationDelay: "0.6s", animationFillMode: "forwards" }}
     >
-      <div className="relative overflow-hidden">
+      <div className="relative overflow-hidden p-2 rounded-lg bg-white/30 backdrop-blur-sm shadow-sm border border-gray-100">
         <div className="flex items-center justify-center">
           <img
             src="/lovable-uploads/b3c33571-dd4d-4269-a516-f847893fdd7f.png"
@@ -20,6 +20,9 @@ const HeroLogoSection: React.FC = () => {
           />
         </div>
       </div>
+      
+      {/* Subtle decorative element */}
+      <div className="absolute -top-2 -right-2 w-4 h-4 bg-red-400 rounded-full opacity-50"></div>
     </div>
   );
 };
