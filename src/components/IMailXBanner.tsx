@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 import { ArrowRight } from 'lucide-react';
@@ -12,52 +11,49 @@ const IMailXBanner = () => {
   });
 
   return (
-    <div
+    <section
       ref={ref}
       className={cn(
-        "w-full max-w-[95%] mx-auto my-16 rounded-2xl overflow-hidden shadow-xl transition-all duration-700",
+        "w-full bg-[#2d3263] text-white transition-all duration-700",
         inView ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
       )}
     >
-      <div className="relative">
-        {/* Flat gradient background instead of image */}
-        <div 
-          className="absolute inset-0 bg-gradient-to-r from-darkblue-800 to-darkblue-600 z-10"
-        />
-        
-        {/* Content */}
-        <div className="relative z-20 px-6 py-16 md:px-16 md:py-20 text-white">
-          <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center">
-            <div className="md:w-1/2 mb-12 md:mb-0 md:pr-12">
-              <span className="inline-block px-4 py-1 rounded-full bg-red-600 text-white text-xs font-medium mb-6">
-                NOUVEAU
-              </span>
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                Découvrez i-prospect : Votre solution de boost de chiffre d'affaires
-              </h2>
-              <p className="text-xl text-white/90 mb-8 max-w-2xl">
-                Maximisez vos revenus, convertissez plus de prospects et développez votre activité avec notre solution professionnelle complète de génération de leads et d'automatisation marketing.
-              </p>
+      <div className="max-w-7xl mx-auto px-6 md:px-12 py-24">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-12">
+          {/* LEFT TEXT BLOCK */}
+          <div className="md:w-1/2">
+            <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
+              Boostez votre croissance <br />
+              avec <span className="text-cyan-400">i-prospect</span>
+            </h1>
+            <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
+              Génération de leads, automatisation marketing, et conversion ultra-efficace dans une seule plateforme. Développez votre business, sans friction.
+            </p>
+            <div className="flex gap-4 flex-wrap">
               <Link
                 to="/i-prospect"
-                className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-red-600 hover:bg-red-700 text-white font-medium transition-all group text-lg"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-md bg-white text-slate-900 font-semibold hover:bg-gray-100 transition"
               >
-                Boostez votre activité
-                <ArrowRight size={20} className="ml-3 transition-transform group-hover:translate-x-1" />
+                Commencer maintenant
+                <ArrowRight size={20} className="transition-transform group-hover:translate-x-1" />
               </Link>
+
             </div>
-            <div className="md:w-1/2 flex justify-center">
-              {/* Updated image */}
-              <img 
-                src="/lovable-uploads/9db84c2d-488c-4595-bb2a-3cf9cccd7afd.png" 
-                alt="Analyse de performance commerciale" 
-                className="w-full max-w-md h-auto object-contain animate-float"
-              />
-            </div>
+          </div>
+
+          {/* RIGHT IMAGE */}
+          <div className="md:w-1/2 flex justify-center relative">
+            <img
+              src="/lovable-uploads/9db84c2d-488c-4595-bb2a-3cf9cccd7afd.png"
+              alt="Analyse de performance commerciale"
+              className="w-full max-w-md h-auto object-contain z-10 relative"
+            />
+            {/* Optional background SVG flare for DigitalOcean vibe */}
+            <div className="absolute -z-10 top-[-50px] right-[-80px] w-[300px] h-[300px] bg-cyan-500 opacity-20 blur-3xl rounded-full" />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

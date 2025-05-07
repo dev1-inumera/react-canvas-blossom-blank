@@ -37,14 +37,14 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       className={cn(
-        "relative w-full overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-36",
+        " w-full overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-36",
         className
       )}
     >
       <MemoizedHeroBackground />
 
       <div className="container px-4 md:px-6 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-[235px] items-center">
           <div className="order-2 lg:order-1">
             <MemoizedHeroIllustration />
           </div>
