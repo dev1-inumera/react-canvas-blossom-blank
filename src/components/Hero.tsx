@@ -36,34 +36,35 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
   return (
     <section
+    style={{flexDirection:"column"}}
       className={cn(
-        " w-full overflow-hidden pt-32 pb-24 lg:pt-40 lg:pb-36",
+        " w-full flex min-h-[100vh] bg-no-repeat bg-cover items-center justify-center overflow-hidden pt-0 pb-24  lg:pb-36",
         className
       )}
     >
       <MemoizedHeroBackground />
 
-      <div className="container px-4 md:px-6 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-[235px] items-center">
-          <div className="order-2 lg:order-1">
-            <MemoizedHeroIllustration />
-          </div>
-          <div className="order-1 lg:order-2 relative">
+      <div className="container h- px-4  relative z-20">
+        <div className="grid lg:grid-cols-2 gap-[205px] items-center">
+        <div className="order-2 lg:order-1 relative">
             <MemoizedHeroContent 
               currentSlide={currentSlide} 
               slides={offerSlides} 
             />
-            <div className="absolute bottom-0 right-0 lg:right-10 lg:-bottom-24">
+            
+          </div>
+          <div className="order-1 lg:order-2">
+            <MemoizedHeroIllustration />
+          </div>
+          <div className="absolute top-0 right-5 lg:right-5 lg:-bottom-35">
               <MemoizedHeroLogoSection />
             </div>
-          </div>
+          
         </div>
       </div>
       
       {/* Separator moved further down to clearly divide hero from content below */}
-      <div className="container px-4 md:px-6 mt-20">
-        <Separator className="h-[2px] bg-gradient-to-r from-transparent via-darkblue-200/40 to-transparent" />
-      </div>
+     
     </section>
   );
 };

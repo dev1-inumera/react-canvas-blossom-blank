@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -12,6 +11,7 @@ import MobileMenu from "./navigation/MobileMenu";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const [isFixed, setIsFixed] = useState(false); // <- État pour savoir si on doit fixer la nav
   const location = useLocation();
   const isMobile = useIsMobile();
 
@@ -19,15 +19,14 @@ const Navigation = () => {
   const closeMenu = () => setIsOpen(false);
 
   useEffect(() => {
-    // Set initial scroll state when component mounts
-    if (window.scrollY > 10) {
-      setScrolled(true);
-    }
-
     const handleScroll = () => {
-      if (window.scrollY > 10) {
+      const scrollTop = window.scrollY;
+
+      if (scrollTop > 10) {
+        setIsFixed(true);
         setScrolled(true);
       } else {
+        setIsFixed(false);
         setScrolled(false);
       }
     };
@@ -44,15 +43,15 @@ const Navigation = () => {
     { name: "i-numera et vous", path: "/registration" },
   ];
 
-  // Check if we're on a page with dark header
-  const isDarkHeader = false;
   const isContactPage = location.pathname === "/contact";
 
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 md:px-8 lg:px-12",
-        "bg-white shadow-md py-3"
+        "transition-all duration-300 px-4 md:px-8 lg:px-12 z-50",
+        isFixed
+          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-3"
+          : "relative bg-transparent py-5"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
@@ -63,14 +62,14 @@ const Navigation = () => {
         <DesktopNavigation
           navItems={navItems}
           scrolled={scrolled}
-          isDarkHeader={isDarkHeader}
+          isDarkHeader={false}
           isContactPage={isContactPage}
         />
 
         {/* CTA Buttons */}
         <DesktopCTA
           scrolled={scrolled}
-          isDarkHeader={isDarkHeader}
+          isDarkHeader={false}
           isContactPage={isContactPage}
         />
 

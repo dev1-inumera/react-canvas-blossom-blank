@@ -20,9 +20,12 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
+      <div className="navigationhero bg-cover" style={{backgroundImage: "url('/bg1.png')"}}>
       <Navigation />
+      <Hero />
+      </div>
       <main className="flex-grow">
-        <Hero />
+        
         
         {/* IMailXBanner component */}
         <div className="bg-gray-50">
