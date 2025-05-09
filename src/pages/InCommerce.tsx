@@ -1,15 +1,40 @@
 
-import React from "react";
+import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { motion } from 'framer-motion';
 import { Separator } from "@/components/ui/separator";
 import { ArrowRight, Check, ShoppingBag, Package, Calendar, Users, Rocket, CreditCard } from "lucide-react";
 import { partnerLogos } from "@/data/referenceData";
 
 const InCommerce = () => {
+  const [openIndex, setOpenIndex] = useState(null);
+
+  const faqs = [
+    {
+      question: "Puis-je choisir mes produits ?",
+      answer: "Oui, vous pouvez proposer vos propres produits ou nous laisser faire le sourcing. Que vous ayez déjà une sélection de produits en tête ou que vous ayez besoin d'aide pour trouver les meilleures options, notre équipe vous accompagne dans cette démarche."
+    },
+    {
+      question: "Est-ce compatible avec Shopify ou WooCommerce ?",
+      answer: "Oui, nous vous laissons le choix de la plateforme selon vos besoins. Nous maîtrisons parfaitement Shopify et WooCommerce et nous vous conseillerons sur la solution la plus adaptée à votre projet et à votre budget."
+    },
+    {
+      question: "Est-ce que je peux vendre partout ?",
+      answer: "Oui, votre boutique est livrée prête pour l'international (livraison + paiements). Nous configurons les options de livraison, les devises et les langues selon vos marchés cibles pour vous permettre de vendre dans le monde entier."
+    },
+    {
+      question: "Est-ce que vous gérez aussi la pub ?",
+      answer: "Oui, nos formules Premium incluent un pack publicitaire. Nous préparons et configurons vos premières campagnes Facebook et Instagram pour vous aider à démarrer rapidement. Des options de gestion continue de vos publicités sont également disponibles."
+    }
+  ];
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
   return (
     <div className="min-h-screen pt-6 flex flex-col bg-white">
       <Navigation />
@@ -400,50 +425,56 @@ const InCommerce = () => {
         </section>
 
         {/* Why Choose Us */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
-                Pourquoi choisir <span className="text-red-600">in-commerce</span> ?
-              </h2>
-            </div>
+        <section className="py-16 md:py-24 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
+        Pourquoi choisir{" "}
+        <span className="text-red-600">in-commerce</span> ?
+      </h2>
+    </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
-              {[
-                {
-                  title: "Clé en main",
-                  description: "Aucune compétence technique requise"
-                },
-                {
-                  title: "Rapide et pro",
-                  description: "Boutique livrée en 5 à 8 jours"
-                },
-                {
-                  title: "Design attractif",
-                  description: "Pour convertir vos visiteurs en acheteurs"
-                },
-                {
-                  title: "Accompagnement stratégique",
-                  description: "Coaching inclus et suivi personnalisé"
-                },
-                {
-                  title: "Sourcing de produits",
-                  description: "Nous vous aidons à choisir les bons fournisseurs"
-                }
-              ].map((item, index) => (
-                <Card key={index} className="border-0 shadow-lg rounded-xl overflow-hidden h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4">
-                      <span className="text-red-600 font-bold">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-darkblue-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-700 flex-grow">{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 max-w-6xl mx-auto">
+      {[
+        {
+          title: "Clé en main",
+          description: "Aucune compétence technique requise"
+        },
+        {
+          title: "Rapide et pro",
+          description: "Boutique livrée en 5 à 8 jours"
+        },
+        {
+          title: "Design attractif",
+          description: "Pour convertir vos visiteurs en acheteurs"
+        },
+        {
+          title: "Accompagnement stratégique",
+          description: "Coaching inclus et suivi personnalisé"
+        },
+        {
+          title: "Sourcing de produits",
+          description: "Nous vous aidons à choisir les bons fournisseurs"
+        }
+      ].map((item, index) => (
+        <div
+          key={index}
+          className="bg-white rounded-xl shadow-md overflow-hidden transition-all duration-300 transform hover:scale-105 hover:shadow-xl h-full flex flex-col"
+        >
+          <div className="p-6 flex flex-col h-full">
+            <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4 shadow-sm">
+              <span className="text-red-600 font-bold text-lg">{index + 1}</span>
             </div>
+            <h3 className="text-xl font-semibold text-darkblue-900 mb-2 transition-colors">
+              {item.title}
+            </h3>
+            <p className="text-gray-600 flex-grow">{item.description}</p>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
         
         {/* Steps Section */}
         <section className="py-16 md:py-24 bg-gray-50">
@@ -603,34 +634,38 @@ const InCommerce = () => {
               </h2>
             </div>
             
-            <div className="max-w-4xl mx-auto space-y-6">
-              {[
-                {
-                  question: "Puis-je choisir mes produits ?",
-                  answer: "Oui, vous pouvez proposer vos propres produits ou nous laisser faire le sourcing. Que vous ayez déjà une sélection de produits en tête ou que vous ayez besoin d'aide pour trouver les meilleures options, notre équipe vous accompagne dans cette démarche."
-                },
-                {
-                  question: "Est-ce compatible avec Shopify ou WooCommerce ?",
-                  answer: "Oui, nous vous laissons le choix de la plateforme selon vos besoins. Nous maîtrisons parfaitement Shopify et WooCommerce et nous vous conseillerons sur la solution la plus adaptée à votre projet et à votre budget."
-                },
-                {
-                  question: "Est-ce que je peux vendre partout ?",
-                  answer: "Oui, votre boutique est livrée prête pour l'international (livraison + paiements). Nous configurons les options de livraison, les devises et les langues selon vos marchés cibles pour vous permettre de vendre dans le monde entier."
-                },
-                {
-                  question: "Est-ce que vous gérez aussi la pub ?",
-                  answer: "Oui, nos formules Premium incluent un pack publicitaire. Nous préparons et configurons vos premières campagnes Facebook et Instagram pour vous aider à démarrer rapidement. Des options de gestion continue de vos publicités sont également disponibles."
-                }
-              ].map((item, index) => (
-                <div key={index} className="bg-white shadow-md rounded-xl overflow-hidden">
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold text-darkblue-900 mb-3">{item.question}</h3>
-                    <Separator className="mb-3" />
-                    <p className="text-gray-700">{item.answer}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+            <div className="max-w-4xl mx-auto space-y-4">
+      {faqs.map((item, index) => (
+        <div key={index} className="bg-white shadow-md rounded-xl overflow-hidden">
+          <button
+            onClick={() => toggle(index)}
+            className="w-full text-left p-6 focus:outline-none flex justify-between items-center"
+            aria-expanded={openIndex === index}
+          >
+            <h3 className="text-xl font-bold text-darkblue-900">{item.question}</h3>
+            <span className="transform transition-transform duration-300 ease-in-out text-2xl">
+              {openIndex === index ? "−" : "+"}
+            </span>
+          </button>
+
+          {/* Réponse visible seulement si ouverte */}
+          {openIndex === index && (
+  <motion.div
+    initial={{ height: 0, opacity: 0 }}
+    animate={{ height: "auto", opacity: 1 }}
+    exit={{ height: 0, opacity: 0 }}
+    transition={{ duration: 0.3 }}
+    className="overflow-hidden"
+  >
+    <Separator />
+    <div className="p-6 pt-0">
+      <p className="text-gray-700">{item.answer}</p>
+    </div>
+  </motion.div>
+)}
+        </div>
+      ))}
+    </div>
           </div>
         </section>
 

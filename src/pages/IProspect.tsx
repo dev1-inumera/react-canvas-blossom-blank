@@ -27,7 +27,7 @@ const IProspect = () => {
                 </p>
                 <div className="mb-8">
                   <Link to="/devis">
-                    <Button 
+                    <Button
                       className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium"
                     >
                       Demander une démo gratuite
@@ -88,10 +88,10 @@ const IProspect = () => {
               {partnerLogos.map((logo, index) => (
                 <div key={index} className="grayscale opacity-70 hover:opacity-100 transition-opacity">
                   <div className="h-10 flex items-center">
-                    <img 
-                      src={logo.image} 
-                      alt={logo.name} 
-                      className="max-h-8 max-w-[120px] object-contain" 
+                    <img
+                      src={logo.image}
+                      alt={logo.name}
+                      className="max-h-8 max-w-[120px] object-contain"
                     />
                   </div>
                 </div>
@@ -205,7 +205,7 @@ const IProspect = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule STARTER</h3>
                   <div className="text-3xl font-bold text-red-600 mb-4">490 €<span className="text-base font-normal text-gray-500">/mois</span></div>
                   <p className="text-gray-600 mb-6">Pour ceux qui démarrent ou veulent tester.</p>
-                  
+
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -232,9 +232,9 @@ const IProspect = () => {
                       <span className="text-gray-700">Suivi par un chargé de campagne</span>
                     </li>
                   </ul>
-                  
+
                   <p className="text-sm text-gray-600 mb-6">Idéal pour tester le canal ou démarrer une prospection ciblée.</p>
-                  
+
                   <Link to="/devis">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
                       Sélectionner
@@ -242,7 +242,7 @@ const IProspect = () => {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Standard Plan */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transform scale-105 z-10">
                 <div className="bg-red-600 text-white text-center py-2 text-sm font-medium">PLUS POPULAIRE</div>
@@ -250,7 +250,7 @@ const IProspect = () => {
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule STANDARD</h3>
                   <div className="text-3xl font-bold text-red-600 mb-4">890 €<span className="text-base font-normal text-gray-500">/mois</span></div>
                   <p className="text-gray-600 mb-6">Pour une prospection active et régulière.</p>
-                  
+
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -281,9 +281,9 @@ const IProspect = () => {
                       <span className="text-gray-700">Suivi par un expert dédié</span>
                     </li>
                   </ul>
-                  
+
                   <p className="text-sm text-gray-600 mb-6">Parfait pour générer des leads en continu et remplir votre agenda.</p>
-                  
+
                   <Link to="/devis">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
                       Sélectionner
@@ -291,14 +291,14 @@ const IProspect = () => {
                   </Link>
                 </div>
               </div>
-              
+
               {/* Premium Plan */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                 <div className="p-8">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule PREMIUM</h3>
                   <div className="text-3xl font-bold text-red-600 mb-4">1490 €<span className="text-base font-normal text-gray-500">/mois</span></div>
                   <p className="text-gray-600 mb-6">Pour les structures en croissance ou avec des besoins commerciaux élevés.</p>
-                  
+
                   <ul className="space-y-3 mb-8">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
@@ -329,9 +329,9 @@ const IProspect = () => {
                       <span className="text-gray-700">Coaching mensuel avec notre équipe</span>
                     </li>
                   </ul>
-                  
+
                   <p className="text-sm text-gray-600 mb-6">Solution complète clé en main avec accompagnement stratégique.</p>
-                  
+
                   <Link to="/devis">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
                       Sélectionner
@@ -340,6 +340,13 @@ const IProspect = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="flex justify-center mt-[70px] items-center ">
+          <Link to="/contact">
+            <Button className="bg-darkblue-900 hover:bg-darkblue-700 text-white py-3 px-6 rounded-lg">
+              Consultez nos offres PRO
+            </Button>
+            </Link>
           </div>
         </section>
 
@@ -428,7 +435,7 @@ const IProspect = () => {
             </div>
           </div>
         </section>
-        
+
         {/* Steps Section */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="  ">
@@ -461,10 +468,10 @@ const IProspect = () => {
                 </div>
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl">
-                    <img 
-                      src="/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png" 
-                      alt="Calendrier de rendez-vous" 
-                      className="w-[50%] h-auto  rounded-lg" 
+                    <img
+                      src="/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png"
+                      alt="Calendrier de rendez-vous"
+                      className="w-[50%] h-auto  rounded-lg"
                     />
                   </div>
                 </div>
@@ -489,10 +496,10 @@ const IProspect = () => {
                 </div>
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl ">
-                    <img 
-                      src="/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png" 
-                      alt="Démonstration de la plateforme" 
-                      className="w-[50%] h-auto rounded-lg" 
+                    <img
+                      src="/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png"
+                      alt="Démonstration de la plateforme"
+                      className="w-[50%] h-auto rounded-lg"
                     />
                   </div>
                 </div>
@@ -517,10 +524,10 @@ const IProspect = () => {
                 </div>
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl">
-                    <img 
-                      src="/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png" 
-                      alt="Analyse de marché" 
-                      className="w-[50%] h-auto rounded-lg" 
+                    <img
+                      src="/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png"
+                      alt="Analyse de marché"
+                      className="w-[50%] h-auto rounded-lg"
                     />
                   </div>
                 </div>
@@ -545,10 +552,10 @@ const IProspect = () => {
                 </div>
                 <div className="w-full md:w-1/2 relative">
                   <div className="bg justify-items-center p-6 rounded-xl">
-                    <img 
-                      src="/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png" 
-                      alt="Signature du contrat" 
-                      className="w-[50%] h-auto rounded-lg" 
+                    <img
+                      src="/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png"
+                      alt="Signature du contrat"
+                      className="w-[50%] h-auto rounded-lg"
                     />
                   </div>
                 </div>
@@ -556,7 +563,7 @@ const IProspect = () => {
             </div>
           </div>
         </section>
-        
+
         {/* FAQ Section */}
         <section className="py-16 md:py-24">
           <div className="container mx-auto px-4">
@@ -568,7 +575,7 @@ const IProspect = () => {
                 Découvrez comment notre solution peut s'adapter à vos besoins spécifiques
               </p>
             </div>
-            
+
             <div className="max-w-4xl mx-auto grid grid-cols-1 gap-6">
               {iProspectFaqCategories.map((category, index) => (
                 <FaqCategoryAccordion key={index} category={category} />
