@@ -50,29 +50,7 @@ const IProspect = () => {
                 </div>
               </div>
               <div className="w-full lg:w-1/2 relative">
-                <div className="bg-gray-50 rounded-lg p-6 relative">
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="bg-white rounded-md p-4 shadow-sm flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-red-600 text-3xl font-bold">+30%</div>
-                        <div className="text-sm text-gray-600">Leads</div>
-                      </div>
-                    </div>
-                    <div className="bg-white rounded-md p-4 shadow-sm flex items-center justify-center">
-                      <div className="text-center">
-                        <div className="text-red-600 text-3xl font-bold">+45%</div>
-                        <div className="text-sm text-gray-600">Rendez-vous</div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="mt-4 bg-white rounded-md p-4 shadow-sm">
-                    <div className="h-32 flex items-center justify-center">
-                      <div className="text-red-600">
-                        <PieChart className="w-20 h-20 mx-auto" />
-                      </div>
-                    </div>
-                  </div>
-                </div>
+                <img src="https://img.freepik.com/vecteurs-libre/concentration-concentration-objectif-cible-entreprise-concept-solution-objectif-commercial-cible-atteinte-au-centre-reussite-entreprise-style-plat-illustration-vectorielle_1150-58758.jpg?t=st=1746797367~exp=1746800967~hmac=18d514cb2a89d103c7c81b5210260604e42886f19f956f93b097da3cb05d5677&w=1380" alt="" />
               </div>
             </div>
           </div>
