@@ -189,7 +189,7 @@ const IProspect = () => {
           </div>
         </section>
 
-        {/* Pricing Plans */}
+        {/* Pricing Plans - UPDATED */}
         <section className="py-16 md:py-24 bg-gray-50">
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
@@ -198,42 +198,27 @@ const IProspect = () => {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {/* Starter Plan */}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+              {/* Formule START */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule STARTER</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">490 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  <p className="text-gray-600 mb-6">Pour ceux qui démarrent ou veulent tester.</p>
-
-                  <ul className="space-y-3 mb-8">
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule START</h3>
+                  <div className="text-3xl font-bold text-red-600 mb-4">1500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
+                  
+                  <ul className="space-y-3 mb-6">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Jusqu'à 800 e-mails ciblés/mois</span>
+                      <span className="text-gray-700">2000 contacts / 8000 envois</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Base de données sur-mesure</span>
+                      <span className="text-gray-700">1 Responsable Marketing</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">1 séquence de cold emailing optimisée</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">1 rendez-vous qualifié garanti</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Statistiques & reporting mensuel</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Suivi par un chargé de campagne</span>
+                      <span className="text-gray-700">Idéal pour : TPE / Tests</span>
                     </li>
                   </ul>
-
-                  <p className="text-sm text-gray-600 mb-6">Idéal pour tester le canal ou démarrer une prospection ciblée.</p>
 
                   <Link to="/devis">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
@@ -243,46 +228,27 @@ const IProspect = () => {
                 </div>
               </div>
 
-              {/* Standard Plan */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 transform scale-105 z-10">
+              {/* Formule STANDARD */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
                 <div className="bg-red-600 text-white text-center py-2 text-sm font-medium">PLUS POPULAIRE</div>
-                <div className="p-8">
+                <div className="p-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule STANDARD</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">890 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  <p className="text-gray-600 mb-6">Pour une prospection active et régulière.</p>
-
-                  <ul className="space-y-3 mb-8">
+                  <div className="text-3xl font-bold text-red-600 mb-4">2500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
+                  
+                  <ul className="space-y-3 mb-6">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Jusqu'à 1000 e-mails ciblés/mois</span>
+                      <span className="text-gray-700">2800 contacts / 11000 envois</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">2 séquences de cold emailing</span>
+                      <span className="text-gray-700">1 Phoner + Responsable Marketing</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Base de données enrichie</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">3 résultats garantis/mois</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Optimisation continue</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Relances automatiques + scoring</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Suivi par un expert dédié</span>
+                      <span className="text-gray-700">Idéal pour : PME</span>
                     </li>
                   </ul>
-
-                  <p className="text-sm text-gray-600 mb-6">Parfait pour générer des leads en continu et remplir votre agenda.</p>
 
                   <Link to="/devis">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
@@ -292,45 +258,84 @@ const IProspect = () => {
                 </div>
               </div>
 
-              {/* Premium Plan */}
+              {/* Formule PREMIUM */}
               <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-8">
+                <div className="p-6">
                   <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule PREMIUM</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">1490 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  <p className="text-gray-600 mb-6">Pour les structures en croissance ou avec des besoins commerciaux élevés.</p>
-
-                  <ul className="space-y-3 mb-8">
+                  <div className="text-3xl font-bold text-red-600 mb-4">3500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
+                  
+                  <ul className="space-y-3 mb-6">
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Jusqu'à 1500 e-mails/mois</span>
+                      <span className="text-gray-700">3600 contacts / 14400 envois</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">3 campagnes email + A/B testing</span>
+                      <span className="text-gray-700">1 Phoner + 1 Community Manager + Responsable Marketing</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Enrichissement CRM</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">5 résultats garantis</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">RDV pris directement dans votre agenda</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Analyse & ajustements hebdomadaires</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Coaching mensuel avec notre équipe</span>
+                      <span className="text-gray-700">Idéal pour : Croissance rapide</span>
                     </li>
                   </ul>
 
-                  <p className="text-sm text-gray-600 mb-6">Solution complète clé en main avec accompagnement stratégique.</p>
+                  <Link to="/devis">
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+                      Sélectionner
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Formule ULTRA */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule ULTRA</h3>
+                  <div className="text-3xl font-bold text-red-600 mb-4">5500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
+                  
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start">
+                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">4000 contacts / 16000 envois</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Équipe dédiée + suivi hebdomadaire</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Idéal pour : Entreprises multi-produits</span>
+                    </li>
+                  </ul>
+
+                  <Link to="/devis">
+                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+                      Sélectionner
+                    </Button>
+                  </Link>
+                </div>
+              </div>
+
+              {/* Formule SUR-MESURE */}
+              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                <div className="p-6">
+                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule SUR-MESURE</h3>
+                  <div className="text-3xl font-bold text-red-600 mb-4">Sur devis</div>
+                  
+                  <ul className="space-y-3 mb-6">
+                    <li className="flex items-start">
+                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Envois illimités</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Équipe dédiée + stratégie 360°</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
+                      <span className="text-gray-700">Idéal pour : Groupes, franchises, multisites</span>
+                    </li>
+                  </ul>
 
                   <Link to="/devis">
                     <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
