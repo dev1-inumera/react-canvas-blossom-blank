@@ -23,15 +23,21 @@ const Index = () => {
       <Navigation />
       <main className="flex-grow">
         <Hero />
-        {/* IMailXBanner component is now directly in the main flow without overlay */}
-        <div className=" bg-gray-50">
+        
+        {/* IMailXBanner component */}
+        <div className="bg-gray-50">
           <IMailXBanner />
         </div>
-        {/* BusinessBanner now appears after IMailXBanner */}
-        <div className=" bg-gray-100">
+        
+        {/* BusinessBanner */}
+        <div className="bg-gray-100">
           <BusinessBanner />
         </div>
+        
+        {/* Section des offres améliorée */}
         <Packages />
+        
+        {/* Section avec arrière-plan */}
         <div
           className="relative bg-gray-100 py-8"
           style={{
@@ -42,7 +48,6 @@ const Index = () => {
             backgroundAttachment: "fixed",
           }}
         >
-          {/* BusinessBanner was removed from here */}
           <div className="absolute inset-0 bg-black bg-opacity-60 backdrop-blur-sm"></div>
           <div className="relative z-10">
             <Testimonials />
