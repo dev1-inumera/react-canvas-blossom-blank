@@ -159,7 +159,7 @@ const Testimonials = () => {
             userSelect: "none",
           }}
         >
-          <div className="inline-block rounded-full px-3 py-1 text-sm bg-red-100 text-darkblue-700/80 mb-4">
+          <div className="inline-block rounded-full px-3 py-1 text-sm bg-[#e53935] text-white mb-4">
             Témoignages clients
           </div>
           <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight mb-4">

@@ -190,170 +190,105 @@ const IProspect = () => {
         </section>
 
         {/* Pricing Plans - UPDATED */}
-        <section className="py-16 md:py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
-                Nos Offres <span className="text-red-600">i-prospect</span>
-              </h2>
+        <section className="py-20 bg-gray-50">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-16">
+      <h2 className="text-4xl font-bold text-darkblue-900 mb-4">
+        Nos Offres <span className="text-red-600">i-prospect</span>
+      </h2>
+      <p className="text-gray-600">Des formules adaptées à chaque ambition</p>
+    </div>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      {[
+        {
+          name: "START",
+          price: "1 500 €",
+          contacts: "8 000 contacts / 32 000 envois",
+          team: "1 Responsable Marketing",
+          ideal: "TPE / Tests",
+        },
+        {
+          name: "STANDARD",
+          price: "2 500 €",
+          contacts: "11 200 contacts / 44 000 envois",
+          team: "1 Phoner + Responsable Marketing",
+          ideal: "PME",
+        },
+        {
+          name: "PREMIUM",
+          price: "3 500 €",
+          contacts: "14 400 contacts / 57 600 envois",
+          team: "1 Phoner + 1 CM + Resp. Marketing",
+          ideal: "Croissance rapide",
+          popular: true,
+        },
+        {
+          name: "ULTRA",
+          price: "5 500 €",
+          contacts: "16 000 contacts / 64 000 envois",
+          team: "Équipe dédiée + suivi hebdo",
+          ideal: "Entreprises multi-produits",
+        },
+        {
+          name: "SUR-MESURE",
+          price: "Sur devis",
+          contacts: "Envois illimités",
+          team: "Équipe dédiée + stratégie 360°",
+          ideal: "Groupes, franchises, multisites",
+        },
+      ].map((offer, index) => (
+        <div
+          key={index}
+          className={`relative bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden`}
+        >
+          {offer.popular && (
+            <div className="absolute top-0 w-full bg-red-600 text-white text-center py-2 text-sm font-semibold uppercase tracking-wide z-10">
+              Plus Populaire
             </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-              {/* Formule START */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule START</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">1500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">2000 contacts / 8000 envois</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">1 Responsable Marketing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Idéal pour : TPE / Tests</span>
-                    </li>
-                  </ul>
-
-                  <Link to="/devis">
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                      Sélectionner
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Formule STANDARD */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="bg-red-600 text-white text-center py-2 text-sm font-medium">PLUS POPULAIRE</div>
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule STANDARD</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">2500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">2800 contacts / 11000 envois</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">1 Phoner + Responsable Marketing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Idéal pour : PME</span>
-                    </li>
-                  </ul>
-
-                  <Link to="/devis">
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                      Sélectionner
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Formule PREMIUM */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule PREMIUM</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">3500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">3600 contacts / 14400 envois</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">1 Phoner + 1 Community Manager + Responsable Marketing</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Idéal pour : Croissance rapide</span>
-                    </li>
-                  </ul>
-
-                  <Link to="/devis">
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                      Sélectionner
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Formule ULTRA */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule ULTRA</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">5500 €<span className="text-base font-normal text-gray-500">/mois</span></div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">4000 contacts / 16000 envois</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Équipe dédiée + suivi hebdomadaire</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Idéal pour : Entreprises multi-produits</span>
-                    </li>
-                  </ul>
-
-                  <Link to="/devis">
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                      Sélectionner
-                    </Button>
-                  </Link>
-                </div>
-              </div>
-
-              {/* Formule SUR-MESURE */}
-              <div className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-6">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">Formule SUR-MESURE</h3>
-                  <div className="text-3xl font-bold text-red-600 mb-4">Sur devis</div>
-                  
-                  <ul className="space-y-3 mb-6">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Envois illimités</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Équipe dédiée + stratégie 360°</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span className="text-gray-700">Idéal pour : Groupes, franchises, multisites</span>
-                    </li>
-                  </ul>
-
-                  <Link to="/devis">
-                    <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                      Sélectionner
-                    </Button>
-                  </Link>
-                </div>
-              </div>
+          )}
+          <div className={`p-6 pt-${offer.popular ? "12" : "6"}`}>
+            <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Formule {offer.name}</h3>
+            <div className="text-center text-3xl font-bold text-red-600 mb-4">
+              {offer.price}
+              {offer.name !== "SUR-MESURE" && (
+                <span className="text-base font-normal text-gray-500"> /mois</span>
+              )}
             </div>
-          </div>
-          <div className="flex justify-center mt-[70px] items-center ">
-          <Link to="/contact">
-            <Button className="bg-darkblue-900 hover:bg-darkblue-700 text-white py-3 px-6 rounded-lg">
-              Consultez nos offres PRO
-            </Button>
+            <ul className="space-y-3 mb-6 text-sm">
+              <li className="flex items-start">
+                <Check className="text-green-600 mr-2 mt-1" size={18} />
+                <span className="text-gray-700">{offer.contacts}</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="text-green-600 mr-2 mt-1" size={18} />
+                <span className="text-gray-700">{offer.team}</span>
+              </li>
+              <li className="flex items-start">
+                <Check className="text-green-600 mr-2 mt-1" size={18} />
+                <span className="text-gray-700">Idéal pour : {offer.ideal}</span>
+              </li>
+            </ul>
+            <Link to="/devis">
+              <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
+                Sélectionner
+              </Button>
             </Link>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+
+    <div className="flex justify-center mt-16">
+      <Link to="/contact">
+        <Button className="bg-darkblue-900 hover:bg-darkblue-700 text-white py-3 px-6 rounded-lg">
+          Consultez nos offres PRO
+        </Button>
+      </Link>
+    </div>
+  </div>
+</section>
+
 
         {/* Results */}
         <section className="py-16 md:py-24">

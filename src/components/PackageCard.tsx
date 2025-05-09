@@ -49,10 +49,10 @@ const PackageCard = ({
   
   // Images/illustrations plates au lieu de photos réalistes avec arrière-plan
   const illustrations = {
-    Artisans: "https://images.unsplash.com/photo-1501854140801-50d01698950b?auto=format&fit=crop&w=800&q=80",
-    Commerçants: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=800&q=80",
-    Professionnel: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=80",
-    Entreprise: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+    Artisans: "https://img.freepik.com/vecteurs-libre/equipe-marketing-numerique-creant-page-destination-page-accueil_74855-10590.jpg?t=st=1746778762~exp=1746782362~hmac=1f53ab4e1fe129d4b1632f632b6fb98cfc79c1fe2aeed447ce525d6f3c5f1535&w=1380",
+    Commerçants: "https://img.freepik.com/vecteurs-libre/concept-strategie-entreprise-design-plat-dessine-main_23-2149190166.jpg?t=st=1746779211~exp=1746782811~hmac=56496b8482e61f8bb6e9cef320ba3c7b8d5e6d48133cadee3de608d8ce70f77b&w=1380",
+    Professionnel: "https://img.freepik.com/vecteurs-libre/illustration-crm-isometrique_52683-83950.jpg?t=st=1746779325~exp=1746782925~hmac=3ea03d3af436dd7da7c46419cc1140f83435053479fa970f89cb1458c483e936&w=1380",
+    Entreprise: "https://img.freepik.com/vecteurs-libre/illustration-erp-degrade_23-2149368728.jpg?t=st=1746779371~exp=1746782971~hmac=cd0c20508057095498e97046af073a1b0effaeff0c4158fc01a8efc9813bcc36&w=1380"
   };
   
   const defaultImage = illustrations[type] || image;
@@ -67,7 +67,7 @@ const PackageCard = ({
           className="w-full h-full bg-cover bg-center"
           style={{ backgroundImage: `url(${defaultImage})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/60 flex flex-col justify-end p-4">
+          <div className="absolute inset-0 bg-gradient-to-b from-black/30 to-black/30 flex flex-col justify-end p-4">
             <div className="flex justify-between items-start">
               <Badge className={`${badgeColor} mb-2`}>{type}</Badge>
               {isPrimary && (

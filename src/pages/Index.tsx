@@ -42,7 +42,7 @@ const Index = () => {
           className="relative bg-gray-100 py-8"
           style={{
             backgroundImage:
-              "url('https://images.unsplash.com/photo-1488972685288-c3fd157d7c7a?auto=format&fit=crop&w=1500&h=800&q=80')",
+              "url('https://img.freepik.com/vecteurs-libre/fond-bleu-classique-creatif_23-2148430302.jpg?t=st=1746783611~exp=1746787211~hmac=f260a2a2a1252990f70737c17f13a1dc9f38b45eda494ee787e674d58b789956&w=826')",
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundAttachment: "fixed",

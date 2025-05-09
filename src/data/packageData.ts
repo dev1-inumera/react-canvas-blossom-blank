@@ -7,7 +7,7 @@ export const artisanPackage: PackageData = {
   title: "Essentiel",
   price: "0",
   setupFee: "0",
-  image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?q=80&w=800", 
+  image: "https://img.freepik.com/vecteurs-libre/equipe-marketing-numerique-creant-page-destination-page-accueil_74855-10590.jpg?t=st=1746778762~exp=1746782362~hmac=1f53ab4e1fe129d4b1632f632b6fb98cfc79c1fe2aeed447ce525d6f3c5f1535&w=1380", 
   features: [
     "Création d'un site web responsive design",
     "Citation de i-numera : Formulaire de devis en ligne, outil de création de devis et facturation, catalogue de prix et produits, gestion des données clients, intégration à Google My Business et aux réseaux sociaux",
@@ -33,7 +33,7 @@ export const commercantPackage: PackageData = {
   title: "Essentiel",
   price: "0",
   setupFee: "0",
-  image: "https://plus.unsplash.com/premium_photo-1661721852953-3da7e4fa15d9?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D", // Updated image URL
+  image: "https://img.freepik.com/vecteurs-libre/concept-strategie-entreprise-design-plat-dessine-main_23-2149190166.jpg?t=st=1746779211~exp=1746782811~hmac=56496b8482e61f8bb6e9cef320ba3c7b8d5e6d48133cadee3de608d8ce70f77b&w=1380", // Updated image URL
   features: [
     "Création d'un site web responsive design",
     "Citation de i-numera : Formulaire de devis en ligne, outil de création de devis et facturation, catalogue de prix et produits, gestion des données clients, intégration à Google My Business et aux réseaux sociaux",
@@ -59,7 +59,7 @@ export const crmPackage: PackageData = {
   title: "CRM",
   price: "50", // Prix mensuel en euros
   setupFee: "500", // Frais de mise en place en euros
-  image: "https://images.unsplash.com/photo-1517694712202-14dd9538aa97", // URL de l'image
+  image: "https://img.freepik.com/vecteurs-libre/illustration-crm-isometrique_52683-83950.jpg?t=st=1746779325~exp=1746782925~hmac=3ea03d3af436dd7da7c46419cc1140f83435053479fa970f89cb1458c483e936&w=1380", // URL de l'image
   features: [
     "Gestion des contacts et des leads : Centralisez et organisez les informations sur vos clients potentiels et existants pour une gestion efficace.",
     "Automatisation des tâches marketing : Automatisez les tâches répétitives comme l'envoi d'emails et les suivis pour gagner du temps et améliorer l'efficacité.",
