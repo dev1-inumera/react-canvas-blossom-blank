@@ -126,7 +126,7 @@ const IProspect = () => {
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Détection des prospects intéress��s</span>
+                      <span>Détection des prospects intéressées</span>
                     </li>
                     <li className="flex items-start">
                       <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
