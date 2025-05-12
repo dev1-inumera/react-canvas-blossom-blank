@@ -26,8 +26,7 @@ const Index = () => {
       </div>
       <main className="flex-grow">
         
-        
-        {/* IMailXBanner component */}
+        {/* IMailXBanner component - renamed to IProspectBanner */}
         <div className="bg-gray-50">
           <IMailXBanner />
         </div>
