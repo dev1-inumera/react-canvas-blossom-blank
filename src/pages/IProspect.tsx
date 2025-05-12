@@ -1,4 +1,3 @@
-
 import React from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
@@ -19,17 +18,17 @@ const IProspect = () => {
         {/* Hero Section - Redesigned with Pipedrive-inspired layout */}
         <section className="relative bg-[#e9f7ea] py-16 md:py-24">
           <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center">
-              <div className="w-full lg:w-1/2 mb-10 lg:mb-0 text-center lg:text-left">
+            <div className="flex flex-col items-center">
+              <div className="w-full lg:w-1/2 mb-10 text-center">
                 <h1 className="text-4xl md:text-5xl font-bold text-[#1f3128] mb-6">
                   Le CRM simple et efficace pour conclure des affaires
                 </h1>
-                <p className="text-lg text-gray-700 mb-8 max-w-xl mx-auto lg:mx-0">
+                <p className="text-lg text-gray-700 mb-8 max-w-xl mx-auto">
                   i-prospect simplifie le suivi du pipeline commercial, l'optimisation des leads, 
                   la gestion des affaires à l'aide de l'IA et l'automatisation de l'ensemble de 
                   votre processus de vente, libérant votre concentration pour la vente.
                 </p>
-                <div className="mb-8 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
+                <div className="mb-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/devis">
                     <Button
                       className="bg-[#6464e8] hover:bg-[#5252d4] text-white rounded-md py-3 px-8 text-lg font-medium w-full sm:w-auto"
@@ -42,11 +41,11 @@ const IProspect = () => {
                   Accès complet. Aucune carte de crédit requise. Utilisé par plus de 100 000 entreprises.
                 </p>
               </div>
-              <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
+              <div className="w-full flex justify-center">
                 <img 
                   src="/lovable-uploads/9c937f83-5dac-4c94-8488-b7ca77e29b96.png" 
                   alt="Interface i-prospect" 
-                  className="w-full max-w-xl rounded-lg shadow-lg"
+                  className="w-full max-w-5xl rounded-lg shadow-lg"
                 />
               </div>
             </div>
