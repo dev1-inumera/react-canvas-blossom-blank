@@ -97,6 +97,10 @@ export const partnerLogos: PartnerLogo[] = [
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
   },
   {
+    name: "Apollo",
+    image: "/lovable-uploads/apollo.png"
+  },
+  {
     name: "Notion",
     image: "https://upload.wikimedia.org/wikipedia/commons/4/45/Notion_app_logo.png"
   }

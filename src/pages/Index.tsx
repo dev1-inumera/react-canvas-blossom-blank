@@ -20,7 +20,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <div className="navigationhero bg-cover" style={{backgroundImage: "url('/bg1.png')"}}>
+      <div className="navigationhero relative bg-cover" style={{backgroundImage: "url('/bg1.png')"}}>
       <Navigation />
       <Hero />
       </div>

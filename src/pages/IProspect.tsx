@@ -31,8 +31,8 @@ const IProspect = () => {
                 </h1>
                 <p className="text-lg text-gray-700 mb-8  mx-auto">
                   i-prospect simplifie le suivi du pipeline commercial, l'optimisation des leads,
-                  la gestion des affaires à l'aide de l'IA et l'automatisation de l'ensemble de
-                  votre processus de vente, libérant votre concentration pour la vente.
+                  la gestion des affaires et l'automatisation de l'ensemble de
+                  votre processus de vente, libérant votre concentration pour votre acquisition client ou la vente.
                 </p>
                 <div className="mb-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/devis">
@@ -58,9 +58,48 @@ const IProspect = () => {
           </div>
         </section>
 
-        {/* Partner Logos Section */}
+        
+
+        {/* Features Section */}
+        <section className="py-16 bg-white">
+          <div className=" mx-auto px-4">
+            <h1 className="text-center text-[40px] mx-auto mb-4" style={{ fontWeight: 'bold' }}>Un CRM qui fera le bonheur de votre portefeuille</h1>
+
+            <div className="px-[150px] mx-auto">
+              
+                  {/* Feature 1 */}
+                  <div className="flex flex-col md:flex-row items-center gap-12">
+                    <div className="w-full md:w-1/2 order-2 md:order-2">
+                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                        Économisez des heures avec des relances du lead nurturing
+                      </h2>
+                      <p className="text-lg text-gray-700 mb-6">
+                        Ne manquez jamais la relance de vos mails grâce aux rélances et récommendation téléphonique, avec des équipe humaine dédié,
+                         vous invitant à vous concentrer sur les
+                        prospects les plus pertinents.
+                      </p>
+                      <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
+                        <p className="italic text-gray-700">
+                          "i-prospect est le meilleur service que j'aie jamais vu ! Du suivi des e-mails aux
+                          automatisations de workflows, en passant par des humains pour la suivi des rélances,
+                          avec i-numa un CRM simplifié débordé de fonctionnalités qui nous aident à dépasser nos objectifs."
+                        </p>
+                        <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
+                        <p className="text-sm text-gray-600">Directeur commerciale, Nirmal Web Studio</p>
+                      </div>
+                    </div>
+                    <div className="w-full md:w-1/2 order-1 md:order-1">
+                      <img
+                        src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
+                        alt="Automatisation lead nurturing"
+                        className="w-full rounded-lg shadow"
+                      />
+                    </div>
+                  </div>
+
+{/* Partner Logos Section */}
         <section className="py-10 bg-white">
-          <div className=" mx-auto">
+          <div className=" ">
             <div className="text-center mb-8">
               <h3 className="text-xl font-medium text-gray-700 mb-6">
                 Le CRM de confiance pour plus de 100 000 entreprises dans 179 pays
@@ -93,49 +132,6 @@ const IProspect = () => {
             </div>
           </div>
         </section>
-
-        {/* Features Section */}
-        <section className="py-16 bg-white">
-          <div className=" mx-auto px-4">
-            <h1 className="text-center text-[40px] mx-auto mb-4" style={{ fontWeight: 'bold' }}>Un CRM qui fera le bonheur de vos équipes commerciales</h1>
-
-            <div className="px-[150px] mx-auto">
-              <Tabs defaultValue="experienced" className="w-full">
-                <TabsList className="grid  bg-transparent h-100 grid-cols-2 mb-12">
-                  <TabsTrigger value="experienced" className="text-lg py-3 data-[state=active]:border-b data-[state=active]:border-[#bb0c15] rounded-[0] data-[state=active]:text-[#bb0c15] ">J'ai déjà utilisé un CRM</TabsTrigger>
-                  <TabsTrigger value="new" className="text-lg py-3 data-[state=active]:border-b data-[state=active]:border-[#bb0c15] rounded-[0] text-balck data-[state=active]:text-[#bb0c15] ">Je n'ai encore jamais utilisé de CRM</TabsTrigger>
-                </TabsList>
-
-                <TabsContent value="experienced" className="space-y-16">
-                  {/* Feature 1 */}
-                  <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 order-2 md:order-2">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Économisez des heures avec l'automatisation du lead nurturing
-                      </h2>
-                      <p className="text-lg text-gray-700 mb-6">
-                        Ne manquez jamais une relance grâce aux conversations de vente automatisées et à
-                        des recommandations, alimentées par l'IA, vous invitant à vous concentrer sur les
-                        prospects les plus pertinents.
-                      </p>
-                      <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
-                        <p className="italic text-gray-700">
-                          "Pipedrive est le meilleur outil que j'aie jamais vu ! Du suivi des e-mails aux
-                          automatisations de workflows, en passant par ses redoutables intégrations,
-                          Pipedrive déborde de fonctionnalités qui nous aident à dépasser nos objectifs commerciaux."
-                        </p>
-                        <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
-                        <p className="text-sm text-gray-600">Directeur général, Nirmal Web Studio</p>
-                      </div>
-                    </div>
-                    <div className="w-full md:w-1/2 order-1 md:order-1">
-                      <img
-                        src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
-                        alt="Automatisation lead nurturing"
-                        className="w-full rounded-lg shadow"
-                      />
-                    </div>
-                  </div>
 
 
                   {/* Feature 2 */}
@@ -176,93 +172,27 @@ const IProspect = () => {
                     </div>
                   </div>
 
-                  {/* Feature 3 */}
-                  <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2">
-                      <img
-                        src="/lovable-uploads/6a81325c-4fca-4905-9887-0b10ea558128.png"
-                        alt="CRM sur mesure"
-                        className="w-full rounded-lg shadow"
-                      />
-                    </div>
-                    <div className="w-full md:w-1/2">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Le CRM sur mesure pour votre entreprise
-                      </h2>
-                      <p className="text-lg text-gray-700 mb-6">
-                        Adoptez la fluidité d'un outil de vente parfaitement accordé à chaque étape de votre
-                        parcours d'achat. Pipedrive, bien plus qu'un simple pipeline.
-                      </p>
-                      <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
-                        <p className="italic text-gray-700">
-                          "Pipedrive s'adapte parfaitement à nos besoins, et ça me plaît. Contrairement
-                          aux autres CRM, il répond à nos attentes au lieu de nous imposer ses limites."
-                        </p>
-                        <p className="mt-4 font-semibold">Sophie Mercier</p>
-                        <p className="text-sm text-gray-600">Fondatrice, Key Tech</p>
-                      </div>
-                      <div className="flex gap-4 mt-6">
-                        <Button variant="outline" className="border-[#6464e8] text-[#6464e8] hover:bg-[#6464e8] hover:text-white">
-                          Voir toutes les fonctionnalités
-                        </Button>
-                        <Button variant="outline" className="border-[#6464e8] text-[#6464e8] hover:bg-[#6464e8] hover:text-white">
-                          Comparer les CRM
-                        </Button>
-                      </div>
-                    </div>
-
-                  </div>
-                </TabsContent>
-
-                <TabsContent value="new" className="space-y-16">
-                  {/* Similar content for new CRM users */}
-                  <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 order-2 md:order-1">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Démarrez facilement avec un CRM intuitif
-                      </h2>
-                      <p className="text-lg text-gray-700 mb-6">
-                        Pipedrive est conçu pour être facile à prendre en main, même si vous n'avez jamais
-                        utilisé de CRM auparavant. Notre interface intuitive et notre support dédié vous
-                        accompagnent à chaque étape.
-                      </p>
-                      <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
-                        <p className="italic text-gray-700">
-                          "En tant que novice dans l'utilisation d'un CRM, j'ai été agréablement surpris par
-                          la simplicité de Pipedrive. En quelques jours, toute mon équipe maîtrisait l'outil."
-                        </p>
-                        <p className="mt-4 font-semibold">Jean Dupont</p>
-                        <p className="text-sm text-gray-600">Gérant, Boutique Créative</p>
-                      </div>
-                    </div>
-                    <div className="w-full md:w-1/2 order-1 md:order-2">
-                      <img
-                        src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
-                        alt="CRM intuitif"
-                        className="w-full rounded-lg shadow"
-                      />
-                    </div>
-                  </div>
-                </TabsContent>
-              </Tabs>
+                  
+               
             </div>
           </div>
         </section>
         {/* Final CTA Section */}
        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#edf2ff]">
-  <div className="max-w-7xl mx-auto   items-center ">
+  <div className="max-w-7xl mx-auto  items-center ">
     <div className="text-center lg:text-left">
       <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-        Rejoignez plus de 100 000 entreprises qui utilisent <span className="text-[#183782]">i-prospect</span>
+        Rejoignez <span className="text-[#183782]">i-prospect</span>, le CRM sur mesure pour votre entreprise
       </h2>
       <p className="text-lg text-gray-700 mb-6">
-        Moins de gestion, plus de ventes.
+        Aider les entrepreneurs à gérer des clients qualifiés sans perdre dans la complexité
+        des marketing digitale grâce à des solutions humaines automatisés et ultra éfficace.
       </p>
     </div>
 
-    <div className="justify-center lg:justify-end">
+    <div className="justify-center text-center center mx-auto lg:justify-center">
       <Link to="/devis">
-        <Button className="bg-[#183782] hover:bg-[#272c57] text-white rounded-lg py-3 px-6 text-base sm:text-lg font-semibold shadow-md transition duration-300">
+        <Button className="bg-[#183782] mx-auto  justify-center hover:bg-[#272c57] text-white rounded-lg py-3 px-6 text-base sm:text-lg font-semibold shadow-md transition duration-300">
           Voir la démo
         </Button>
       </Link>
@@ -478,12 +408,11 @@ const IProspect = () => {
                   <ul className="space-y-2">
                     {section.items.map((item, index) => (
                       <li key={index}>
-                        <Link
-                          to="/devis"
+                        <p
                           className="inline-block transition-all duration-300 border-b-2 border-transparent hover:border-[#bb0c15] hover:text-[#bb0c15]"
                         >
                           {item}
-                        </Link>
+                        </p>
                       </li>
                     ))}
                   </ul>

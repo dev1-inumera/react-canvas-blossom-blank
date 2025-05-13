@@ -42,7 +42,7 @@ const IMailXBanner = () => {
           </div>
 
           {/* RIGHT IMAGE */}
-          <div className="md:w-1/2 flex justify-center relative">
+          <div className="md:w-1/2 flex float justify-center relative">
             <img
               src="/lovable-uploads/pc1.png"
               alt="Analyse de performance commerciale"
