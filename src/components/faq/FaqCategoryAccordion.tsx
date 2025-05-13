@@ -19,7 +19,7 @@ const FaqCategoryAccordion: React.FC<FaqCategoryAccordionProps> = ({ category })
     <div 
       ref={ref}
       className={cn(
-        "bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden",
+        " border border-gray-100 overflow-hidden",
         inView ? "opacity-100" : "opacity-0 translate-y-8"
       )}
       style={{ 

@@ -49,7 +49,7 @@ const BusinessBanner = () => {
             <div className="md:w-1/2 flex justify-center">
               <div className=" p-8 rounded-3xl backdrop-blur-lg">
                 <img
-                  src="/lovable-uploads/bsn.png"
+                  src="/lovable-uploads/shop1.png"
                   alt="Créer votre business"
                   className="w-full max-w-sm md:max-w-md"
                 />
