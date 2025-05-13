@@ -58,149 +58,147 @@ const IProspect = () => {
           </div>
         </section>
 
-        
+
 
         {/* Features Section */}
         <section className="py-16 bg-white">
           <div className=" mx-auto px-4">
-            <h1 className="text-center text-[40px] mx-auto mb-4" style={{ fontWeight: 'bold' }}>Un CRM qui fera le bonheur de votre portefeuille</h1>
+            <h1 className="text-center text-[#183782] text-[40px] mx-auto mb-4" style={{ fontWeight: 'bold' }}>Un CRM qui fera le bonheur de votre portefeuille</h1>
 
             <div className="px-[150px] mx-auto">
-              
-                  {/* Feature 1 */}
-                  <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 order-2 md:order-2">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Économisez des heures avec des relances du lead nurturing
-                      </h2>
-                      <p className="text-lg text-gray-700 mb-6">
-                        Ne manquez jamais la relance de vos mails grâce aux rélances et récommendation téléphonique, avec des équipe humaine dédié,
-                         vous invitant à vous concentrer sur les
-                        prospects les plus pertinents.
-                      </p>
-                      <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
-                        <p className="italic text-gray-700">
-                          "i-prospect est le meilleur service que j'aie jamais vu ! Du suivi des e-mails aux
-                          automatisations de workflows, en passant par des humains pour la suivi des rélances,
-                          avec i-numa un CRM simplifié débordé de fonctionnalités qui nous aident à dépasser nos objectifs."
-                        </p>
-                        <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
-                        <p className="text-sm text-gray-600">Directeur commerciale, Nirmal Web Studio</p>
-                      </div>
-                    </div>
-                    <div className="w-full md:w-1/2 order-1 md:order-1">
-                      <img
-                        src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
-                        alt="Automatisation lead nurturing"
-                        className="w-full rounded-lg shadow"
-                      />
-                    </div>
-                  </div>
 
-{/* Partner Logos Section */}
-        <section className="py-10 bg-white">
-          <div className=" ">
-            <div className="text-center mb-8">
-              <h3 className="text-xl font-medium text-gray-700 mb-6">
-                Le CRM de confiance pour plus de 100 000 entreprises dans 179 pays
-              </h3>
-            </div>
-            <div className="flex flex-wrap justify-center items-center gap-12">
-              {partnerLogos.map((logo, index) => (
-                <div key={index} className="text-center">
-                  <div className="h-12 flex items-center justify-center">
-                    <img
-                      src={logo.image}
-                      alt={logo.name}
-                      className="max-h-10 max-w-[250px] object-contain"
-                    />
-                  </div>
-                  <div className="mt-3 flex items-center justify-center">
-                    <span className="text-lg font-bold text-gray-800">4.{Math.floor(Math.random() * 3) + 5}/5</span>
-                    <div className="flex ml-2">
-                      {[...Array(5)].map((_, i) => (
-                        <Star
-                          key={i}
-                          size={16}
-                          className={i < 4 ? "text-yellow-400 fill-yellow-400" : "text-yellow-400"}
-                        />
-                      ))}
-                    </div>
+              {/* Feature 1 */}
+              <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="w-full md:w-1/2 order-2 md:order-2">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Économisez des heures avec des relances du lead nurturing
+                  </h2>
+                  <p className="text-lg text-gray-700 mb-6">
+                    Ne manquez jamais la relance de vos mails grâce aux rélances et récommendation téléphonique, avec des équipe humaine dédié,
+                    vous invitant à vous concentrer sur les
+                    prospects les plus pertinents.
+                  </p>
+                  <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
+                    <p className="italic text-gray-700">
+                      "i-prospect est le meilleur service que j'aie jamais vu ! Du suivi des e-mails aux
+                      automatisations de workflows, en passant par des humains pour la suivi des rélances,
+                      avec i-numa un CRM simplifié débordé de fonctionnalités qui nous aident à dépasser nos objectifs."
+                    </p>
+                    <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
+                    <p className="text-sm text-gray-600">Directeur commerciale, Nirmal Web Studio</p>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        </section>
+                <div className="w-full md:w-1/2 order-1 md:order-1">
+                  <img
+                    src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
+                    alt="Automatisation lead nurturing"
+                    className="w-full rounded-lg shadow"
+                  />
+                </div>
+              </div>
+
+              {/* Partner Logos Section */}
+              <section className="py-10 bg-white">
+                <div className=" ">
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-medium text-gray-700 mb-6">
+                      Le CRM de confiance pour plus de 100 000 entreprises dans 179 pays
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap justify-center items-center gap-12">
+                    {partnerLogos.map((logo, index) => (
+                      <div key={index} className="text-center">
+                        <div className="h-12 flex items-center justify-center">
+                          <img
+                            src={logo.image}
+                            alt={logo.name}
+                            className="max-h-10 max-w-[250px] object-contain"
+                          />
+                        </div>
+                        <div className="mt-3 flex items-center justify-center">
+                          <span className="text-lg font-bold text-gray-800">4.{Math.floor(Math.random() * 3) + 5}/5</span>
+                          <div className="flex ml-2">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                size={16}
+                                className={i < 4 ? "text-yellow-400 fill-yellow-400" : "text-yellow-400"}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
 
 
-                  {/* Feature 2 */}
-                  <div className="flex flex-col md:flex-row items-center gap-12">
-                    <div className="w-full md:w-1/2 order-2 md:order-1">
-                      <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                        Nourrissez votre stratégie avec les statistiques de vente
-                      </h2>
-                      <p className="text-lg text-gray-700 mb-6">
-                        Plongez-vous dans les rapports de vente actualisés en continu et identifiez
-                        les points forts et les faiblesses de votre entonnoir avec des suggestions
-                        fournies par i-prospect. Grâce à la prévision, à la définition d'objectifs,
-                        au suivi des équipes et aux outils avancés d'évaluation des ventes, i-prospect
-                        facilite la prise de décisions agiles et éclairées.
-                      </p>
-                      <div className="p-4 border-l-4 border-[#183782] bg-gray-50 my-6">
-                        <p className="italic text-gray-700">
-                          <svg xmlns="http://www.w3.org/2000/svg"
-                            width="24" height="24" fill="#183782" viewBox="0 0 24 24" className="puco-icon puco-icon-s">
-                            <path fill="#183782" d="M8.154 11.588q1.36.294 2.07 1.353.77 1.06.77 2.588 0 2-1.243 3.236Q8.568 20 6.556 20t-3.313-1.235Q2
+              {/* Feature 2 */}
+              <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="w-full md:w-1/2 order-2 md:order-1">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Nourrissez votre stratégie avec les statistiques de vente
+                  </h2>
+                  <p className="text-lg text-gray-700 mb-6">
+                    Plongez-vous dans les rapports de vente actualisés en continu et identifiez
+                    les points forts et les faiblesses de votre entonnoir avec des suggestions
+                    fournies par i-prospect. Grâce à la prévision, à la définition d'objectifs,
+                    au suivi des équipes et aux outils avancés d'évaluation des ventes, i-prospect
+                    facilite la prise de décisions agiles et éclairées.
+                  </p>
+                  <div className="p-4 border-l-4 border-[#183782] bg-gray-50 my-6">
+                    <p className="italic text-gray-700">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                        width="24" height="24" fill="#183782" viewBox="0 0 24 24" className="puco-icon puco-icon-s">
+                        <path fill="#183782" d="M8.154 11.588q1.36.294 2.07 1.353.77 1.06.77 2.588 0 2-1.243 3.236Q8.568 20 6.556 20t-3.313-1.235Q2
                              17.47 2 15.588q0-1.823 1.183-3.882L7.68 4h3.314zm4.852 4q0-1.823 1.183-3.882L18.686 4H22l-2.84 
                              7.588q1.36.294 2.07 1.353.77 1.06.77 2.588 0 2-1.243 3.236Q19.573 20 17.562 20t-3.314-1.235q-1.242-1.295-1.242-3.177"></path></svg>
-                          i-prospect est l'outil ultime que j'ai jamais utilisé ! Du suivi des
-                          e-mails aux automatisations de workflows, sans oublier ses intégrations
-                          impressionnantes, i-prospect regorge de fonctionnalités qui nous aident à
-                          surpasser nos objectifs commerciaux.
-                        </p>
-                        <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
-                        <p className="text-sm text-gray-600">Directeur général, Nirmal Web Studio</p>
-                      </div>
-                    </div>
-                    <div className="w-full md:w-1/2 order-1 md:order-2">
-                      <img
-                        src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
-                        alt="Automatisation lead nurturing"
-                        className="w-full rounded-lg shadow"
-                      />
-                    </div>
+                      i-prospect est l'outil ultime que j'ai jamais utilisé ! Du suivi des
+                      e-mails aux automatisations de workflows, sans oublier ses intégrations
+                      impressionnantes, i-prospect regorge de fonctionnalités qui nous aident à
+                      surpasser nos objectifs commerciaux.
+                    </p>
+                    <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
+                    <p className="text-sm text-gray-600">Directeur général, Nirmal Web Studio</p>
                   </div>
+                </div>
+                <div className="w-full md:w-1/2 order-1 md:order-2">
+                  <img
+                    src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
+                    alt="Automatisation lead nurturing"
+                    className="w-full rounded-lg shadow"
+                  />
+                </div>
+              </div>
 
-                  
-               
+
+
             </div>
           </div>
         </section>
         {/* Final CTA Section */}
-       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#edf2ff]">
-  <div className="max-w-7xl mx-auto  items-center ">
-    <div className="text-center lg:text-left">
-      <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-        Rejoignez <span className="text-[#183782]">i-prospect</span>, le CRM sur mesure pour votre entreprise
-      </h2>
-      <p className="text-lg text-gray-700 mb-6">
-        Aider les entrepreneurs à gérer des clients qualifiés sans perdre dans la complexité
-        des marketing digitale grâce à des solutions humaines automatisés et ultra éfficace.
-      </p>
-    </div>
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#edf2ff]">
+          <div className="max-w-7xl mx-auto  items-center ">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                Rejoignez <span className="text-[#183782]">i-prospect</span>, le CRM sur mesure pour votre entreprise
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Aider les entrepreneurs à gérer des clients qualifiés sans perdre dans la complexité
+                des marketing digitale grâce à des solutions humaines automatisés et ultra éfficace.
+              </p>
+            </div>
 
-    <div className="justify-center text-center center mx-auto lg:justify-center">
-      <Link to="/devis">
-        <Button className="bg-[#183782] mx-auto  justify-center hover:bg-[#272c57] text-white rounded-lg py-3 px-6 text-base sm:text-lg font-semibold shadow-md transition duration-300">
-          Voir la démo
-        </Button>
-      </Link>
-    </div>
-  </div>
-</section>
-
-
+            <div className="justify-center text-center center mx-auto lg:justify-center">
+              <Link to="/devis">
+                <Button className="bg-[#183782] mx-auto  justify-center hover:bg-[#272c57] text-white rounded-lg py-3 px-6 text-base sm:text-lg font-semibold shadow-md transition duration-300">
+                  Voir la démo
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
         {/* Pricing Section */}
         <section className="py-16 bg-gray-50">
           <div className=" mx-auto px-[150px] ">
