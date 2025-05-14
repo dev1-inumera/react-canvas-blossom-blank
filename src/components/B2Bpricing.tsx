@@ -21,14 +21,14 @@ const offers: Offer[] = [
   {
     name: "START",
     price: "1 500 €",
-    contacts: "8 000 contacts / 32 000 envois",
+    contacts: "2 600 contacts / 10 000 envois",
     team: "1 Responsable Marketing",
     ideal: "TPE / Tests",
   },
   {
     name: "STANDARD",
     price: "2 500 €",
-    contacts: "11 200 contacts / 44 000 envois",
+    contacts: "3 700 contacts / 14 000 envois",
     team: "1 Phoner + Responsable Marketing",
     ideal: "PME",
   },
@@ -44,14 +44,14 @@ const offers: Offer[] = [
   {
     name: "PREMIUM",
     price: "3 500 €",
-    contacts: "14 400 contacts / 57 600 envois",
+    contacts: "4 800 contacts / 19 200 envois",
     team: "1 Phoner + 1 CM + Resp. Marketing",
     ideal: "Croissance rapide",
   },
   {
     name: "ULTRA",
     price: "5 500 €",
-    contacts: "16 000 contacts / 64 000 envois",
+    contacts: "5 300 contacts / 21 300 envois",
     team: "Équipe dédiée + suivi hebdo",
     ideal: "Entreprises multi-produits",
   }
