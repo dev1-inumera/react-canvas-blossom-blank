@@ -90,9 +90,9 @@ const IProspect = () => {
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-1">
                   <img
-                    src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
+                    src="/lovable-uploads/data1.png"
                     alt="Automatisation lead nurturing"
-                    className="w-full rounded-lg shadow"
+                    className="w-full"
                   />
                 </div>
               </div>
@@ -147,27 +147,13 @@ const IProspect = () => {
                     au suivi des équipes et aux outils avancés d'évaluation des ventes, i-prospect
                     facilite la prise de décisions agiles et éclairées.
                   </p>
-                  <div className="p-4 border-l-4 border-[#183782] bg-gray-50 my-6">
-                    <p className="italic text-gray-700">
-                      <svg xmlns="http://www.w3.org/2000/svg"
-                        width="24" height="24" fill="#183782" viewBox="0 0 24 24" className="puco-icon puco-icon-s">
-                        <path fill="#183782" d="M8.154 11.588q1.36.294 2.07 1.353.77 1.06.77 2.588 0 2-1.243 3.236Q8.568 20 6.556 20t-3.313-1.235Q2
-                             17.47 2 15.588q0-1.823 1.183-3.882L7.68 4h3.314zm4.852 4q0-1.823 1.183-3.882L18.686 4H22l-2.84 
-                             7.588q1.36.294 2.07 1.353.77 1.06.77 2.588 0 2-1.243 3.236Q19.573 20 17.562 20t-3.314-1.235q-1.242-1.295-1.242-3.177"></path></svg>
-                      i-prospect est l'outil ultime que j'ai jamais utilisé ! Du suivi des
-                      e-mails aux automatisations de workflows, sans oublier ses intégrations
-                      impressionnantes, i-prospect regorge de fonctionnalités qui nous aident à
-                      surpasser nos objectifs commerciaux.
-                    </p>
-                    <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
-                    <p className="text-sm text-gray-600">Directeur général, Nirmal Web Studio</p>
-                  </div>
+                  
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2">
                   <img
-                    src="/lovable-uploads/4d95487e-c8fa-4533-91f4-3674bc25cf5b.png"
+                    src="/lovable-uploads/WebDash.png"
                     alt="Automatisation lead nurturing"
-                    className="w-full rounded-lg shadow"
+                    className="w-full rounded-lg"
                   />
                 </div>
               </div>

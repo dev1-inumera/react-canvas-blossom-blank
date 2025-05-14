@@ -33,7 +33,7 @@ export const offerSlides: OfferSlide[] = [
   },
   {
     tag: "Boutique en ligne",
-    title: "Votre <span class='text-red-500'>e-commerce</span> clé en main à partir de 999€",
+    title: "Votre <span class='text-red-500'>e-commerce</span> clé en main",
     description:
       "Vendez en ligne facilement avec notre solution complète : catalogue produits, paiement sécurisé et gestion des commandes intégrée.",
     primaryLink: {
