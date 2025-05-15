@@ -102,7 +102,7 @@ const IProspect = () => {
                 <div className=" ">
                   <div className="text-center mb-8">
                     <h3 className="text-xl font-medium text-gray-700 mb-6">
-                      Le CRM de confiance pour plus de 100 000 entreprises dans 179 pays
+                      Le CRM de confiance pour vous
                     </h3>
                   </div>
                   <div className="flex flex-wrap justify-center items-center gap-12">
@@ -147,7 +147,7 @@ const IProspect = () => {
                     au suivi des équipes et aux outils avancés d'évaluation des ventes, i-prospect
                     facilite la prise de décisions agiles et éclairées.
                   </p>
-                  
+
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-2">
                   <img
@@ -164,27 +164,34 @@ const IProspect = () => {
           </div>
         </section>
         {/* Final CTA Section */}
-        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#edf2ff]">
-          <div className="max-w-7xl mx-auto  items-center ">
-            <div className="text-center lg:text-left">
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
-                Rejoignez <span className="text-[#183782]">i-prospect</span>, le CRM sur mesure pour votre entreprise
-              </h2>
-              <p className="text-lg text-gray-700 mb-6">
-                Aider les entrepreneurs à gérer des clients qualifiés sans perdre dans la complexité
-                des marketing digitale grâce à des solutions humaines automatisés et ultra éfficace.
-              </p>
-            </div>
+       <section className="bg-[#edf2ff] py-24 px-6 sm:px-10 lg:px-24">
+  <div className="max-w-4xl mx-auto text-center">
+    <h2 className="text-4xl sm:text-5xl font-extrabold text-[#282b57] leading-tight mb-6 tracking-tight">
+      Rejoignez{" "}
+      <span className="inline-block align-middle">
+        <img
+          src="/iprospect.png"
+          alt="iProspect"
+          className="inline-block w-[140px] h-auto object-contain align-middle"
+        />
+      </span>
+      , le CRM sur mesure pour votre entreprise
+    </h2>
 
-            <div className="justify-center text-center center mx-auto lg:justify-center">
-              <Link to="/devis">
-                <Button className="bg-[#183782] mx-auto  justify-center hover:bg-[#272c57] text-white rounded-lg py-3 px-6 text-base sm:text-lg font-semibold shadow-md transition duration-300">
-                  Voir la démo
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </section>
+    <p className="text-lg sm:text-xl text-gray-700 mb-10 max-w-3xl mx-auto leading-relaxed">
+      Aidez votre équipe à gérer les clients qualifiés sans vous perdre dans la complexité du marketing digital.
+      Une solution humaine, automatisée, et ultra efficace pensée pour votre quotidien.
+    </p>
+
+    <Link to="/devis">
+      <Button className="bg-[#183782] hover:bg-[#272c57] text-white py-4 px-10 rounded-xl text-lg font-semibold shadow-lg transition-all duration-300">
+        Voir la démo
+      </Button>
+    </Link>
+  </div>
+</section>
+
+
         {/* Pricing Section */}
         <section className="py-16 bg-gray-50">
           <div className=" mx-auto px-[150px] ">
@@ -367,11 +374,14 @@ const IProspect = () => {
         {/* FAQ Section */}
         <section className="py-16 bg-white">
           <div className=" px-4">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl font-bold text-gray-900 mb-4">
-                Questions fréquentes sur <span className="text-[#bb0c15]">i-prospect</span>
+
+            <div className="flex items-center items-center justify-center mx-auto mb-12 space-x-2">
+              <h2 className="text-3xl font-bold text-[#282b57] ">
+                Questions fréquentes sur
               </h2>
+              <img src="/iprospect.png" alt="iProspect" className="mt-4 w-[160px] h-auto object-contain" />
             </div>
+
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-[150px] mx-auto">
               {iProspectFaqCategories.map((category, index) => (

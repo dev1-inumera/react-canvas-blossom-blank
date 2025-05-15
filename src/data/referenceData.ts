@@ -93,6 +93,10 @@ export const partnerLogos: PartnerLogo[] = [
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/Slack_Technologies_Logo.svg/2560px-Slack_Technologies_Logo.svg.png"
   },
   {
+    name: "Apollo",
+    image: "/lovable-uploads/apollo.png"
+  },
+  {
     name: "Salesforce",
     image: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Salesforce.com_logo.svg/2560px-Salesforce.com_logo.svg.png"
   },

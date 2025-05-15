@@ -73,7 +73,7 @@ export const PricingModal = ({ isOpen, onClose }: PricingModalProps) => {
 
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-darkblue-900 mb-4">
-            Nos Offres <span className="text-red-600">i-prospect</span>
+            Nos Offres <span className="text-red-600">B2B</span>
           </h2>
           <p className="text-gray-600">Des formules adaptées à chaque ambition</p>
         </div>
@@ -116,14 +116,6 @@ export const PricingModal = ({ isOpen, onClose }: PricingModalProps) => {
               </div>
             </div>
           ))}
-        </div>
-
-        <div className="flex justify-center mt-16">
-          <Link to="/contact">
-            <Button className="bg-darkblue-900 hover:bg-darkblue-700 text-white py-3 px-6 rounded-lg">
-              Consultez nos offres PRO
-            </Button>
-          </Link>
         </div>
       </div>
     </div>
