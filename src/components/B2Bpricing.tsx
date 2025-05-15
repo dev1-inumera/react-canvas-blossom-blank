@@ -21,21 +21,21 @@ const offers: Offer[] = [
   {
     name: "START",
     price: "1 500 €",
-    contacts: "8 000 contacts / 32 000 envois",
+    contacts: "2 600 contacts / 10 000 envois",
     team: "1 Responsable Marketing",
     ideal: "TPE / Tests",
   },
   {
     name: "STANDARD",
     price: "2 500 €",
-    contacts: "11 200 contacts / 44 000 envois",
+    contacts: "3 700 contacts / 14 000 envois",
     team: "1 Phoner + Responsable Marketing",
     ideal: "PME",
   },
   {
     name: "PREMIUM",
     price: "3 500 €",
-    contacts: "14 400 contacts / 57 600 envois",
+    contacts: "4 800 contacts / 19 200 envois",
     team: "1 Phoner + 1 CM + Resp. Marketing",
     ideal: "Croissance rapide",
     popular: true,
@@ -43,7 +43,7 @@ const offers: Offer[] = [
   {
     name: "ULTRA",
     price: "5 500 €",
-    contacts: "16 000 contacts / 64 000 envois",
+    contacts: "5 300 contacts / 21 300 envois",
     team: "Équipe dédiée + suivi hebdo",
     ideal: "Entreprises multi-produits",
   },
@@ -73,7 +73,7 @@ export const PricingModal = ({ isOpen, onClose }: PricingModalProps) => {
 
         <div className="text-center mb-10">
           <h2 className="text-4xl font-bold text-darkblue-900 mb-4">
-            Nos Offres <span className="text-red-600">B2B</span>
+            Nos Offres pour <span className="text-red-600">B2B</span>
           </h2>
           <p className="text-gray-600">Des formules adaptées à chaque ambition</p>
         </div>

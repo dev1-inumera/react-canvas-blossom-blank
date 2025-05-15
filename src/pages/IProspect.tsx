@@ -78,14 +78,13 @@ const IProspect = () => {
                     vous invitant à vous concentrer sur les
                     prospects les plus pertinents.
                   </p>
-                  <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
+                  <div className="p-4 border-l-4 border-[#282b57] bg-gray-50 my-6">
                     <p className="italic text-gray-700">
                       "i-prospect est le meilleur service que j'aie jamais vu ! Du suivi des e-mails aux
                       automatisations de workflows, en passant par des humains pour la suivi des rélances,
                       avec i-numa un CRM simplifié débordé de fonctionnalités qui nous aident à dépasser nos objectifs."
                     </p>
-                    <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
-                    <p className="text-sm text-gray-600">Directeur commerciale, Nirmal Web Studio</p>
+                    <p className="mt-3 text-sm text-gray-600">Directeur commerciale</p>
                   </div>
                 </div>
                 <div className="w-full md:w-1/2 order-1 md:order-1">
@@ -167,12 +166,12 @@ const IProspect = () => {
        <section className="bg-[#edf2ff] py-24 px-6 sm:px-10 lg:px-24">
   <div className="max-w-4xl mx-auto text-center">
     <h2 className="text-4xl sm:text-5xl font-extrabold text-[#282b57] leading-tight mb-6 tracking-tight">
-      Rejoignez{" "}
+      Rejoignez
       <span className="inline-block align-middle">
         <img
           src="/iprospect.png"
           alt="iProspect"
-          className="inline-block w-[140px] h-auto object-contain align-middle"
+          className="inline-block px-3 w-[160px] h-auto object-contain align-middle"
         />
       </span>
       , le CRM sur mesure pour votre entreprise
