@@ -24,7 +24,7 @@ const IMailXBanner = () => {
           <div className="md:w-1/2">
             <h1 className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6">
               Boostez votre croissance <br />
-              avec <span className="text-cyan-400">i-prospect</span>
+              avec <span className="text-red-600">i-prospect</span>
             </h1>
             <p className="text-lg md:text-xl text-white/90 mb-8 max-w-xl">
               Génération de leads, automatisation marketing, et conversion ultra-efficace dans une seule plateforme. Développez votre business, sans friction.
@@ -44,7 +44,7 @@ const IMailXBanner = () => {
           {/* RIGHT IMAGE */}
           <div className="md:w-1/2 flex justify-center relative">
             <img
-              src="/lovable-uploads/9db84c2d-488c-4595-bb2a-3cf9cccd7afd.png"
+              src="lovable-uploads/pc1.png"
               alt="Analyse de performance commerciale"
               className="w-full max-w-md h-auto object-contain z-10 relative"
             />

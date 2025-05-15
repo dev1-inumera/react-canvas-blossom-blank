@@ -1,481 +1,363 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { PricingModal } from "@/components/B2Bpricing";
+import { PricingB2CModal } from "@/components/B2Cpricing";
+import { footerLinks } from "@/data/footerLinks";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { ArrowRight, Check, PieChart, Mail, Calendar, Users, Video, FileSearch, Signature } from "lucide-react";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { ArrowRight, Check, Calendar, Users, Video, FileSearch, Signature, Star, Diamond, Mail, PieChart } from "lucide-react";
 import { partnerLogos } from "@/data/referenceData";
 import { iProspectFaqCategories } from "@/data/iProspectFaq";
 import FaqCategoryAccordion from "@/components/faq/FaqCategoryAccordion";
 
 const IProspect = () => {
+  const [showModal, setShowModal] = useState(false);
+  const [showb2cModal, setb2cShowModal] = useState(false);
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navigation />
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative bg-white py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="flex flex-col lg:flex-row items-center gap-12">
-              <div className="w-full lg:w-1/2">
-                <h1 className="text-4xl md:text-5xl font-bold text-darkblue-900 mb-6">
-                  Les meilleurs <span className="text-red-600">outils sales,</span> simplement !
+        <section className="relative h-[auto] top-0 bg-[#edf2ff] pb-0 pt-16 md:pt-24">
+          <div className=" mx-auto px-4">
+            <div className="flex flex-col items-center">
+              <div className="w-full mb-[45px] lg:w-2/3 mb text-center">
+                <h1 className="text-4xl md:text-5xl font-bold text-[#bb0c15] mb-6">
+                  Le CRM simple et efficace pour conclure des affaires
                 </h1>
-                <p className="text-lg text-gray-700 mb-8 max-w-xl">
-                  i-prospect est une solution de prospection commerciale intelligente conçue pour aider les entreprises à générer des leads qualifiés, remplir leur agenda et booster leurs ventes - sans perdre de temps à prospecter à l'aveugle.
+                <p className="text-lg text-gray-700 mb-8  mx-auto">
+                  i-prospect simplifie le suivi du pipeline commercial, l'optimisation des leads,
+                  la gestion des affaires et l'automatisation de l'ensemble de
+                  votre processus de vente, libérant votre concentration pour votre acquisition client ou la vente.
                 </p>
-                <div className="mb-8">
+                <div className="mb-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                   <Link to="/devis">
                     <Button
-                      className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium"
+                      className="bg-[#183782] hover:bg-[#272c57] text-white  py-5 px-8 text-lg font-medium w-full sm:w-auto"
                     >
-                      Demander une démo gratuite
+                      Essai gratuit
                     </Button>
                   </Link>
                 </div>
-                <div className="flex flex-wrap gap-4 items-center">
-                  <div className="flex items-center text-green-600">
-                    <Check size={18} className="mr-1" />
-                    <span className="text-gray-700">Cold mailing</span>
-                  </div>
-                  <div className="flex items-center text-green-600">
-                    <Check size={18} className="mr-1" />
-                    <span className="text-gray-700">Cold calling</span>
-                  </div>
-                  <div className="flex items-center text-green-600">
-                    <Check size={18} className="mr-1" />
-                    <span className="text-gray-700">Community Manager</span>
-                  </div>
-                </div>
+                <p className="text-sm text-gray-600">
+                  Accès complet. Aucune carte de crédit requise. Utilisé par plus de 100 000 entreprises.
+                </p>
               </div>
-              <div className="w-full lg:w-1/2 relative">
-                <img src="https://img.freepik.com/vecteurs-libre/concentration-concentration-objectif-cible-entreprise-concept-solution-objectif-commercial-cible-atteinte-au-centre-reussite-entreprise-style-plat-illustration-vectorielle_1150-58758.jpg?t=st=1746797367~exp=1746800967~hmac=18d514cb2a89d103c7c81b5210260604e42886f19f956f93b097da3cb05d5677&w=1380" alt="" />
+              <div className="w-full  px-[10%] justify-center">
+                <img
+                  src="/lovable-uploads/capture1.png"
+                  alt="Interface Pipedrive"
+                  className="w-full "
+                />
               </div>
             </div>
           </div>
         </section>
 
-        {/* Logos Section */}
-        <section className="py-12 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-8">
-              <h3 className="text-lg font-medium text-gray-700">Ils font confiance à i-prospect</h3>
+
+
+        {/* Features Section */}
+        <section className="py-16 bg-white">
+          <div className=" mx-auto px-4">
+            <h1 className="text-center text-[#183782] text-[40px] mx-auto mb-4" style={{ fontWeight: 'bold' }}>Un CRM qui fera le bonheur de votre portefeuille</h1>
+
+            <div className="px-[150px] mx-auto">
+
+              {/* Feature 1 */}
+              <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="w-full md:w-1/2 order-2 md:order-2">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Économisez des heures avec des relances du lead nurturing
+                  </h2>
+                  <p className="text-lg text-gray-700 mb-6">
+                    Ne manquez jamais la relance de vos mails grâce aux rélances et récommendation téléphonique, avec des équipe humaine dédié,
+                    vous invitant à vous concentrer sur les
+                    prospects les plus pertinents.
+                  </p>
+                  <div className="p-4 border-l-4 border-[#6464e8] bg-gray-50 my-6">
+                    <p className="italic text-gray-700">
+                      "i-prospect est le meilleur service que j'aie jamais vu ! Du suivi des e-mails aux
+                      automatisations de workflows, en passant par des humains pour la suivi des rélances,
+                      avec i-numa un CRM simplifié débordé de fonctionnalités qui nous aident à dépasser nos objectifs."
+                    </p>
+                    <p className="mt-4 font-semibold">Nirmal Gyanwali</p>
+                    <p className="text-sm text-gray-600">Directeur commerciale, Nirmal Web Studio</p>
+                  </div>
+                </div>
+                <div className="w-full md:w-1/2 order-1 md:order-1">
+                  <img
+                    src="/lovable-uploads/data1.png"
+                    alt="Automatisation lead nurturing"
+                    className="w-full"
+                  />
+                </div>
+              </div>
+
+              {/* Partner Logos Section */}
+              <section className="py-10 bg-white">
+                <div className=" ">
+                  <div className="text-center mb-8">
+                    <h3 className="text-xl font-medium text-gray-700 mb-6">
+                      Le CRM de confiance pour plus de 100 000 entreprises dans 179 pays
+                    </h3>
+                  </div>
+                  <div className="flex flex-wrap justify-center items-center gap-12">
+                    {partnerLogos.map((logo, index) => (
+                      <div key={index} className="text-center">
+                        <div className="h-12 flex items-center justify-center">
+                          <img
+                            src={logo.image}
+                            alt={logo.name}
+                            className="max-h-10 max-w-[250px] object-contain"
+                          />
+                        </div>
+                        <div className="mt-3 flex items-center justify-center">
+                          <span className="text-lg font-bold text-gray-800">4.{Math.floor(Math.random() * 3) + 5}/5</span>
+                          <div className="flex ml-2">
+                            {[...Array(5)].map((_, i) => (
+                              <Star
+                                key={i}
+                                size={16}
+                                className={i < 4 ? "text-yellow-400 fill-yellow-400" : "text-yellow-400"}
+                              />
+                            ))}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </section>
+
+
+              {/* Feature 2 */}
+              <div className="flex flex-col md:flex-row items-center gap-12">
+                <div className="w-full md:w-1/2 order-2 md:order-1">
+                  <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                    Nourrissez votre stratégie avec les statistiques de vente
+                  </h2>
+                  <p className="text-lg text-gray-700 mb-6">
+                    Plongez-vous dans les rapports de vente actualisés en continu et identifiez
+                    les points forts et les faiblesses de votre entonnoir avec des suggestions
+                    fournies par i-prospect. Grâce à la prévision, à la définition d'objectifs,
+                    au suivi des équipes et aux outils avancés d'évaluation des ventes, i-prospect
+                    facilite la prise de décisions agiles et éclairées.
+                  </p>
+                  
+                </div>
+                <div className="w-full md:w-1/2 order-1 md:order-2">
+                  <img
+                    src="/lovable-uploads/WebDash.png"
+                    alt="Automatisation lead nurturing"
+                    className="w-full rounded-lg"
+                  />
+                </div>
+              </div>
+
+
+
             </div>
-            <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-              {partnerLogos.map((logo, index) => (
-                <div key={index} className="grayscale opacity-70 hover:opacity-100 transition-opacity">
-                  <div className="h-10 flex items-center">
-                    <img
-                      src={logo.image}
-                      alt={logo.name}
-                      className="max-h-8 max-w-[120px] object-contain"
-                    />
+          </div>
+        </section>
+        {/* Final CTA Section */}
+        <section className="py-16 px-4 sm:px-6 lg:px-8 bg-[#edf2ff]">
+          <div className="max-w-7xl mx-auto  items-center ">
+            <div className="text-center lg:text-left">
+              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">
+                Rejoignez <span className="text-[#183782]">i-prospect</span>, le CRM sur mesure pour votre entreprise
+              </h2>
+              <p className="text-lg text-gray-700 mb-6">
+                Aider les entrepreneurs à gérer des clients qualifiés sans perdre dans la complexité
+                des marketing digitale grâce à des solutions humaines automatisés et ultra éfficace.
+              </p>
+            </div>
+
+            <div className="justify-center text-center center mx-auto lg:justify-center">
+              <Link to="/devis">
+                <Button className="bg-[#183782] mx-auto  justify-center hover:bg-[#272c57] text-white rounded-lg py-3 px-6 text-base sm:text-lg font-semibold shadow-md transition duration-300">
+                  Voir la démo
+                </Button>
+              </Link>
+            </div>
+          </div>
+        </section>
+        {/* Pricing Section */}
+        <section className="py-16 bg-gray-50">
+          <div className=" mx-auto px-[150px] ">
+            <div className="text-left mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Des abonnements conçus pour les petites entreprises qui montent
+              </h2>
+              <p className="text-lg text-gray-700 mx-auto">
+                Stimulez votre croissance, peu importe la taille de votre équipe. Sélectionnez l'abonnement adapté à vos besoins actuels et débloquez des fonctionnalités supplémentaires au moment opportun.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12  mx-auto">
+              {[
+                {
+                  name: "START",
+                  icon: "circle",
+                  color: "bg-indigo-100 text-indigo-600",
+                  price: "1 500 €",
+                  description: "Organisez-vous et configurez rapidement vos processus de vente",
+                  contacts: "2 000 contacts / 8 000 envois",
+                  team: "1 Responsable Marketing",
+                  ideal: "TPE / Tests",
+                },
+                {
+                  name: "STANDARD",
+                  icon: "star",
+                  color: "bg-blue-100 text-blue-600",
+                  price: "2 500 €",
+                  description: "Ne manquez jamais la prochaine étape grâce à des séquences d'e-mails",
+                  contacts: "2 800 contacts / 11 000 envois",
+                  team: "1 Phoner + Responsable Marketing",
+                  ideal: "PME",
+                },
+                {
+                  name: "PREMIUM",
+                  icon: "diamond",
+                  color: "bg-purple-100 text-purple-600",
+                  price: "3 500 €",
+                  description: "Optimisez les performances avec des options de personnalisation avancées",
+                  contacts: "3 600 contacts / 14 400 envois",
+                  team: "1 Phoner + 1 CM + Resp. Marketing",
+                  ideal: "Croissance rapide",
+                  popular: true,
+                },
+                {
+                  name: "ULTRA",
+                  icon: "zap",
+                  color: "bg-red-100 text-red-600",
+                  price: "5 500 €",
+                  description: "Automatisez les grandes équipes avec des modes flexibles d'assistance",
+                  contacts: "4 000 contacts / 16 000 envois",
+                  team: "Équipe dédiée + suivi hebdomadaire",
+                  ideal: "Entreprises multi-produits",
+                },
+              ].map((plan, index) => (
+                <div key={index} className={`relative bg-white rounded-xl overflow-hidden border border-gray-200`}>
+
+                  <div className={`p-6 ${plan.popular ? "pt-8" : ""}`}>
+                    <div className={`w-12 h-12 rounded-full ${plan.color} flex items-center justify-center mb-4`}>
+                      {plan.icon === "circle" && <div className="w-5 h-5 rounded-full bg-current"></div>}
+                      {plan.icon === "star" && <Star size={20} className="fill-current" />}
+                      {plan.icon === "diamond" && <Diamond size={20} className="fill-current" />}
+                      {plan.icon === "zap" && <div className="w-5 h-5 bg-current clip-path-lightning"></div>}
+                    </div>
+
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">{plan.name}</h3>
+                    <p className="text-gray-600 text-sm mb-4">{plan.description}</p>
                   </div>
                 </div>
               ))}
             </div>
+            <div className="flex mx-auto mt-10 justify-center gap-3">
+              <Button
+                className="bg-[#bb0c15] mt-5 hover:bg-[#272c57] text-white rounded-md py-3 px-8 text-2xl font-medium w-full sm:w-auto"
+                onClick={() => setShowModal(true)}
+              >
+                Toutes les offres B2B
+              </Button>
+
+              <Button
+                className="bg-[#183782] mx-10 mt-5 hover:bg-[#272c57] text-white rounded-md py-3 px-8 text-lg font-medium w-full sm:w-auto"
+              >
+                Essai gratuit
+              </Button>
+
+              <Button
+                className="bg-[#bb0c15] text-2xl mt-5 hover:bg-[#272c57] text-white rounded-md py-3 px-8  font-medium w-full sm:w-auto"
+                onClick={() => setb2cShowModal(true)}
+              >
+                Toutes les offres B2C
+              </Button>
+              {/* Le popup */}
+              <PricingModal isOpen={showModal} onClose={() => setShowModal(false)} />
+              <PricingB2CModal isOpen={showb2cModal} onClose={() => setb2cShowModal(false)} />
+
+            </div>
+
+
+
           </div>
         </section>
 
-        {/* What is i-prospect */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
-                Qu'est-ce que <span className="text-red-600">i-prospect</span>?
+        {/* Blog Preview Section */}
+        <section className="py-16 bg-gray-50">
+          <div className="mx-[120px] px-4">
+            <div className="text-left mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Articles de blog populaires
               </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-700">
-                Notre mission : vous permettre de vous concentrer sur la signature, pendant que nous remplissons votre agenda.
+              <p className="text-lg text-gray-700 mx-auto">
+                Découvrez nos conseils et astuces pour optimiser votre pipeline commercial
               </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card className="border-0 shadow-lg rounded-xl overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-6">
-                    <Mail className="w-7 h-7 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-darkblue-900 mb-3">Nous prospectons à votre place</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Création de campagnes d'e-mails ciblées (cold mailing)</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Détection des prospects intéressées</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Prise de rendez-vous qualifiés</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-lg rounded-xl overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-6">
-                    <Calendar className="w-7 h-7 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-darkblue-900 mb-3">Vous vous concentrez sur vos rendez-vous</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Vous recevez directement les leads intéressés dans votre agenda</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Vous ne perdez plus de temps à filtrer les mauvais contacts</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Vous signez plus rapidement</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-
-              <Card className="border-0 shadow-lg rounded-xl overflow-hidden">
-                <CardContent className="p-6">
-                  <div className="w-14 h-14 rounded-full bg-red-100 flex items-center justify-center mb-6">
-                    <Users className="w-7 h-7 text-red-600" />
-                  </div>
-                  <h3 className="text-xl font-bold text-darkblue-900 mb-3">À qui s'adresse i-prospect?</h3>
-                  <ul className="space-y-2 text-gray-700">
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Commerciaux indépendants</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Entrepreneurs & freelances</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Startups et TPE/PME</span>
-                    </li>
-                    <li className="flex items-start">
-                      <Check size={18} className="text-green-600 mr-2 mt-1 flex-shrink-0" />
-                      <span>Agences marketing, coachs, formateurs, etc.</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
-          </div>
-        </section>
-
-        {/* Pricing Plans - UPDATED */}
-        <section className="py-20 bg-gray-50">
-  <div className="container mx-auto px-4">
-    <div className="text-center mb-16">
-      <h2 className="text-4xl font-bold text-darkblue-900 mb-4">
-        Nos Offres <span className="text-red-600">i-prospect</span>
-      </h2>
-      <p className="text-gray-600">Des formules adaptées à chaque ambition</p>
-    </div>
-
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
-      {[
-        {
-          name: "START",
-          price: "1 500 €",
-          contacts: "8 000 contacts / 32 000 envois",
-          team: "1 Responsable Marketing",
-          ideal: "TPE / Tests",
-        },
-        {
-          name: "STANDARD",
-          price: "2 500 €",
-          contacts: "11 200 contacts / 44 000 envois",
-          team: "1 Phoner + Responsable Marketing",
-          ideal: "PME",
-        },
-        {
-          name: "PREMIUM",
-          price: "3 500 €",
-          contacts: "14 400 contacts / 57 600 envois",
-          team: "1 Phoner + 1 CM + Resp. Marketing",
-          ideal: "Croissance rapide",
-          popular: true,
-        },
-        {
-          name: "ULTRA",
-          price: "5 500 €",
-          contacts: "16 000 contacts / 64 000 envois",
-          team: "Équipe dédiée + suivi hebdo",
-          ideal: "Entreprises multi-produits",
-        },
-        {
-          name: "SUR-MESURE",
-          price: "Sur devis",
-          contacts: "Envois illimités",
-          team: "Équipe dédiée + stratégie 360°",
-          ideal: "Groupes, franchises, multisites",
-        },
-      ].map((offer, index) => (
-        <div
-          key={index}
-          className={`relative bg-white rounded-xl shadow-lg border border-gray-100 overflow-hidden`}
-        >
-          {offer.popular && (
-            <div className="absolute top-0 w-full bg-red-600 text-white text-center py-2 text-sm font-semibold uppercase tracking-wide z-10">
-              Plus Populaire
-            </div>
-          )}
-          <div className={`p-6 pt-${offer.popular ? "12" : "6"}`}>
-            <h3 className="text-xl font-bold text-gray-900 mb-2 text-center">Formule {offer.name}</h3>
-            <div className="text-center text-3xl font-bold text-red-600 mb-4">
-              {offer.price}
-              {offer.name !== "SUR-MESURE" && (
-                <span className="text-base font-normal text-gray-500"> /mois</span>
-              )}
-            </div>
-            <ul className="space-y-3 mb-6 text-sm">
-              <li className="flex items-start">
-                <Check className="text-green-600 mr-2 mt-1" size={18} />
-                <span className="text-gray-700">{offer.contacts}</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-green-600 mr-2 mt-1" size={18} />
-                <span className="text-gray-700">{offer.team}</span>
-              </li>
-              <li className="flex items-start">
-                <Check className="text-green-600 mr-2 mt-1" size={18} />
-                <span className="text-gray-700">Idéal pour : {offer.ideal}</span>
-              </li>
-            </ul>
-            <Link to="/devis">
-              <Button className="w-full bg-red-600 hover:bg-red-700 text-white py-3 rounded-lg">
-                Sélectionner
-              </Button>
-            </Link>
-          </div>
-        </div>
-      ))}
-    </div>
-
-    <div className="flex justify-center mt-16">
-      <Link to="/contact">
-        <Button className="bg-darkblue-900 hover:bg-darkblue-700 text-white py-3 px-6 rounded-lg">
-          Consultez nos offres PRO
-        </Button>
-      </Link>
-    </div>
-  </div>
-</section>
-
-
-        {/* Results */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
-                Exemple de résultats avec <span className="text-red-600">i-prospect</span>
-              </h2>
-            </div>
-
-            <div className="max-w-4xl mx-auto bg-white rounded-xl shadow-lg overflow-hidden">
-              <div className="p-6">
-                <div className="overflow-x-auto">
-                  <table className="min-w-full divide-y divide-gray-200">
-                    <thead>
-                      <tr>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Mois</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Emails envoyés</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Leads générés</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">RDV confirmés</th>
-                        <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Signatures</th>
-                      </tr>
-                    </thead>
-                    <tbody className="bg-white divide-y divide-gray-200">
-                      {[1, 2, 3].map((month) => (
-                        <tr key={month} className="hover:bg-gray-50">
-                          <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Mois {month}</td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{1500 * month}</td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{45 * month}</td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{12 * month}</td>
-                          <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">{4 * month}</td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
+              <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+                <img
+                  src="https://img.freepik.com/vecteurs-premium/erreur-promotion-blog-publicite-numerique-analyse-mots-cles-inefficaces-illustration-moderne-vecteur-plat_566886-10281.jpg"
+                  alt="CRM evaluation"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Évaluations de CRM : Comment choisir l'outil parfait
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    Ce guide met en lumière les critères essentiels à considérer, et vous fournit des conseils pour obtenir les informations les plus utiles des fournisseurs.
+                  </p>
+                  <Link to="/blog" className="text-[#bb0c15] font-medium hover:underline inline-flex items-center">
+                    Lire l'article
+                    <ArrowRight size={16} className="ml-1" />
+                  </Link>
                 </div>
               </div>
-            </div>
-          </div>
-        </section>
 
-        {/* Why Choose Us */}
-        <section className="py-16 md:py-24 bg-gray-50">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
-                Pourquoi choisir <span className="text-red-600">i-prospect</span>?
-              </h2>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-              {[
-                {
-                  title: "Gain de temps",
-                  description: "Vous n'avez plus à prospecter"
-                },
-                {
-                  title: "Leads qualifiés uniquement",
-                  description: "Pas de temps perdu avec des curieux"
-                },
-                {
-                  title: "Méthodologie éprouvée",
-                  description: "Segmentation, copywriting, automatisation"
-                },
-                {
-                  title: "Suivi humain + technologie",
-                  description: "Notre équipe + notre logiciel i-mailx"
-                },
-                {
-                  title: "Accompagnement sur-mesure",
-                  description: "Un expert i-numera vous guide"
-                },
-              ].map((item, index) => (
-                <Card key={index} className="border-0 shadow-lg rounded-xl overflow-hidden h-full">
-                  <CardContent className="p-6 flex flex-col h-full">
-                    <div className="w-12 h-12 rounded-full bg-red-100 flex items-center justify-center mb-4">
-                      <span className="text-red-600 font-bold">{index + 1}</span>
-                    </div>
-                    <h3 className="text-xl font-bold text-darkblue-900 mb-2">{item.title}</h3>
-                    <p className="text-gray-700 flex-grow">{item.description}</p>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Steps Section */}
-        <section className="py-16 md:py-24 bg-gray-50">
-          <div className="  ">
-            <div className="text-center mb-16">
-              <span className="text-red-600 font-medium text-sm uppercase tracking-wider">Comment ça marche</span>
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mt-2 mb-4">
-                Les étapes <span className="text-red-600">i-prospect</span>
-              </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-700">
-                Notre processus simplifié pour vous accompagner vers le succès commercial
-              </p>
-            </div>
-
-            <div className="max-w-[75%] mx-auto">
-              {/* Step 1 */}
-              <div className="flex flex-col md:flex-row items-center mb-20 relative">
-                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
-                  <div className="flex items-start space-x-5">
-                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                      <Calendar size={28} />
-                    </div>
-                    <div>
-                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 1</div>
-                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Prendre Rendez-Vous</h3>
-                      <p className="text-gray-700">
-                        Planifiez un rendez-vous avec l'un de nos experts i-prospect. Nous évaluerons vos besoins spécifiques et établirons un plan d'action personnalisé pour votre entreprise. Nous vous recommandons les meilleures stratégies de prospection adaptées à votre secteur.
-                      </p>
-                    </div>
-                  </div>
+              <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+                <img
+                  src="https://img.freepik.com/vecteurs-premium/erreur-promotion-blog-publicite-numerique-analyse-mots-cles-inefficaces-illustration-moderne-vecteur-plat_566886-10281.jpg"
+                  alt="Email templates"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Comment rédiger un e-mail de suivi qui incite à répondre
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    Nous avons compilé 15 exemples d'e-mails de relance, couvrant pratiquement toutes les situations de vente.
+                  </p>
+                  <Link to="/blog" className="text-[#bb0c15] font-medium hover:underline inline-flex items-center">
+                    Lire l'article
+                    <ArrowRight size={16} className="ml-1" />
+                  </Link>
                 </div>
-                <div className="w-full md:w-1/2 relative">
-                  <div className="bg justify-items-center p-6 rounded-xl">
-                    <img
-                      src="/lovable-uploads/1d795743-b396-47b1-b346-944c5c5b6bf4.png"
-                      alt="Calendrier de rendez-vous"
-                      className="w-[50%] h-auto  rounded-lg"
-                    />
-                  </div>
-                </div>
-                {/* Connecting line */}
               </div>
 
-              {/* Step 2 */}
-              <div className="flex flex-col md:flex-row-reverse items-center mb-20 relative">
-                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8 relative z-10">
-                  <div className="flex items-start space-x-5">
-                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                      <Video size={28} />
-                    </div>
-                    <div>
-                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 2</div>
-                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Démo</h3>
-                      <p className="text-gray-700">
-                        Assistez à une démonstration personnalisée de notre solution i-prospect. Découvrez comment notre plateforme peut automatiser votre prospection, générer des leads qualifiés et optimiser votre processus de vente. Posez toutes vos questions à notre équipe d'experts.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 relative">
-                  <div className="bg justify-items-center p-6 rounded-xl ">
-                    <img
-                      src="/lovable-uploads/0521eee7-8189-41b1-b8ca-5e04a88369d1.png"
-                      alt="Démonstration de la plateforme"
-                      className="w-[50%] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-                {/* Connecting line */}
-              </div>
-
-              {/* Step 3 */}
-              <div className="flex flex-col md:flex-row items-center mb-20 relative">
-                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pr-8 relative z-10">
-                  <div className="flex items-start space-x-5">
-                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                      <FileSearch size={28} />
-                    </div>
-                    <div>
-                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 3</div>
-                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Étude du marché</h3>
-                      <p className="text-gray-700">
-                        Nous analysons votre marché cible et identifions les meilleurs prospects pour votre entreprise. Notre équipe élabore une stratégie de prospection sur mesure, en tenant compte de votre secteur d'activité, de votre positionnement et de vos objectifs commerciaux.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 relative">
-                  <div className="bg justify-items-center p-6 rounded-xl">
-                    <img
-                      src="/lovable-uploads/9147447c-61a0-4390-b23a-5b25c2003409.png"
-                      alt="Analyse de marché"
-                      className="w-[50%] h-auto rounded-lg"
-                    />
-                  </div>
-                </div>
-                {/* Connecting line */}
-              </div>
-
-              {/* Step 4 */}
-              <div className="flex flex-col md:flex-row-reverse items-center relative">
-                <div className="w-full md:w-1/2 mb-8 md:mb-0 md:pl-8 relative z-10">
-                  <div className="flex items-start space-x-5">
-                    <div className="w-16 h-16 flex-shrink-0 rounded-full bg-red-100 flex items-center justify-center text-red-600">
-                      <Signature size={28} />
-                    </div>
-                    <div>
-                      <div className="text-red-600 font-semibold mb-2">ÉTAPE 4</div>
-                      <h3 className="text-2xl font-bold text-darkblue-900 mb-4">Signature</h3>
-                      <p className="text-gray-700">
-                        Une fois que vous êtes convaincu par notre approche, nous finalisons le contrat et mettons en place votre solution i-prospect. Notre équipe vous accompagne tout au long du processus d'intégration et reste disponible pour répondre à vos questions et optimiser vos résultats.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div className="w-full md:w-1/2 relative">
-                  <div className="bg justify-items-center p-6 rounded-xl">
-                    <img
-                      src="/lovable-uploads/81b712cf-71fb-4449-8885-8d16accf7d85.png"
-                      alt="Signature du contrat"
-                      className="w-[50%] h-auto rounded-lg"
-                    />
-                  </div>
+              <div className="bg-white rounded-xl overflow-hidden shadow-sm">
+                <img
+                  src="https://img.freepik.com/vecteurs-premium/erreur-promotion-blog-publicite-numerique-analyse-mots-cles-inefficaces-illustration-moderne-vecteur-plat_566886-10281.jpg"
+                  alt="Sales presentations"
+                  className="w-full h-48 object-cover"
+                />
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                    Présentations de vente : modèles et exemples
+                  </h3>
+                  <p className="text-gray-700 mb-4">
+                    Dans ce guide, vous apprendrez à utiliser la puissance du storytelling pour influencer la prise de décision et conclure plus de ventes.
+                  </p>
+                  <Link to="/blog" className="text-[#bb0c15] font-medium hover:underline inline-flex items-center">
+                    Lire l'article
+                    <ArrowRight size={16} className="ml-1" />
+                  </Link>
                 </div>
               </div>
             </div>
@@ -483,47 +365,52 @@ const IProspect = () => {
         </section>
 
         {/* FAQ Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-4">
-                Questions fréquentes sur <span className="text-red-600">i-prospect</span>
+        <section className="py-16 bg-white">
+          <div className=" px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                Questions fréquentes sur <span className="text-[#bb0c15]">i-prospect</span>
               </h2>
-              <p className="max-w-3xl mx-auto text-lg text-gray-700">
-                Découvrez comment notre solution peut s'adapter à vos besoins spécifiques
-              </p>
             </div>
 
-            <div className="max-w-4xl mx-auto grid grid-cols-1 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 px-[150px] mx-auto">
               {iProspectFaqCategories.map((category, index) => (
-                <FaqCategoryAccordion key={index} category={category} />
+                <div key={index}>
+                  <FaqCategoryAccordion category={category} />
+                </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="py-16 md:py-24">
-          <div className="container mx-auto px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <h2 className="text-3xl md:text-4xl font-bold text-darkblue-900 mb-6">
-                Prêt à booster votre prospection?
-              </h2>
-              <p className="text-lg text-gray-700 mb-8">
-                Prenez rendez-vous avec un conseiller i-prospect.<br />
-                En moins de 48h, commencez à remplir votre agenda.
-              </p>
-              <Link to="/devis">
-                <Button className="bg-red-600 hover:bg-red-700 text-white rounded-full py-3 px-8 text-lg font-medium inline-flex items-center">
-                  Demander une démo gratuite
-                  <ArrowRight size={20} className="ml-2" />
-                </Button>
-              </Link>
+        <footer className="bg-gray-50 py-12 border-t">
+          <div className="px-[150px] mx-auto px-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
+              {footerLinks.map((section, idx) => (
+                <div key={idx}>
+                  <h4 className="font-semibold text-gray-900 mb-4">{section.title}</h4>
+                  <ul className="space-y-2">
+                    {section.items.map((item, index) => (
+                      <li key={index}>
+                        <p
+                          className="inline-block transition-all duration-300 border-b-2 border-transparent hover:border-[#bb0c15] hover:text-[#bb0c15]"
+                        >
+                          {item}
+                        </p>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
             </div>
           </div>
-        </section>
+        </footer>
+
       </main>
       <Footer />
+
+
+
     </div>
   );
 };
