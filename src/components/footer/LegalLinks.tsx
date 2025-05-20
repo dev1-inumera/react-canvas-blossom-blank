@@ -5,7 +5,7 @@ import CookieManager from '@/components/cookies/CookieManager';
 
 const LegalLinks: React.FC = () => {
   return (
-    <div className="flex flex-wrap items-center gap-4 text-sm text-darkblue-700">
+    <div className="mb-5 flex flex-wrap items-center gap-4 text-sm text-darkblue-700">
       <Link 
         to="/terms" 
         className="hover:text-darkblue-900 transition-colors"

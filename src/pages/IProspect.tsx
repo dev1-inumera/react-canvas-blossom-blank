@@ -392,28 +392,7 @@ const IProspect = () => {
           </div>
         </section>
 
-        <footer className="bg-gray-50 py-12 border-t">
-          <div className="px-[150px] mx-auto px-4">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 text-sm text-gray-700">
-              {footerLinks.map((section, idx) => (
-                <div key={idx}>
-                  <h4 className="font-semibold text-gray-900 mb-4">{section.title}</h4>
-                  <ul className="space-y-2">
-                    {section.items.map((item, index) => (
-                      <li key={index}>
-                        <p
-                          className="inline-block transition-all duration-300 border-b-2 border-transparent hover:border-[#bb0c15] hover:text-[#bb0c15]"
-                        >
-                          {item}
-                        </p>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              ))}
-            </div>
-          </div>
-        </footer>
+        
 
       </main>
       <Footer />

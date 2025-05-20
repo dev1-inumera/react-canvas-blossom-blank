@@ -6,7 +6,7 @@ import { ArrowRight } from 'lucide-react';
 const HelpLinks: React.FC = () => {
   return (
     <div>
-      <h3 className="text-lg font-semibold mb-4 text-darkblue-900">Besoin d'aide ?</h3>
+      <h3 className="mt-5 text-lg font-semibold mb-4 text-darkblue-900">Besoin d'aide ?</h3>
       <ul className="space-y-3">
         <li>
           <Link 
