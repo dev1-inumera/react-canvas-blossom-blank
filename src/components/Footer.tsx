@@ -27,11 +27,11 @@ const Footer: React.FC<FooterProps> = ({ className }) => {
 
           {footerLinks.map((section, idx) => (
             <div key={idx}>
-              <h4 className="font-semibold text-gray-900 mb-4">{section.title}</h4>
+              <h4 className="font-semibold text-blue-900 text-xl text-gray-900 mb-4">{section.title}</h4>
               <ul className="space-y-2">
                 {section.items.map((item, index) => (
                   <li key={index}>
-                    <p className="inline-block transition-all duration-300 border-b-2 border-transparent hover:border-[#bb0c15] hover:text-[#bb0c15]">
+                    <p className="inline-block text-blue-900 transition-all duration-300 border-b-2 border-transparent hover:border-[#bb0c15] hover:text-[#bb0c15]">
                       {item}
                     </p>
                   </li>
