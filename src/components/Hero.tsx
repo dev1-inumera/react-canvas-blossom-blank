@@ -36,35 +36,29 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
 
   return (
     <section
-    style={{flexDirection:"column"}}
       className={cn(
-        " w-full flex min-h-[100vh] bg-no-repeat bg-cover items-center justify-center overflow-hidden pt-0 pb-24  lg:pb-36",
+        "w-full flex flex-col min-h-[80vh] md:min-h-[100vh] bg-no-repeat bg-cover items-center justify-center overflow-hidden pt-0 pb-16 md:pb-24 lg:pb-36",
         className
       )}
     >
       <MemoizedHeroBackground />
 
-      <div className="container h- px-4  relative z-20">
-        <div className="grid lg:grid-cols-2 gap-[205px] items-center">
-        <div className="order-2 lg:order-1 relative">
+      <div className="container px-4 sm:px-6 lg:px-8 relative z-20">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-32 items-center">
+          <div className="order-2 lg:order-1 relative">
             <MemoizedHeroContent 
               currentSlide={currentSlide} 
               slides={offerSlides} 
             />
-            
           </div>
           <div className="order-1 lg:order-2">
             <MemoizedHeroIllustration />
           </div>
-          <div className="absolute top-0 right-5 lg:right-5 lg:-bottom-35">
-              <MemoizedHeroLogoSection />
-            </div>
-          
+          <div className="absolute top-0 right-2 sm:right-4 lg:right-5 hidden md:block">
+            <MemoizedHeroLogoSection />
+          </div>
         </div>
       </div>
-      
-      {/* Separator moved further down to clearly divide hero from content below */}
-     
     </section>
   );
 };

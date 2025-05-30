@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { cn } from "@/lib/utils";
@@ -11,7 +12,7 @@ import MobileMenu from "./navigation/MobileMenu";
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [isFixed, setIsFixed] = useState(false); // <- État pour savoir si on doit fixer la nav
+  const [isFixed, setIsFixed] = useState(false);
   const location = useLocation();
   const isMobile = useIsMobile();
 
@@ -48,10 +49,10 @@ const Navigation = () => {
   return (
     <header
       className={cn(
-        "transition-all duration-300 px-4 md:px-8 lg:px-12 z-50",
+        "transition-all duration-300 px-4 sm:px-6 md:px-8 lg:px-12 z-50",
         isFixed
-          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-3"
-          : "relative bg-transparent py-5"
+          ? "fixed top-0 left-0 right-0 bg-white shadow-md py-2 md:py-3"
+          : "relative bg-transparent py-3 md:py-5"
       )}
     >
       <div className="max-w-7xl mx-auto flex items-center justify-between">
