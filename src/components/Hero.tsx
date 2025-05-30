@@ -37,26 +37,33 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       className={cn(
-        "w-full flex flex-col min-h-[80vh] md:min-h-[100vh] bg-no-repeat bg-cover items-center justify-center overflow-hidden pt-0 pb-16 md:pb-24 lg:pb-36",
+        "w-full flex flex-col min-h-screen relative bg-no-repeat bg-cover items-center justify-center overflow-hidden",
+        "px-4 sm:px-6 lg:px-8",
+        "py-8 sm:py-12 md:py-16 lg:py-20",
         className
       )}
     >
       <MemoizedHeroBackground />
 
-      <div className="container px-4 sm:px-6 lg:px-8 relative z-20">
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 xl:gap-32 items-center">
-          <div className="order-2 lg:order-1 relative">
+      <div className="container relative z-20 w-full max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-10rem)]">
+          {/* Content Section */}
+          <div className="order-2 lg:order-1 relative w-full">
             <MemoizedHeroContent 
               currentSlide={currentSlide} 
               slides={offerSlides} 
             />
           </div>
-          <div className="order-1 lg:order-2">
+          
+          {/* Illustration Section */}
+          <div className="order-1 lg:order-2 relative w-full flex justify-center lg:justify-end">
             <MemoizedHeroIllustration />
           </div>
-          <div className="absolute top-0 right-2 sm:right-4 lg:right-5 hidden md:block">
-            <MemoizedHeroLogoSection />
-          </div>
+        </div>
+
+        {/* Logo Section - Hidden on mobile, visible on larger screens */}
+        <div className="absolute top-4 right-4 lg:top-8 lg:right-8 hidden md:block">
+          <MemoizedHeroLogoSection />
         </div>
       </div>
     </section>
