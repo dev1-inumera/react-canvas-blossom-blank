@@ -37,7 +37,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
   return (
     <section
       className={cn(
-        "w-full flex flex-col min-h-screen relative bg-no-repeat bg-cover items-center justify-center overflow-hidden",
+        "w-full flex flex-col relative bg-no-repeat bg-cover items-center justify-center overflow-hidden",
         "px-4 sm:px-6 lg:px-8",
         "py-8 sm:py-12 md:py-16 lg:py-20",
         className
@@ -46,7 +46,7 @@ const Hero: React.FC<HeroProps> = ({ className }) => {
       <MemoizedHeroBackground />
 
       <div className="container relative z-20 w-full max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center min-h-[calc(100vh-8rem)] lg:min-h-[calc(100vh-10rem)]">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center lg:min-h-[calc(100vh-10rem)]">
           {/* Content Section */}
           <div className="order-2 lg:order-1 relative w-full">
             <MemoizedHeroContent 
