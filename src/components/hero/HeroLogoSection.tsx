@@ -10,8 +10,8 @@ const HeroLogoSection: React.FC = () => {
       <div className="relative overflow-hidden p-2 sm:p-3 lg:p-4 rounded-lg bg-white/30 backdrop-blur-sm shadow-sm border border-gray-100">
         <div className="flex items-center justify-center">
           <img
-            src="/src/assets/flower-logo.png"
-            alt="Logo fleur"
+            src="/lovable-uploads/b3c33571-dd4d-4269-a516-f847893fdd7f.png"
+            alt="i-numera logo"
             className="w-auto max-w-[80px] sm:max-w-[100px] lg:max-w-[120px] h-auto"
             loading="eager"
             decoding="async"
